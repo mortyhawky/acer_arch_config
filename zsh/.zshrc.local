@@ -1,0 +1,62 @@
+#!/usr/bin/env zsh
+## Updated ArchReal 2026-04-25 11:16 Sat
+
+local scr_pat4="${(%):-%N}"
+if [[ "$DEBUG" == "true" ]]; then
+  echo "\n    --> Start: $scr_pat4     --> Sourced from .zshrc SL=$SHLVL"
+fi
+
+# alias.zsh sources functions.zsh
+source $ZDOTDIR/alias.zsh
+
+# All variables are set in /etc/zsh/zshenv
+#echo
+echo "    ---- ---- ENVIRONMENT VARIABLES from /etc/zsh/zshenv ---- ----"
+echo "    BROWSER                     = "$BROWSER
+echo "    DEBUG                       = "$DEBUG
+echo "    DISPLAY                     = "$DISPLAY
+echo "    EDITOR                      = "$EDITOR
+echo "    POWERSHELL_TELEMETRY_OPTOUT = "$POWERSHELL_TELEMETRY_OPTOUT
+echo "    SHELL                       = "$SHELL
+echo "    TERM                        = "$TERM
+echo "    XAUTHORITY                  = "$XAUTHORITY
+echo "    XDG_CONFIG_HOME             = "$XDG_CONFIG_HOME
+echo "    XDG_STATE_HOME              = "$XDG_STATE_HOME
+echo "    XINITRC                     = "$XINITRC
+echo "    ZDOTDIR                     = "$ZDOTDIR
+echo "    ---- ---------------------------------------------------- ----"
+# All variables are set in /etc/zsh/zshenv
+
+if [[ "$DISPLAY" ]]; then
+  echo "    Show all my keybindgs in Alacritty: Ctrl+Shift+K"
+fi
+
+
+if [[ "$(ip -4 address show wlan0 |grep 'inet ')" ]]; then
+  ip -c -4 address show wlan0 |grep --color=always "inet "
+elif [[ "$(ip -4 address show enp1s0 |grep 'inet ')" ]]; then
+  ip -4 address show enp1s0 |grep --color=always "inet "
+elif [[ "$(ip -4 address show eth0 |grep 'inet ')" ]]; then
+  ip -4 address show eth0 |grep --color=always "inet "
+else
+  RED=$(tput setaf 1)
+  RESET=$(tput sgr0)
+  echo "    ${RED}***WARN: No netw, use: sc start NetworkManager.service${RESET}"
+fi
+
+HISTSIZE=100
+SAVEHIST=100
+HISTFILE=$ZDOTDIR/.zsh_history
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+
+
+if [[ "$DEBUG" == "true" ]]; then
+  echo "    --> End..: $scr_pat4\n"
+else
+  clear
+  fastfetch
+fi

@@ -1,0 +1,96 @@
+In dwm, view, tag, and TAGKEYS are the core mechanisms for
+its tagging system (workspaces).
+
+1. Concepts
+tag → assign a window to a workspace
+view → switch to a workspace
+A window can belong to multiple tags at once
+2. view vs tag
+view
+
+Switches what you see:
+
+{ MODKEY, XK_1, view, {.ui = 1 << 0 } },
+Shows all windows with tag 1
+Does not move windows
+Ex: 
+Win+2  Shows Tag/Workspace 2
+Win+3  Shows Tag/Workspace 3
+
+Moves the focused window:
+
+{ MODKEY|ShiftMask, XK_1, tag, {.ui = 1 << 0 } },
+Assigns current window to tag 1
+3. Bitmask explanation
+.ui = 1 << TAG
+
+Ex:
+Win+Shift+3 moves the focused window to tag 3
+
+Examples:
+
+1 << 0 → tag 1
+1 << 1 → tag 2
+1 << 8 → tag 9
+
+You are setting bits in a mask:
+
+Tag 1 → 000000001
+Tag 2 → 000000010
+Tag 3 → 000000100
+
+Multiple tags:
+
+.ui = (1 << 0) | (1 << 2)   // tag 1 + 3
+4. TAGKEYS macro
+
+Defined in config.h:
+
+#define TAGKEYS(KEY,TAG) \
+    { MODKEY,                       KEY, view,       {.ui = 1 << TAG} }, \
+    { MODKEY|ControlMask,           KEY, toggleview, {.ui = 1 << TAG} }, \
+    { MODKEY|ShiftMask,             KEY, tag,        {.ui = 1 << TAG} }, \
+    { MODKEY|ControlMask|ShiftMask, KEY, toggletag,  {.ui = 1 << TAG} },
+What it generates
+
+For:
+
+TAGKEYS(XK_1, 0)
+
+You get:
+
+Key combo	Action
+Mod + 1	view tag 1
+Mod + Ctrl + 1	toggle view tag 1
+Mod + Shift + 1	move window to tag 1
+Mod + Ctrl + Shift + 1	toggle window on tag 1
+5. Typical usage in config
+TAGKEYS( XK_1, 0 )
+TAGKEYS( XK_2, 1 )
+TAGKEYS( XK_3, 2 )
+...
+TAGKEYS( XK_9, 8 )
+6. Related functions
+view → show tag(s)
+toggleview → add/remove tag from current view
+tag → move window
+toggletag → add/remove tag from window
+7. Practical examples
+Move window to tag 2
+Mod + Shift + 2
+View tag 2
+Mod + 2
+Show tag 1 + 2 at same time
+Mod + Ctrl + 1
+Mod + Ctrl + 2
+Put window on multiple tags
+Mod + Ctrl + Shift + 2
+Summary
+view = what you see
+tag = where window lives
+TAGKEYS = macro that generates all bindings automatically
+Everything is based on bitmasks (1 << tag)
+
+If you want, a minimal custom config.h snippet tailored
+to your workflow can be provided.
+  

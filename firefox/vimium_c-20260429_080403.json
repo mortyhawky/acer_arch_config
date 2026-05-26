@@ -1,0 +1,18 @@
+{
+	"name": "Vimium C",
+	"@time": "4/29/2026, 8:04:03 AM",
+	"time": 1777442643513,
+	"environment": {
+		"extension": "2.12.3",
+		"platform": "win",
+		"firefox": 150
+	},
+	"keyLayout": 2,
+	"keyMappings": [
+		"#!no-check",
+		"map <c-d> scrollPageDown",
+		"map <c-u> scrollPageUp",
+		""
+	],
+	"vimSync": true
+}

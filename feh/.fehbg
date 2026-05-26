@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+# Updated ArchReal 2026
+
+feh --no-fehbg --bg-fill '/home/m/Wallpapers/mountain-lake-4k_1600x900.jpg'

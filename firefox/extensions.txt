@@ -1,0 +1,13 @@
+### Extensions:
+Dark Reader
+Vimium C
+New Tab Override
+I don't care about cookies
+(Read Aloud)
+
+### Theme:
+Dark
+A theme with a dark color scheme.
+
+--------------------------
+Updated: 2026_04_17-20_39
