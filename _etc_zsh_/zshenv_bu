@@ -3,7 +3,7 @@
 # Updated ArchReal 2026-04-27 16:03 Mon
 
 local SCRIPT_PATH="${(%):-%N}"
-export DEBUG="true"
+export DEBUG="FALSE"
 if [[ "$DEBUG" == "true" ]]; then 
   echo "\n--> Start: $SCRIPT_PATH  SL=$SHLVL --> Sourced for all shells"
 fi
