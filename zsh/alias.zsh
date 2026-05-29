@@ -22,7 +22,7 @@ source $ZDOTDIR/functions.zsh
 
 unalias -a
 #alias rm='sudo rm -rf'
-alias a='command alias'
+alias a='alias'
 alias b='command bat'
 alias c='f_cdls'
 alias cal='cal -m'

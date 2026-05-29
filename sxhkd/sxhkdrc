@@ -1,47 +1,52 @@
-#(Return, Tab, Escape, Space, BackSpace)
-#(shift, alt, super, ctrl) must be lowercase
-#Following X keysym naming conventions
-# Run terminal emulator 
+## ######################################################### 
+##  (Return, Tab, Escape, Space, BackSpace)  Capitalized
+##  (shift, alt, super, ctrl)                all lowercase
+##  Following X keysym naming conventions
+## ######################################################### 
+
+## Run terminal emulator 
 super + Return
   kitty
 
-# Run web browser
+## Run web browser
 super + w
   firefox
 
-# Run program
+## Run program
 super + p
   dmenu_run
 
-# Reload sxhkd
+## Reload sxhkd
 ctrl + super + r
   pkill -USR1 -x sxhkd
 
-# Reload bspwm
+## Reload bspwm
 super + alt + r
 	bspc wm -r
 
-#
-# bspwm hotkeys
-#
+## ###############################################
+##   BSPWM   HOTKEYS
+## ###############################################
 
-# close and kill
-#super + {_,shift + }q
-#	bspc node -{c,k}
+## focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
 
-# Close
+## Close window
 super + q
   bspc node -c
 
-# quit/restart bspwm
+## quit/restart bspwm
 super + shift + q
   bspc quit
 
-
-#
 ## alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
+
+## Promote window
+super + shift + Return
+  bspc node -s biggest.local
 #
 ## send the newest marked node to the newest preselected node
 #super + y
@@ -67,9 +72,6 @@ super + m
 ## focus/swap
 ##
 #
-## focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
 #
 ## focus the node for the given path jump
 #super + {p,b,comma,period}

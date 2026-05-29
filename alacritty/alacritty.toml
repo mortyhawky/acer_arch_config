@@ -27,14 +27,16 @@ import = [
    mods = "Control|Shift"
     chars = "grep --color -A4 \"^\\[\\[keyboard.bindings\\]\\]\" ~/.config/alacritty/alacritty.toml\r"
 
-[terminal.shell]
-program = "/usr/bin/bash"
-args = ["--login", "-i"]
+#[terminal.shell]
+#program = "/usr/bin/bash"
+#args = ["--login", "-i"]
 
 [font]
-  size = 10.96
+  size = 11
 
 [font.normal]
+  #family = "JetBrainsMono Nerd Font"
+  #family  ="DejaVuSansM Nerd Font Mono"
   family = "AdwaitaMono Nerd Font Mono"
   style = "Regular"
 #
