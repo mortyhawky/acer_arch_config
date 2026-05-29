@@ -5,6 +5,8 @@
 # To Edit this global file, owend by root, use sudo nvim
 # Or use the Ctrl+e mapping in vifm (:!sudo -E nvim "%f")
 
+echo "/usr/zsh/zprofile"
+
 local SCRIPT_PATH="${(%):-%N}"
 
 if [[ "$DEBUG" == "true" ]]; then 

@@ -28,7 +28,8 @@ import = [
     chars = "grep --color -A4 \"^\\[\\[keyboard.bindings\\]\\]\" ~/.config/alacritty/alacritty.toml\r"
 
 [terminal.shell]
-program = "pwsh"
+program = "/usr/bin/bash"
+args = ["--login", "-i"]
 
 [font]
   size = 10.96

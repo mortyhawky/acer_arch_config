@@ -2,6 +2,8 @@
 # /etc/zsh/zsenv
 # Updated ArchReal 2026-04-27 16:03 Mon
 
+echo "/usr/zsh/zprofile"
+
 local SCRIPT_PATH="${(%):-%N}"
 export DEBUG="true"
 if [[ "$DEBUG" == "true" ]]; then 
