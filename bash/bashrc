@@ -1,4 +1,6 @@
-# ~/.config/bash/bashrc
+#!/usr/bin/env bash
+
+echo " ~/.config/bash/bashrc"
 #
 # Load modular components
 for file in ~/.config/bash/{exports,aliases,functions,prompt,completion};

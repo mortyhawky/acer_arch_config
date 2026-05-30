@@ -2,6 +2,8 @@
 -- 01SETTINGS   ~/.config/nvim/lua/morty/01settings.lua
 -- --------------------------------------------------------
 
+vim.opt.modeline = true           -- Enable 5 modelines
+
 -- --------------------------------------------------------
 -- MY ADDONS:
 -- --------------------------------------------------------
@@ -12,9 +14,9 @@ local display = os.getenv("DISPLAY") or os.getenv("WAYLAND_DISPLAY")
 --echo "display"
 
 if display and display ~= "" then
-  vim.cmd("colorscheme unokai")
+  vim.cmd("colorscheme habamax")
 else
-  vim.cmd("colorscheme elflord")
+  vim.cmd("colorscheme default")
 end
 
 vim.g.mapleader         = " "     -- Space as leader
@@ -55,7 +57,7 @@ vim.opt.colorcolumn     = "80"    -- Show a column at 80 pos chars
 vim.opt.showmatch       = true    -- Highlight matching brackets
 vim.opt.cmdheight       = 1       -- Single line command line
 vim.opt.completeopt     = "menuone,noinsert,noselect"
-vim.opt.showmode        = false   -- Do not show the mode, instead have it in statusline
+vim.opt.showmode        = true   -- Do not show the mode, instead have it in statusline
 vim.opt.showmode        = false   -- Do not show the mode, instead have it in statusline
 vim.opt.pumheight       = 10      -- Popup menu height
 vim.opt.pumblend        = 10      -- Popup menu transparency

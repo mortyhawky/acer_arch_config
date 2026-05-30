@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+alias l="eza -lAh --color=auto --icons=auto --git"
+alias mkcd="f_mkcd"

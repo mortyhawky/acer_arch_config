@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+echo " ~/.config/bash_profile"
+#
+# Load bashrc for login shells
+if [ -f ~/.config/bash/bashrc ]; then
+  source ~/.config/bash/bashrc
+fi

@@ -8,10 +8,13 @@
 vim.keymap.set("n", "<leader>ri", '<Cmd>source $MYVIMRC<CR><Cmd>echo "Reloaded nvim"<CR>')
  
 -- Ctrl-s save all files from all modes
-vim.keymap.set({ 'n', 'i', 'v', 'c' }, '<C-s>', '<Esc><Cmd>wall <CR>', { desc = 'Save all files' })
+vim.keymap.set({ 'n', 'i', 'v', 'c' }, '<C-s>', '<esc>:wall<cr>', { desc = 'Save all files' })
      
 -- Make Y behave as D, Yank to end of line
 vim.keymap.set('n', 'Y', 'y$')
 
-vim.keymap.set("n", "<leader>ru", ":w<CR>:!python %<CR>", { noremap = true, silent = true })
--- Updated ArchVbox 2026-04-23 21:28
+-- Run Python prog
+vim.keymap.set("n", "<leader>rp", ":w<CR>:!python %<CR>", { noremap = true, silent = true } )
+
+vim.keymap.set("n", ",z", ":wqa ", { noremap = true, silent = true } )
+-- Updated AsusArchReal 2026-05-29 21:28
