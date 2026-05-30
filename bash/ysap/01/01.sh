@@ -1,9 +1,3 @@
-#/usr/bin/env bash
+# Rename a file:
+mv file-44.txt file-4.txt
 
-echo REPL
-echo =
-echo Read Evaluate Print Loop
-
-pwd
-pwd -L
-pwd -P

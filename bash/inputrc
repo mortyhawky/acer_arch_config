@@ -2,7 +2,9 @@
 
 set editing-mode vi
 # Make Ctrl + L clear screen in vi insert mode
-set keymap vi-insert 
+set keymap vi-insert  
+"\C-l": clear-screen
+set keymap vi-command 
 "\C-l": clear-screen
 
 set show-mode-in-prompt on
@@ -12,6 +14,7 @@ set vi-ins-mode-string "\1\e[3 q\2"
 
 # Blinking Block in Command mode
 set vi-cmd-mode-string "\1\e[1 q\2"
+set keyseq-timeout 80
 
 #Code				Shape
 #\e[0 q				terminal default
