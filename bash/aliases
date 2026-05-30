@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 
-alias l="eza -lAh --color=auto --icons=auto --git"
+alias b="bat"
+alias c="f_cdls"
+alias eb="vim ~/.bashrc ~/.inputrc && source ~/.bashrc && bind -f ~/.inputrc"
+alias l="eza -lAh --icons=auto --git --sort modified -r"
 alias mkcd="f_mkcd"
+alias n="nvim"
+alias v="vim"
+alias vf="vifm"

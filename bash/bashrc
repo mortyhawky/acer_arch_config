@@ -3,6 +3,11 @@
 echo " ~/.config/bash/bashrc"
 #
 # Load modular components
-for file in ~/.config/bash/{exports,aliases,functions,prompt,completion};
+for file in ~/.config/bash/{exports,aliases,functions,prompt,completion}; do
     [ -f "$file" ] && source "$file"
 done
+
+# Make CapsLock a secondary Escape key
+sudo loadkeys $XDG_CONFIG_HOME/kbd/esc.map
+# Make ctrl+s useable
+stty -ixon

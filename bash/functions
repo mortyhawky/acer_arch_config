@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+function f_cdls {
+  cd $1
+  command eza -Alh --icons=auto --git --sort modified -r
+}
+alias c="f_cdls"
+
 function f_mkcd() {
   mkdir -p "$1"
   cd "$1"
