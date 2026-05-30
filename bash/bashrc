@@ -11,3 +11,6 @@ done
 sudo loadkeys $XDG_CONFIG_HOME/kbd/esc.map
 # Make ctrl+s useable
 stty -ixon
+
+source ~/.config/bash/debug
+#fastfetch

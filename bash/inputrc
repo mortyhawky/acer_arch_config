@@ -1,0 +1,42 @@
+# Reload with:  bind -f ~/.inputrc
+
+set editing-mode vi
+# Make Ctrl + L clear screen in vi insert mode
+set keymap vi-insert 
+"\C-l": clear-screen
+
+set show-mode-in-prompt on
+
+# Blinking I-beam in Insert mode
+set vi-ins-mode-string "\1\e[3 q\2"
+
+# Blinking Block in Command mode
+set vi-cmd-mode-string "\1\e[1 q\2"
+
+#Code				Shape
+#\e[0 q				terminal default
+#\e[1 q				blinking block
+#\e[2 q				steady block
+#\e[3 q				blinking underline
+#\e[4 q				steady underline
+#\e[5 q				blinking bar
+#\e[6 q				steady bar
+
+
+
+
+
+# Test with:    bind -v | grep mode-string
+#set editing-mode vi
+#set show-mode-in-prompt on
+#set vi-ins-mode-string "\1\033[5 q\2"
+#set vi-cmd-mode-string "\1\033[2 q\2"
+#set keyseq-timeout 100
+
+# Global options
+#set show-all-if-ambiguous on
+#set completion-ignore-case on
+#set colored-stats on
+#
+#set keymap vi-insert
+#"\C-l": clear-screen

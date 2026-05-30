@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo " ~/.config/debug"
+
+echo "\$TERM            = $TERM"
+echo "\$SHELL           = $SHELL"
+
+echo "\$BROWSER         = $BROWSER"
+echo "\$EDITOR          = $EDITOR"
+echo "\$XDG_CONFIG_HOME = $XDG_CONFIG_HOME"
+echo "\$XDG_STATE_HOME  = $XDG_STATE_HOME"
+echo "\$XAUTHORITY      = $XAUTHORITY"
+echo "\$XINITRC         = $XINITRC"

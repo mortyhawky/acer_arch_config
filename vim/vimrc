@@ -1,0 +1,50 @@
+"" """"""""""""""""""""""""""""""""""""""""""""""
+""  SETTINGS
+"" """"""""""""""""""""""""""""""""""""""""""""""
+" :echo &term
+
+set viminfofile=$XDG_STATE_HOME/vim/viminfo
+set viminfo='100,<1000,s100,h
+
+colorscheme default
+syntax on
+set relativenumber
+set number
+
+set colorcolumn=100
+"set cursorline
+"set cursorcolumn
+
+set tabstop=4
+set expandtab       " Convert Tabs to Spaces
+set shiftwidth=4
+
+set nowrap
+
+
+"" """"""""""""""""""""""""""""""""""""""""""""""
+""  MAPPINGS
+"" """"""""""""""""""""""""""""""""""""""""""""""
+let mapleader = " "
+
+" :sp	Split Hor	" :vs	Split Vert
+nnoremap <leader>=  <c-w>=         " Equalize splits
+nnoremap <leader>00 <c-w>=         " Equalize splits 
+
+nnoremap <c-h> <c-w>h	" ctrl + hjkl
+nnoremap <c-j> <c-w>j   " navigate
+nnoremap <c-k> <c-w>k	" vim
+nnoremap <c-l> <c-w>l	" windows
+
+nnoremap <leader>ff :Explore<cr>
+nnoremap <leader>nn :bn<cr>        " Buffer Next
+nnoremap <leader>pp :bn<cr>        " Buffer Previous
+
+nnoremap <c-s>      :wall<cr>
+inoremap <c-s> <esc>:wall<cr>
+
+
+"nnoremap <c-0>   :echo "C-0"<cr>    " Works
+"nnoremap <s-c-0> :echo "S-C-0"<cr>  " Not Working
+"nnoremap <c-=>   :echo "C-="<cr>    " Not Working
+"nnoremap <s-c-=> :echo "S-C-="<cr>  " Not Working
