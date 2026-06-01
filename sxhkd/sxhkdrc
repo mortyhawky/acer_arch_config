@@ -4,6 +4,9 @@
 ##  Following X keysym naming conventions
 ## ######################################################### 
 
+super + r
+  rofi -show drun
+
 ## Run terminal emulator 
 super + Return
   kitty

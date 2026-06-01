@@ -16,7 +16,7 @@ local display = os.getenv("DISPLAY") or os.getenv("WAYLAND_DISPLAY")
 if display and display ~= "" then
   vim.cmd("colorscheme habamax")
 else
-  vim.cmd("colorscheme default")
+  vim.cmd("colorscheme elflord")
 end
 
 vim.g.mapleader         = " "     -- Space as leader
@@ -82,3 +82,4 @@ vim.opt.writebackup     = false   -- Do not write to a backup file
 -- Updated acerWSL  2026-04-28 18:36 Tue
 -- Updated acerWin  2026-04-29 07:07 Wed
 -- Updated acerArch 2026-04-29 11:08 Wed
+-- Updated AcerArch 2026-05-31 07:47 Sun
