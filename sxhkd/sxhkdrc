@@ -15,19 +15,22 @@
 ## ###############################
 
 super + Return
-  wezterm
+  ~/.config/sxhkd/wrap_wezterm_start.sh
 
-super + w
-  firefox
+#super + w
+#  firefox
 
 super + p
-  dmenu_run
+  rofi -show drun
 
 super + r
   rofi -show drun
 
 super + a
-  wrap_sup_a.sh
+  ~/.config/sxhkd/wrap_wezterm_start.sh
+
+super + b
+  ~/.config/sxhkd/wrap_wezterm_start.sh
 
 ## Reload sxhkd
 ctrl + super + r
