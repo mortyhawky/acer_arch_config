@@ -1,6 +1,5 @@
 " vim: filetype=vim :
 
-
 " ------------------------------------------------------------------------------
 "  SETTINGS   ~/.config/vifm/vifmrc
 " ------------------------------------------------------------------------------
@@ -15,6 +14,8 @@ colorscheme istib-solarized-dark Default-256 Default
 "  MAPPINGS
 " ------------------------------------------------------------------------------
 "nnoremap s :!alacritty --working-directory="%d" &<cr>
+"nnoremap s :!wezterm
+"nnoremap s :!kitty
 "nnoremap s :cd %d | shell<cr>
 nnoremap s :shell<cr>
 nnoremap x :!sudo chmod +x "%f"<cr>
@@ -22,7 +23,7 @@ nnoremap X :!sudo chmod -x "%f"<cr>
 " Shift-Ctrl+E to edit as root
 nnoremap <c-e> :!sudo nvim "%f"<cr>
 " Open editor to edit vifmrc and apply settings after returning to vifm
-nnoremap ,ev :write | edit ~/.config/vifm/vifmrc
+nnoremap ,er :write | edit ~/.config/vifm/vifmrc
 nnoremap ,r :run<cr>
 nnoremap ,c :edit ~/.config/vifm/vifmrc<cr>:write | restart full<cr>
 
@@ -30,10 +31,10 @@ nnoremap ,c :edit ~/.config/vifm/vifmrc<cr>:write | restart full<cr>
 nnoremap ,lf :set followlinks
 nnoremap ,ln :set nofollowlinks
 " Automatically resolve symbolic links on l or Enter.
-set nofollowlinks
-"set followlinks
+"set nofollowlinks
+set followlinks
 
-nnoremap <tab> :echo "TAB"<cr>
+"nnoremap <tab> :echo "TAB"<cr>
 "nnoremap <esc> <esc> :echo "ESC"<cr> :echo "ESC"
 
 "Ctrl-W o - leave only one pane.                vifm-CTRL-W_o

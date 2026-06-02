@@ -1,23 +1,33 @@
-## ######################################################### 
-##  (Return, Tab, Escape, Space, BackSpace)  Capitalized
-##  (shift, alt, super, ctrl)                all lowercase
-##  Following X keysym naming conventions
-## ######################################################### 
+## ###############################
+##  BackSpace
+##  Escape
+##  Return
+##  Space
+##  Tab
+#   Are Capitalized.
+#   ------------------------------
+##  alt
+##  ctrl
+##  shift
+##  super
+#   Are lowercase, following
+#   X keysym conventions
+## ###############################
+
+super + Return
+  wezterm
+
+super + w
+  firefox
+
+super + p
+  dmenu_run
 
 super + r
   rofi -show drun
 
-## Run terminal emulator 
-super + Return
-  kitty
-
-## Run web browser
-super + w
-  firefox
-
-## Run program
-super + p
-  dmenu_run
+super + a
+  wrap_sup_a.sh
 
 ## Reload sxhkd
 ctrl + super + r
