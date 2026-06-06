@@ -48,6 +48,7 @@ nnoremap <c-j> :wincmd j<CR>
 nnoremap <c-k> :wincmd k<CR>
 nnoremap <c-l> :wincmd l<CR>
 
+nnoremap <c-s> :write
 " ------------------------------------------------------------------------------
 "  BOOKMARKS  m+letter to create '+letter to go to mark
 " ------------------------------------------------------------------------------

@@ -2,6 +2,10 @@
 Simple X Hot Key Daemon  
 `pm -S sxhkd`
 
+sxhkd -h
+sxhkd -c $XDG_CONFIG_HOME/sxhkd/bspwm_xhk &
+
+
 #### Create Repo on the CLI
 ```bash
 c ~/.config/sxhkd
@@ -22,3 +26,6 @@ git push -u origin main
 ```
 
 Use: `git status` to check
+git remote -v
+
+
