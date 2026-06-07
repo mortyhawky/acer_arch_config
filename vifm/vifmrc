@@ -18,8 +18,8 @@ colorscheme istib-solarized-dark Default-256 Default
 "nnoremap s :!kitty
 "nnoremap s :cd %d | shell<cr>
 nnoremap s :shell<cr>
-nnoremap x :!sudo chmod +x "%f"<cr>
-nnoremap X :!sudo chmod -x "%f"<cr>
+nnoremap X :!sudo chmod +x "%f"<cr>
+nnoremap x :!sudo chmod -x "%f"<cr>
 " Shift-Ctrl+E to edit as root
 nnoremap <c-e> :!sudo nvim "%f"<cr>
 " Open editor to edit vifmrc and apply settings after returning to vifm
