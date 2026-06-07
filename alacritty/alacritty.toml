@@ -1,12 +1,12 @@
 # $XDG_CONFIG_HOME/alacritty/alacritty.toml
 [general]
   import = [
+    "~/.config/alacritty/keybindings.toml",
     "~/.config/alacritty/themes/base16-3024.toml",
     #"~/.config/alacritty/themes/acme.toml",
     #"~/.config/alacritty/themes/base16_default_dark.toml",
     #"~/.config/alacritty/themes/Cobalt2.toml",
     #"~/.config/alacritty/themes/gruvbox_dark.toml",
-    "~/.config/alacritty/keybindings.toml",
   ] 
 
   working_directory  = "~"
@@ -31,10 +31,10 @@
 
 
 [font]
-  normal      = { family = "JetBrainsMono", style = "Regular" }
-  bold        = { family = "JetBrainsMono", style = "Bold" }
-  italic      = { family = "JetBrainsMono", style = "Italic" }
-  bold_italic = { family = "JetBrainsMono", style = "Bold Italic" }
+  normal      = { family = "JetBrainsMono NFM", style = "Regular" }
+  bold        = { family = "JetBrainsMono NFM", style = "Bold" }
+  italic      = { family = "JetBrainsMono NMF", style = "Italic" }
+  bold_italic = { family = "JetBrainsMono NMF", style = "Bold Italic" }
   size = 12
   offset = { x = 0, y = 0 }
   glyph_offset = { x = 0, y = 0 }
@@ -52,5 +52,4 @@
   background = '0x090300'
   foreground = '0xa5a2a2'
   #dim_foreground = "#111111"
-
 
