@@ -14,16 +14,14 @@
 #   X keysym conventions
 ## ###############################
 
-#super + Return
-#  ~/.config/sxhkd/wrap_wezterm_start.sh
+super + Return
+  /usr/bin/alacritty
+  #~/.config/sxhkd/wrap_wezterm_start.sh
 
-#super + w
-#  firefox
+super + w
+  firefox
 
 super + p
-  rofi -show drun
-
-super + r
   rofi -show drun
 
 super + a

@@ -27,5 +27,3 @@ git push -u origin main
 
 Use: `git status` to check
 git remote -v
-
-
