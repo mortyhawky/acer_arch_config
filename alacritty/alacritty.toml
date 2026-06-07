@@ -1,3 +1,4 @@
+# $XDG_CONFIG_HOME/alacritty/alacritty.toml
 [general]
   import = [
     "~/.config/alacritty/themes/base16-3024.toml",
@@ -11,9 +12,45 @@
   working_directory  = "~"
   live_config_reload = true
 
+
 [env]
-  MY_ENV_VAR = "mev"
+  MY_ENV_VAR = "my_env_variable"
+
 
 [window]
-  padding = { x = 5, y = 4 }
-  opacity = 0.6
+  padding = { x = 5, y = 5 }
+  #dynamic_padding = true
+  opacity = 0.60
+  #blur = true
+  decorations_theme_variant = "Dark"
+  resize_increments = true
+
+[scrolling]
+  history = 1000  # default is 10000
+  multiplier = 3  # default is     3
+
+
+[font]
+  normal      = { family = "JetBrainsMono", style = "Regular" }
+  bold        = { family = "JetBrainsMono", style = "Bold" }
+  italic      = { family = "JetBrainsMono", style = "Italic" }
+  bold_italic = { family = "JetBrainsMono", style = "Bold Italic" }
+  size = 12
+  offset = { x = 0, y = 0 }
+  glyph_offset = { x = 0, y = 0 }
+  builtin_box_drawing = true
+
+
+[colors]
+  draw_bold_text_with_bright_colors = false
+  # Set cursor colors redish              green
+  cursor = { text = "#690300", cursor = "#01a252" }
+  vi_mode_cursor = { text = "#fded02", "#000000" }
+
+# Default colors
+[colors.primary]
+  background = '0x090300'
+  foreground = '0xa5a2a2'
+  #dim_foreground = "#111111"
+
+
