@@ -2,7 +2,7 @@
 ""  SETTINGS
 "" """"""""""""""""""""""""""""""""""""""""""""""
 " :echo &term
-
+ 
 set viminfofile=$XDG_STATE_HOME/vim/viminfo
 set viminfo='100,<1000,s100,h
 
