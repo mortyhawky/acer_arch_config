@@ -1,11 +1,11 @@
 [general]
   import = [
     "~/.config/alacritty/themes/base16-3024.toml",
+    #"~/.config/alacritty/themes/acme.toml",
     #"~/.config/alacritty/themes/base16_default_dark.toml",
     #"~/.config/alacritty/themes/Cobalt2.toml",
-    #"~/.config/alacritty/base16-dark.toml",
-    #"~/.config/alacritty/keybindings.toml",
-    #"alacritty-theme/themes/gruvbox_dark.tom",
+    #"~/.config/alacritty/themes/gruvbox_dark.toml",
+    "~/.config/alacritty/keybindings.toml",
   ] 
 
   working_directory  = "~"
@@ -16,4 +16,4 @@
 
 [window]
   padding = { x = 5, y = 4 }
-  opacity = 0.8
+  opacity = 0.6

@@ -1,14 +1,25 @@
 #!/usr/bin/env bash
 
+### KEYBOARD ###
 #                              LAYOUT  MODEL   VARIANT     OPTIONS
-sudo localectl set-x11-keymap  no      pc105   nodeadkeys  caps:escape --no-convert &
-xmodmap $XDG_CONFIG_HOME/x11/.Xmodmap &
-$XDG_CONFIG_HOME/feh/.fehbg &
-#$XDG_CONFIG_HOME/x11/dwm_status.sh &
-xset -dpms s 20*60 & # 1200s/60s/min=20minutes
-#sxhkd & #
-sxhkd -c $XDG_CONFIG_HOME/sxhkd/bspwm_xhk &
+#sudo localectl set-x11-keymap  no      pc105   nodeadkeys  caps:escape --no-convert &
+#!/usr/bin/env bash
 
-#cd ~ &
+### KEYBOARD ###
+setxkbmap -layout no -model pc105 -variant nodeadkeys -option caps:escape
+xmodmap "$XDG_CONFIG_HOME/x11/.Xmodmap"
+
+### WALLPAPER ###
+"$XDG_CONFIG_HOME/feh/setWallPaper.sh" &
+
+### SCREEN SAVER ###
+xset -dpms s 2400
+
+### HOTKEY DAEMON ###
+sxhkd -c "$XDG_CONFIG_HOME/sxhkd/bspwm.xhk" &
+
+### COMPOSITOR ###
+picom --config "$XDG_CONFIG_HOME/picom/picom.conf" &
+
+### WINDOW MANAGER ###
 exec bspwm
-# No commands below here will be excuted.
