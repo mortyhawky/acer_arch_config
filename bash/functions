@@ -2,7 +2,8 @@
 
 function f_cdls {
   cd $1
-  command eza -Alh --icons=auto --git --sort modified -r
+  #command eza -Alh --icons=auto --git --sort modified -r
+  command eza -Alh --group-directories-first --icons=auto --git
 }
 alias c="f_cdls"
 

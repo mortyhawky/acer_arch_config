@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
-
 GREEN="\[$(tput setaf 2)\]"
 RESET="\[$(tput sgr0)\]"
 
-PS0="PS0: "
+#PS0="PS0: "
 #PS1="\u@\h:\w\$ "
 #PS1="ret:$? jobs:\j ${GREEN}\A ${PWD} \n>> ${RESET}"
-PS1="${GREEN}\${PWD}${RESET}\n>> "
-PS2="PS2: "
+PS1="\${PWD}${GREEN}\n>> ${RESET}"
+#PS2="PS2: "
