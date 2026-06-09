@@ -9,4 +9,6 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+
+
 -- Updated ArchReal 2026-04-20 20:55 Mon

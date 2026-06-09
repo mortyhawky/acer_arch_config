@@ -1,0 +1,3 @@
+# vim: filetype=sh :
+echo "~/.bash_logout"
+#sleep 1

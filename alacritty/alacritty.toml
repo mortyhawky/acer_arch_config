@@ -18,7 +18,7 @@
 
 
 [window]
-  padding = { x = 5, y = 5 }
+  padding = { x = 6, y = 6 }
   #dynamic_padding = true
   opacity = 0.60
   #blur = true
@@ -53,3 +53,12 @@
   foreground = '0xa5a2a2'
   #dim_foreground = "#111111"
 
+[cursor]
+  style = { shape = "Block", blinking = "On" }
+  blink_interval = 250
+  blink_timeout = 3
+  unfocused_hollow = true
+  thickness = 0.10
+
+[terminal]
+  shell = { program = "/usr/bin/bash", args = ["--login"] }

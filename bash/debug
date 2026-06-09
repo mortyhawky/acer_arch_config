@@ -2,13 +2,14 @@
 
 echo " ~/.config/debug"
 
-echo "\$TERM            = $TERM"
-echo "\$SHELL           = $SHELL"
+echo "INPUTRC         = $INPUTRC"
+echo "TERM            = $TERM"
+echo "SHELL           = $SHELL"
 
-echo "\$BROWSER         = $BROWSER"
-echo "\$EDITOR          = $EDITOR"
-echo "\$HOME            = $HOME"
-echo "\$XDG_CONFIG_HOME = $XDG_CONFIG_HOME"
-echo "\$XDG_STATE_HOME  = $XDG_STATE_HOME"
-echo "\$XAUTHORITY      = $XAUTHORITY"
-echo "\$XINITRC         = $XINITRC"
+echo "BROWSER         = $BROWSER"
+echo "EDITOR          = $EDITOR"
+echo "HOME            = $HOME"
+echo "XDG_CONFIG_HOME = $XDG_CONFIG_HOME"
+echo "XDG_STATE_HOME  = $XDG_STATE_HOME"
+echo "XAUTHORITY      = $XAUTHORITY"
+echo "XINITRC         = $XINITRC"

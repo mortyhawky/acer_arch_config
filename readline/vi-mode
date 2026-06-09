@@ -1,0 +1,8 @@
+# vim: filetype=readline :
+# vi-mode
+
+set editing-mode vi
+set show-mode-in-prompt on
+
+set vi-cmd-mode-string "[c] "
+set vi-ins-mode-string "[i] "

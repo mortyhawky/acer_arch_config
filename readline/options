@@ -1,0 +1,12 @@
+# vim: filetype=readline :
+# options
+
+set bell-style visible
+set mark-symlinked-directories on
+
+# Prevents pasted multiline commands 
+# from being executed accidentally.
+set enable-bracketed-paste on
+
+# Escape key timeout
+set keyseq-timeout 80

@@ -1,0 +1,13 @@
+# vim: filetype=readline :
+# keybinds
+# update with: bind -f ~/.inputrc
+
+set keymap vi-insert
+"\C-k": history-search-backward
+"\C-j": history-search-forward
+"\C-l": clear-screen
+
+set keymap vi-command
+"\C-k": history-search-backward
+"\C-j": history-search-forward
+"\C-l": clear-screen

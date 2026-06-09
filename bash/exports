@@ -4,6 +4,7 @@
 export EDITOR="/usr/bin/nvim"
 export BROWSER="/usr/bin/firefox"
 export XDG_CONFIG_HOME="$HOME/.config"
+export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 export XDG_STATE_HOME="$HOME/.local"
 export PATH="$XDG_STATE_HOME/bin:$PATH"
 export XAUTHORITY="$XDG_CONFIG_HOME/x11/.Xauthority"

@@ -1,0 +1,13 @@
+# vim: filetype=readline :
+# completion
+
+set completion-ignore-case on
+set show-all-if-ambiguous on
+
+set colored-stats on
+set colored-completion-prefix on
+
+# Avoids paging through completion lists.
+set page-completions off
+
+set history-size 1000

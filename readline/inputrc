@@ -1,0 +1,7 @@
+# vim: filetype=readline :
+# inputrc
+
+$include ~/.config/readline/options
+$include ~/.config/readline/vi-mode
+$include ~/.config/readline/keybinds
+$include ~/.config/readline/completions

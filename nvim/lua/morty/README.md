@@ -1,0 +1,5 @@
+#### Morty Neovim Config
+
+```
+
+```

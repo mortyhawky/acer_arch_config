@@ -40,9 +40,9 @@ vim.opt.wrap            = false   -- Disable line wrapping
 vim.opt.scrolloff       = 8       -- Keep 8 lines above/below cursor
 vim.opt.sidescrolloff   = 8       -- Keep 8 lines to the left/right of cursor
 
-vim.opt.tabstop         = 2       -- Visual width of a real tab character
-vim.opt.shiftwidth      = 2       -- Number of spaces for >> / << indentation
-vim.opt.softtabstop     = 2       -- <Tab>/<BS> count as 2 spaces in insert mode
+vim.opt.tabstop         = 4       -- Visual width of a real tab character
+vim.opt.shiftwidth      = 4       -- Number of spaces for >> / << indentation
+vim.opt.softtabstop     = 4       -- <Tab>/<BS> count as 4 spaces in insert mode
 vim.opt.expandtab       = true    -- Insert spaces when <Tab> is pressed
 vim.opt.smartindent     = true    -- Auto-indent new lines based on syntax context
 vim.opt.autoindent      = true    -- Copy indent level from current line on <CR>
