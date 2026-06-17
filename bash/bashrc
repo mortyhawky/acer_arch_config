@@ -15,7 +15,7 @@ sudo loadkeys $XDG_CONFIG_HOME/kbd/esc.map
 stty -ixon
 
 # Uncomment to turn on debugging
-#source ~/.config/bash/debug
+source ~/.config/bash/debug
 
 #fastfetch
 #neofetch

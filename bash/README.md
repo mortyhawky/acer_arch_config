@@ -1,9 +1,9 @@
 #### M2B = MMB = Minial Modular Bash
 
+:r !tree --sort name
 ```bash
-(:r !tree --sort name)
 ~/.config/bash
-    ├── README.md
+    ├── 01installSyms.sh
     ├── aliases
     ├── bash_logout
     ├── bash_profile
@@ -12,6 +12,7 @@
     ├── debug
     ├── exports
     ├── functions
-    ├── inputrc
-    └── prompt
+    ├── prompt
+    └── README.md
 ```
+1 directory, 11 files

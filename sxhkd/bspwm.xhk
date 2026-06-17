@@ -21,7 +21,7 @@ super + Return
 super + w
   firefox
 
-super + p
+super + r
   rofi -show drun
 
 super + a

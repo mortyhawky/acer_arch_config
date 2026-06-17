@@ -2,7 +2,7 @@
 -- ~/.config/nvim/init.lua
 -- =====================================
 
---require("morty")
+--           require("morty")
 -- ~/.config/nvim/lua/morty
 
              require("phaeno")

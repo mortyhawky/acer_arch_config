@@ -2,11 +2,14 @@
 -- KEYMAPS
 -- =====================================
 
-vim.g.mapleader = " "
-
 vim.keymap.set( {"n","i"}, "<C-s>", "<Esc><Cmd>:write<Cr><Cmd>:nohls<Cr>" )
 vim.keymap.set( {"n","i"}, "<Esc>", "<Esc><Cmd>:nohls<Cr>")
+
 vim.keymap.set(  "n",      "Y",     "y$")
+vim.keymap.set(  "n",      "w",     "W")
+vim.keymap.set(  "n",      "W",     "w")
+vim.keymap.set(  "n",      "b",     "B")
+vim.keymap.set(  "n",      "B",     "b")
 
 -- Replaces selected text WITHOUT
 -- losing what you yanked
@@ -36,5 +39,3 @@ vim.keymap.set( "n", "<C-u>", "<C-u>zz" )
 vim.keymap.set( "n", "n", "nzzzv" )
 -- Prev search result cursor centered
 vim.keymap.set( "n", "N", "Nzzzv" )
-
-

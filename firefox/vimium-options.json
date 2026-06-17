@@ -1,0 +1,9 @@
+{
+  "exclusionRules": [],
+  "keyMappings": "map <C-d> scrollPageDown\nmap <C-t> createTab",
+  "newTabCustomUrl": "https://start.duckduckgo.com",
+  "newTabDestination": "customUrl",
+  "openVomnibarOnNewTabPage": false,
+  "scrollStepSize": 100,
+  "settingsVersion": "2.4.2"
+}

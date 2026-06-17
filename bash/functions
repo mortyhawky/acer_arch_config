@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
-function f_cdls {
-  cd $1
-  #command eza -Alh --icons=auto --git --sort modified -r
-  command eza -Alh --group-directories-first --icons=auto --git
+function f_eza() {
+    command eza $1 -alh --sort=name --group-directories-first --icons=auto --git
 }
-alias c="f_cdls"
+
+function f_cdls() {
+  cd $1
+  f_eza
+}
 
 function f_mkcd() {
   mkdir -p "$1"
-  cd "$1"
+  f_cdls $1
 }
-alias mkcd="f_mkcd"
