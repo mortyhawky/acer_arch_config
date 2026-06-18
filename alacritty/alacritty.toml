@@ -2,7 +2,7 @@
 [general]
   import = [
     "~/.config/alacritty/keybindings.toml",
-    "~/.config/alacritty/my_3024_toml.toml",
+    "~/.config/alacritty/_my_3024_toml.toml",
     #"~/.config/alacritty/themes/base16-3024.toml",
     #"~/.config/alacritty/themes/acme.toml",
     #"~/.config/alacritty/themes/base16_default_dark.toml",
