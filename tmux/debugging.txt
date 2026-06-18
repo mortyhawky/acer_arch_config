@@ -1,0 +1,2 @@
+tmux list-keys | g user
+cat -v

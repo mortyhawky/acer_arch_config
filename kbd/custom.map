@@ -13,3 +13,11 @@ alt keycode 53 = F14
 # alt + |  returns:    ^[[25~   while TERM=linux            (pure linux tty)
 # alt + -  returns:    ^[[1:2Q  while TERM=xterm-256color
 # alt + -  returns:    ^[[26~   while TERM=linux
+
+
+##--## # in tmux
+##--## # vertical split
+##--## bind-key -n '\e[25~' split-window -h
+##--## 
+##--## # horizontal split
+##--## bind-key -n '\e[26~' split-window

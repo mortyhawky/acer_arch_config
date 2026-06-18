@@ -11,6 +11,7 @@ done
 #
 # Make CapsLock a secondary Escape key
 sudo loadkeys $XDG_CONFIG_HOME/kbd/esc.map
+sudo loadkeys $XDG_CONFIG_HOME/kbd/custom.map
 # Make ctrl+s useable
 stty -ixon
 
