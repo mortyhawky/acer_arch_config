@@ -1,0 +1,13 @@
+### custom.map
+###-----------
+
+# showkey
+# | is keycode 41
+# - is keycode 
+keycode     58 = Escape
+
+alt keycode 41 = F13
+
+# cat -v
+# gives me:    ^[[1:2P  in tmux   TERM=xterm-256color
+#              ^[[25~   in linux  TERM=linux
