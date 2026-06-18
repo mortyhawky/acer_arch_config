@@ -1,0 +1,8 @@
+{
+  "exclusionRules": [],
+  "keyMappings": "map H goBack\nmap J nextTab\nmap K previousTab\nmap H goBack",
+  "newTabCustomUrl": "https://start.duckduckgo.com",
+  "newTabDestination": "customUrl",
+  "scrollStepSize": 120,
+  "settingsVersion": "2.4.2"
+}

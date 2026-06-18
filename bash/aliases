@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 
-#alias l="eza -lAh --icons=auto --git --sort modified -r"
+#alias ea="nvim $XDG_CONFIG_HOME/bash/aliases && source $HOME/.bashrc"
 alias b="bat"
 alias c="f_cdls"
-alias ea="nvim $XDG_CONFIG_HOME/bash/aliases && source $HOME/.bashrc"
-alias er="nvim $XDG_CONFIG_HOME/bash/bashrc && source $HOME/.bashrc"
+alias dm="sudo dmesg"
+alias ea="nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml"
+alias eb="nvim $XDG_CONFIG_HOME/bash/bashrc     \
+               $XDG_CONFIG_HOME/bash/aliases    \
+               $XDG_CONFIG_HOME/bash/aliases && \
+               source $HOME/.bashrc"
 alias ew="nvim $XDG_CONFIG_HOME/wezterm/wezterm.lua"
+alias fdisk="sudo fdisk --list"
 alias g="grep -i --color=auto"
 alias ga="git add -Av"
 alias gc="git commit -m "$(date -Iseconds)""
@@ -13,10 +18,11 @@ alias gp="git push -u origin main"
 alias gr="git remote -v"
 alias gs="git status --short"
 alias l="f_eza"
+alias lb="lsblk -o NAME,FSTYPE,UUID"
 alias mkcd="f_mkcd"
 alias pm="sudo pacman --color=auto"
-alias reboot="sudo reboot"
 alias poweroff="sudo poweroff"
+alias reboot="sudo reboot"
 alias sb="clear && source $HOME/.bashrc"
 alias sc="sudo systemctl"
 alias t="tmux"

@@ -2,14 +2,13 @@
 -- KEYMAPS
 -- =====================================
 
-vim.keymap.set( {"n","i"}, "<C-s>", "<Esc><Cmd>:write<Cr><Cmd>:nohls<Cr>" )
-vim.keymap.set( {"n","i"}, "<Esc>", "<Esc><Cmd>:nohls<Cr>")
+vim.keymap.set( {"n","i"}, "<C-s>",      "<Esc><Cmd>:write<Cr><Cmd>:nohls<Cr>" )
+vim.keymap.set(  "n",      "<leader>so", "<Cmd>:source<CR><Cmd>:nohls<Cr>:echo 'Sourced'<CR>" )
+vim.keymap.set( {"n","i"}, "<Esc>",      "<Esc><Cmd>:nohls<Cr>")
+vim.keymap.set( {"n","i"}, "C-c",        "<Esc><Cmd>:nohls<Cr>:echo 'Esc'<CR>'" )
 
+-- Yank form to cursor to end of line
 vim.keymap.set(  "n",      "Y",     "y$")
-vim.keymap.set(  "n",      "w",     "W")
-vim.keymap.set(  "n",      "W",     "w")
-vim.keymap.set(  "n",      "b",     "B")
-vim.keymap.set(  "n",      "B",     "b")
 
 -- Replaces selected text WITHOUT
 -- losing what you yanked
@@ -39,3 +38,5 @@ vim.keymap.set( "n", "<C-u>", "<C-u>zz" )
 vim.keymap.set( "n", "n", "nzzzv" )
 -- Prev search result cursor centered
 vim.keymap.set( "n", "N", "Nzzzv" )
+
+

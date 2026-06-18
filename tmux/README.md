@@ -1,10 +1,13 @@
 ### My tmux settings:
 
+Link:
+[https://github.com/tmux/tmux/wiki]
+
 ```bash
 cd ~/.config/tmux
 git init
 echo "#### My tmux config" >> README.md
-git add .
+git add -Av
 git commit -m "Initial commit"
 ```
 

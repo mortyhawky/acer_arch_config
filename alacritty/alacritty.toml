@@ -2,7 +2,8 @@
 [general]
   import = [
     "~/.config/alacritty/keybindings.toml",
-    "~/.config/alacritty/themes/base16-3024.toml",
+    "~/.config/alacritty/my_3024_toml.toml",
+    #"~/.config/alacritty/themes/base16-3024.toml",
     #"~/.config/alacritty/themes/acme.toml",
     #"~/.config/alacritty/themes/base16_default_dark.toml",
     #"~/.config/alacritty/themes/Cobalt2.toml",
@@ -18,12 +19,13 @@
 
 
 [window]
-  padding = { x = 6, y = 6 }
-  #dynamic_padding = true
+  padding = { x = 10, y = 10 }
+  dynamic_padding = true
   opacity = 0.60
   #blur = true
   decorations_theme_variant = "Dark"
   resize_increments = true
+
 
 [scrolling]
   history = 1000  # default is 10000
@@ -31,26 +33,26 @@
 
 
 [font]
-  normal      = { family = "JetBrainsMono NFM", style = "Regular" }
-  bold        = { family = "JetBrainsMono NFM", style = "Bold" }
-  italic      = { family = "JetBrainsMono NMF", style = "Italic" }
-  bold_italic = { family = "JetBrainsMono NMF", style = "Bold Italic" }
-  size = 12
+  normal      = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+  bold        = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+  italic      = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
+  bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
+  size = 10.5
   offset = { x = 0, y = 0 }
   glyph_offset = { x = 0, y = 0 }
   builtin_box_drawing = true
 
 
 [colors]
-  draw_bold_text_with_bright_colors = false
-  # Set cursor colors redish              green
-  cursor = { text = "#690300", cursor = "#01a252" }
-  vi_mode_cursor = { text = "#fded02", "#000000" }
+  #draw_bold_text_with_bright_colors = false
+  ## Set cursor colors redish              green
+  #cursor = { text = "0x090300", cursor = "0xa5a2a2" }
+  #vi_mode_cursor = { text = "#fded02", "#000000" }
 
 # Default colors
 [colors.primary]
-  background = '0x090300'
-  foreground = '0xa5a2a2'
+  #background = '0x090300'
+  #foreground = '0xa5a2a2'
   #dim_foreground = "#111111"
 
 [cursor]

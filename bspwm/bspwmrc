@@ -2,17 +2,20 @@
 
 #pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+#bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d 1 2 3 4
 
-bspc config border_width                    3
-bspc config window_gap                     13
-bspc config normal_border_color      '#444444'
-bspc config active_border_color      '#666666'
-bspc config focused_border_color     '#005577'
-bspc config preselect_feedback_color '#00ff88'
+bspc config border_width                        3
+bspc config window_gap                         13
+
+bspc config normal_border_color          '#3a3432'
+bspc config active_border_color          '#01a252'
+bspc config focused_border_color         '#01a252'
+bspc config preselect_feedback_color     '#00ff88'
+#bspc config focused_monocle_border_color "#db2d20"
 
 bspc config split_ratio                     0.54
-bspc config borderless_monocle              false
+bspc config borderless_monocle              true
 bspc config gapless_monocle                 false
 
 
