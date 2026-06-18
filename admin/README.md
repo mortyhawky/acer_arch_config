@@ -2,11 +2,17 @@
 
 #### Info and scripts for administration of config files.  
 
-```zsh
-01-backup-config
+Create list of explicitly installed packages:
+```bash
+pacman -Qqe > pkglist.txt
 ```
 
-Push to git:  
-```zsh
-git pull
+Restore with:
+```bash
+pacman -S --needed - < pkglist.txt
+```
+
+Or even cleaner:
+```bash
+pacman -S --needed $(<pkglist.txt)
 ```

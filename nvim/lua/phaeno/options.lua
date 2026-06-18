@@ -29,7 +29,7 @@ vim.opt.isfname:append("@-@")
 vim.opt.guicursor       = ""
 
 vim.opt.scrolloff       = 8
-vim.opt.colorcolumn     = "62"
+vim.opt.colorcolumn     = "70"
 
 vim.opt.cursorline      = true
 vim.opt.cursorcolumn    = true
