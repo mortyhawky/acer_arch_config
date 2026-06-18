@@ -1,0 +1,6 @@
+Standard:
+Ctrl+Shift+S    Extensions and Themes
+
+Vimium:
+Shift+H         goBack
+Shift+L         goForward

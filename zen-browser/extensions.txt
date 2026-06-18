@@ -2,3 +2,4 @@ Dark Reader
 I don't care about cookies
 New Tab Override
 Vimium
+Read Aloud
