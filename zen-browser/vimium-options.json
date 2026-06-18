@@ -1,6 +1,6 @@
 {
   "exclusionRules": [],
-  "keyMappings": "map H goBack\nmap J nextTab\nmap K previousTab\nmap H goBack",
+  "keyMappings": "map H goBack\nmap J nextTab\nmap K previousTab\nmap H goBack\nmap <C-d> scrollPageDown\nmap <C-d> scrollPageUp",
   "newTabCustomUrl": "https://start.duckduckgo.com",
   "newTabDestination": "customUrl",
   "scrollStepSize": 120,
