@@ -1,5 +1,6 @@
 " vim: filetype=vim :
-
+"
+"
 " ------------------------------------------------------------------------------
 "  SETTINGS   ~/.config/vifm/vifmrc
 " ------------------------------------------------------------------------------
@@ -9,25 +10,22 @@ set dotfiles
 set relativenumber  
 " List of color schemes to try (picks the first one supported by the terminal)
 colorscheme istib-solarized-dark Default-256 Default
-
+"
+"
 " ------------------------------------------------------------------------------
 "  MAPPINGS
 " ------------------------------------------------------------------------------
-"nnoremap s :!alacritty --working-directory="%d" &<cr>
-"nnoremap s :!wezterm
-"nnoremap s :!kitty
-"nnoremap s :cd %d | shell<cr>
 nnoremap s :shell<cr>
 nnoremap X :!sudo chmod +x "%f"<cr>
 nnoremap x :!sudo chmod -x "%f"<cr>
 " Shift-Ctrl+E to edit as root
-nnoremap <c-e> :!sudo nvim "%f"<cr>
+nnoremap <C-e> :!sudo nvim "%f"<cr>
 " Open editor to edit vifmrc and apply settings after returning to vifm
 nnoremap ,er :write | edit ~/.config/vifm/vifmrc
 nnoremap ,r :run<cr>
 nnoremap ,c :edit ~/.config/vifm/vifmrc<cr>:write | restart full<cr>
 
-" ,fl = Resolve Symlinks
+" Resolve Symlinks
 nnoremap ,lf :set followlinks
 nnoremap ,ln :set nofollowlinks
 " Automatically resolve symbolic links on l or Enter.
@@ -43,12 +41,13 @@ set followlinks
 nnoremap <SPACE>- <C-W>s :echo "Horizontal Split"<cr>
 nnoremap <SPACE>| <C-W>v :echo "Vertical Split"<cr>
 nnoremap <SPACE>m <C-W>o :echo "Monocle"<cr>
-nnoremap <c-h> :wincmd h<CR>
-nnoremap <c-j> :wincmd j<CR>
-nnoremap <c-k> :wincmd k<CR>
-nnoremap <c-l> :wincmd l<CR>
-
-nnoremap <c-s> :write
+nnoremap <C-h> :wincmd h<CR>
+nnoremap <C-j> :wincmd j<CR>
+nnoremap <C-k> :wincmd k<CR>
+nnoremap <C-l> :wincmd l<CR>
+"nnoremap <C-s> :write
+"
+"
 " ------------------------------------------------------------------------------
 "  BOOKMARKS  m+letter to create '+letter to go to mark
 " ------------------------------------------------------------------------------
@@ -583,13 +582,13 @@ elseif $DISPLAY != ''
 endif
 
 " Mappings for faster renaming
-nnoremap I cw<c-a>
-nnoremap cc cw<c-u>
+nnoremap I cw<C-a>
+nnoremap cc cw<C-u>
 nnoremap A cw
 
 " As above, but without the file extension
-" nnoremap I cW<c-a>
-" nnoremap cc cW<c-u>
+" nnoremap I cW<C-a>
+" nnoremap cc cW<C-u>
 " nnoremap A cW
 
 " Open console in current directory
@@ -622,7 +621,7 @@ nnoremap <a-i> :sync<cr>
 " Open directory under cursor in the other pane
 nnoremap <a-o> :sync %c<cr>
 " Swap panes (uncomment if you don't need builtin behaviour of Ctrl-U)
-" nnoremap <c-u> <c-w>x
+" nnoremap <C-u> <C-w>x
 
 " ------------------------------------------------------------------------------
 " Panel configuration examples

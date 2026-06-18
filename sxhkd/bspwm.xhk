@@ -19,8 +19,9 @@ super + Return
   #~/.config/sxhkd/wrap_wezterm_start.sh
 
 super + w
-  zen
-  #firefox
+  firefox
+  #brave
+  #zen
 
 super + r
   rofi -show drun
