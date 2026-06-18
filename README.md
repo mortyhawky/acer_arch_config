@@ -11,7 +11,7 @@ git clone https://github.com/mortyhawky/acer_arch_config.git ~/.config
 ```
 
 git aliases:
-- gr  git remote -v
+- gr  git remote --verbose
 - gs  git status --short
 - ga  git add -Av
 - gc  git commit --message '$(date -Iseconds)'
