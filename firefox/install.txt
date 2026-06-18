@@ -1,0 +1,2 @@
+pm -S firefox
+pm -S speech-dispatcher
