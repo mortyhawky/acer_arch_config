@@ -16,6 +16,7 @@ colorscheme istib-solarized-dark Default-256 Default
 "  MAPPINGS
 " ------------------------------------------------------------------------------
 nnoremap s :shell<cr>
+" X set file executable, x set file non-executable
 nnoremap X :!sudo chmod +x "%f"<cr>
 nnoremap x :!sudo chmod -x "%f"<cr>
 " Shift-Ctrl+E to edit as root
