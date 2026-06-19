@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Atelier Seaside Wallpaper</title>
+<style>
+  :root{
+    --b00:#131513; --b01:#242924; --b02:#5e6e5e; --b03:#687d68;
+    --b04:#809980; --b05:#8ca68c; --b06:#cfe8cf; --b07:#f4fbf4;
+    --b08:#e6193c; --b09:#87711d; --b0A:#98981b; --b0B:#29a329;
+    --b0C:#1999b3; --b0D:#3d62f5; --b0E:#ad2bee; --b0F:#e619c3;
+  }
+  html,body{margin:0;padding:0;background:var(--b00);overflow:hidden;}
+  #wrap{
+    width:1920px; height:1080px;
+    position:relative;
+    background: radial-gradient(circle at 75% 15%, var(--b01) 0%, var(--b00) 55%);
+    overflow:hidden;
+  }
+  svg{position:absolute; top:0; left:0;}
+  #grain{
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 3px);
+    mix-blend-mode:overlay;
+    pointer-events:none;
+  }
+  #moon{
+    position:absolute; top:120px; right:260px;
+    width:140px; height:140px; border-radius:50%;
+    background: radial-gradient(circle at 35% 35%, var(--b07), var(--b06) 60%, var(--b04) 100%);
+    box-shadow: 0 0 90px 30px rgba(140,166,140,0.25);
+  }
+  .star{
+    position:absolute; border-radius:50%;
+    background:var(--b07);
+  }
+</style>
+</head>
+<body>
+<div id="wrap">
+
+  <!-- Stars -->
+  <div id="stars"></div>
+
+  <!-- Moon -->
+  <div id="moon"></div>
+
+  <!-- Mountain layers as SVG -->
+  <svg width="1920" height="1080" viewBox="0 0 1920 1080">
+    <!-- Far ridge -->
+    <polygon points="0,650 200,560 420,610 650,520 900,600 1150,540 1400,610 1650,560 1920,630 1920,1080 0,1080"
+             fill="#243024" opacity="0.9"/>
+    <!-- Mid ridge -->
+    <polygon points="0,760 180,690 380,740 600,650 880,720 1100,660 1350,730 1600,670 1920,740 1920,1080 0,1080"
+             fill="#3a4a3a" opacity="0.95"/>
+    <!-- Near ridge -->
+    <polygon points="0,880 250,800 500,850 760,770 1020,840 1280,780 1560,850 1920,800 1920,1080 0,1080"
+             fill="#5e6e5e"/>
+    <!-- Foreground silhouette -->
+    <polygon points="0,980 300,920 560,960 820,900 1080,950 1350,890 1620,940 1920,910 1920,1080 0,1080"
+             fill="#131513"/>
+
+    <!-- Sun/accent glow ring behind moon area, subtle color accents as distant lights -->
+    <circle cx="450" cy="640" r="4" fill="#e6193c"/>
+    <circle cx="980" cy="610" r="4" fill="#3d62f5"/>
+    <circle cx="1500" cy="630" r="4" fill="#ad2bee"/>
+    <circle cx="700" cy="660" r="3" fill="#98981b"/>
+    <circle cx="1250" cy="650" r="3" fill="#1999b3"/>
+  </svg>
+
+  <div id="grain"></div>
+</div>
+
+<script>
+  // Generate scattered stars with varying size/opacity using base16 light tones
+  const starsContainer = document.getElementById('stars');
+  const starColors = ['#f4fbf4', '#cfe8cf', '#8ca68c'];
+  for(let i=0; i<160; i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2 + 0.6;
+    s.style.width = size + 'px';
+    s.style.height = size + 'px';
+    s.style.left = Math.random() * 1920 + 'px';
+    s.style.top = Math.random() * 600 + 'px';
+    s.style.background = starColors[Math.floor(Math.random()*starColors.length)];
+    s.style.opacity = Math.random() * 0.8 + 0.2;
+    starsContainer.appendChild(s);
+  }
+</script>
+</body>
+</html>

@@ -1,31 +1,57 @@
 #!/usr/bin/env bash
 
-#alias ea="nvim $XDG_CONFIG_HOME/bash/aliases && source $HOME/.bashrc"
+####################################################
+## GENERAL
+####################################################
 alias b="bat"
 alias c="f_cdls"
-alias dm="sudo dmesg"
-alias ea="nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml"
-alias eb="nvim $XDG_CONFIG_HOME/bash/bashrc     \
-               $XDG_CONFIG_HOME/bash/aliases    \
-               $XDG_CONFIG_HOME/bash/aliases && \
-               source $HOME/.bashrc"
-alias ew="nvim $XDG_CONFIG_HOME/wezterm/wezterm.lua"
-alias fdisk="sudo fdisk --list"
 alias g="grep -i --color=auto"
-alias ga="git add -Av"
-alias gc="git commit --message '$(date -Iseconds)'"
-alias gp="git push --set-upstream origin main"
-alias gr="git remote -v"
-alias gs="git status --short"
-alias l="f_eza"
-alias lb="lsblk -o NAME,FSTYPE,UUID,MOUNTPOINT"
-alias mkcd="f_mkcd"
-alias pm="sudo pacman --color=auto"
-alias poweroff="sudo poweroff"
-alias reboot="sudo reboot"
-alias sb="clear && source $HOME/.bashrc"
-alias sc="sudo systemctl"
 alias t="tmux"
 alias v="nvim"
 alias vf="vifm"
 alias x="startx"
+
+
+####################################################
+## EDIT CONFIGS
+####################################################
+alias eb="nvim $XDG_CONFIG_HOME/bash/exports    \
+               $XDG_CONFIG_HOME/bash/aliases    \
+               $XDG_CONFIG_HOME/bash/functions  \
+               $XDG_CONFIG_HOME/bash/prompt     \
+               $XDG_CONFIG_HOME/bash/completion \
+                && source $HOME/.bashrc"
+alias ea="nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml \
+               $XDG_CONFIG_HOME/alacritty/keybidings"
+alias ew="nvim $XDG_CONFIG_HOME/wezterm/wezterm.lua"
+
+
+####################################################
+## GIT
+####################################################
+alias gr="git remote -v"
+alias gs="git status --short"
+alias ga="git add -Av"
+alias gc="git commit --message '$(date -Iseconds)'"
+alias gp="git push --set-upstream origin main"
+alias gitall="gr && gs && ga && gc && gp"
+
+
+####################################################
+## FILESYSTEM
+####################################################
+alias l="f_eza"
+alias mkcd="f_mkcd"
+alias sb="clear && source $HOME/.bashrc"
+alias sc="sudo systemctl"
+
+
+####################################################
+## ADMIN
+####################################################
+alias dm="sudo dmesg"
+alias fdisk="sudo fdisk --list"
+alias lb="lsblk -o NAME,FSTYPE,UUID,MOUNTPOINT"
+alias pm="sudo pacman --color=auto"
+alias poweroff="sudo poweroff"
+alias reboot="sudo reboot"
