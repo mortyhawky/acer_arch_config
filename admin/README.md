@@ -24,3 +24,9 @@ systemctl status |grep service > \
     $XDG_CONFIG_HOME/admin/services.txt \
     cat $XDG_CONFIG_HOME/admin/services.txt
 ```
+
+Check dmesg:
+```bash
+sudo dmesg |grep --color error
+sudo dmesg |grep --color -i microcode
+```

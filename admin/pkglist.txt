@@ -3,15 +3,19 @@ alsa-utils
 base
 base-devel
 bat
+brave-bin
 bspwm
+btop
 efibootmgr
 exfatprogs
 eza
+fastfetch
 feh
 firefox
 git
 github-cli
 grub
+htop
 impala
 iwd
 less
@@ -28,7 +32,6 @@ picom
 pulseaudio
 rofi
 sof-firmware
-speech-dispatcher
 sudo
 sxhkd
 texinfo
