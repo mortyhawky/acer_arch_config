@@ -3,7 +3,9 @@
 -- =====================================
 
 
-vim.keymap.set( "n",        "ZZ",        ":wqa<CR>" )
+-- Write all changed buffers and exit
+vim.keymap.set( "n",        "ZZ",        ":wqall<CR>" )
+--vim.keymap.set( "i",        "<A-p>"      
 
 vim.keymap.set( {"n","i"}, "<C-s>",      "<Esc><Cmd>:write<CR><Cmd>:nohls<CR>" )
 vim.keymap.set(  "n",      "<leader>so", "<Cmd>:source<CR><Cmd>:nohls<CR>:echo 'Sourced'<CR>" )
@@ -41,5 +43,3 @@ vim.keymap.set( "n", "<C-u>", "<C-u>zz" )
 vim.keymap.set( "n", "n", "nzzzv" )
 -- Prev search result cursor centered
 vim.keymap.set( "n", "N", "Nzzzv" )
-
-

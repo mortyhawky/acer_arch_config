@@ -37,8 +37,7 @@ alias ea="nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml \
 
 alias ew="nvim $XDG_CONFIG_HOME/wezterm/wezterm.lua"
 
-alias eg="sudo nvim /etc/default/grub && \
-            sudo grub-mkconfig -o ~/_grub_test_.conf"
+alias eg="sudo nvim /etc/default/grub && sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 
 ####################################################
