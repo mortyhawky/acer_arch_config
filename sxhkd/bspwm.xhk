@@ -13,6 +13,7 @@
 #    lowercase, (X keysym conventions)
 ## ####################################
 
+ctrl + 
 super + F8
     env > /tmp/sxhkd-env
 

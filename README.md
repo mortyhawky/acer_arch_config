@@ -1,4 +1,4 @@
-#### acer_arch_config.git
+#l### acer_arch_config.git
 
 ##### /home/m/.config/  $HOME/.config/   ~/.config/        
 
@@ -16,4 +16,3 @@ git aliases:
 - ga  git add -Av
 - gc  git commit --message '$(date -Iseconds)'
 - gp  git push origin --set-upstream origin main
-
