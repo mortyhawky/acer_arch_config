@@ -4,15 +4,16 @@
 
 Create list of explicitly installed packages:
 ```bash
-pacman -Qqe > pkglist.txt
+pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist.txt
+bat $XDG_CONFIG_HOME/admin/pkglist.txt
 ```
 
 Restore with:
 ```bash
-pacman -S --needed - < pkglist.txt
+pacman -S --needed - <$XDG_CONFIG_HOME/admin/pkglist.txt 
 ```
 
 Or even cleaner:
 ```bash
-pacman -S --needed $(<pkglist.txt)
+pacman -S --needed $(<$XDG_CONFIG_HOME/admin/pkglist.txt)
 ```
