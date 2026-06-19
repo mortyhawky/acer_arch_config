@@ -1,6 +1,7 @@
 alacritty
 alsa-utils
 base
+base-devel
 bat
 bspwm
 efibootmgr
@@ -8,7 +9,6 @@ exfatprogs
 eza
 feh
 firefox
-flatpak
 git
 github-cli
 grub
@@ -22,6 +22,8 @@ man-db
 man-pages
 neovim
 os-prober
+paru
+paru-debug
 picom
 pulseaudio
 rofi
@@ -41,3 +43,4 @@ xf86-video-intel
 xorg-server
 xorg-xinit
 xorg-xset
+zen-browser-bin

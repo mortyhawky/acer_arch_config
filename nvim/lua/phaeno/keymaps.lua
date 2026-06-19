@@ -2,10 +2,13 @@
 -- KEYMAPS
 -- =====================================
 
-vim.keymap.set( {"n","i"}, "<C-s>",      "<Esc><Cmd>:write<Cr><Cmd>:nohls<Cr>" )
-vim.keymap.set(  "n",      "<leader>so", "<Cmd>:source<CR><Cmd>:nohls<Cr>:echo 'Sourced'<CR>" )
-vim.keymap.set( {"n","i"}, "<Esc>",      "<Esc><Cmd>:nohls<Cr>")
---vim.keymap.set( {"n","i"}, "C-c",        "<Esc><Cmd>:nohls<Cr>:echo 'Esc'<CR>'" )
+
+vim.keymap.set( "n",        "ZZ",        ":wqa<CR>" )
+
+vim.keymap.set( {"n","i"}, "<C-s>",      "<Esc><Cmd>:write<CR><Cmd>:nohls<CR>" )
+vim.keymap.set(  "n",      "<leader>so", "<Cmd>:source<CR><Cmd>:nohls<CR>:echo 'Sourced'<CR>" )
+vim.keymap.set( {"n","i"}, "<Esc>",      "<Esc><Cmd>:nohls<CR>")
+--vim.keymap.set( {"n","i"}, "C-c",        "<Esc><Cmd>:nohls<CR>:echo 'Esc'<CR>'" )
 
 -- Yank form to cursor to end of line
 vim.keymap.set(  "n",      "Y",     "y$")

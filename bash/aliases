@@ -3,9 +3,11 @@
 ####################################################
 ## GENERAL
 ####################################################
+alias a="alias"
 alias b="bat"
 alias c="f_cdls"
 alias g="grep -i --color=auto"
+alias ff="clear && fastfetch"
 alias t="tmux"
 alias v="nvim"
 alias vf="vifm"
@@ -15,15 +17,28 @@ alias x="startx"
 ####################################################
 ## EDIT CONFIGS
 ####################################################
-alias eb="nvim $XDG_CONFIG_HOME/bash/exports    \
-               $XDG_CONFIG_HOME/bash/aliases    \
+alias ev="nvim $XDG_CONFIG_HOME/nvim/init.lua"
+
+alias eb="nvim $XDG_CONFIG_HOME/bash/aliases    \
                $XDG_CONFIG_HOME/bash/functions  \
-               $XDG_CONFIG_HOME/bash/prompt     \
+               $XDG_CONFIG_HOME/bash/exports    \
+               $XDG_CONFIG_HOME/bash/debug      \
                $XDG_CONFIG_HOME/bash/completion \
+               $XDG_CONFIG_HOME/bash/prompt     \
+               $XDG_CONFIG_HOME/readline/inputrc     \
+               $XDG_CONFIG_HOME/readline/options     \
+               $XDG_CONFIG_HOME/readline/vi-mode     \
+               $XDG_CONFIG_HOME/readline/keybind     \
+               $XDG_CONFIG_HOME/readline/completions \
                 && source $HOME/.bashrc"
+
 alias ea="nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml \
                $XDG_CONFIG_HOME/alacritty/keybidings"
+
 alias ew="nvim $XDG_CONFIG_HOME/wezterm/wezterm.lua"
+
+alias eg="sudo nvim /etc/default/grub && \
+            sudo grub-mkconfig -o ~/_grub_test_.conf"
 
 
 ####################################################
@@ -52,6 +67,6 @@ alias sc="sudo systemctl"
 alias dm="sudo dmesg"
 alias fdisk="sudo fdisk --list"
 alias lb="lsblk -o NAME,FSTYPE,UUID,MOUNTPOINT"
-alias pm="sudo pacman --color=auto"
+alias pm="paru --color=auto"
 alias poweroff="sudo poweroff"
 alias reboot="sudo reboot"
