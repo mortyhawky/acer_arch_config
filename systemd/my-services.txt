@@ -1,0 +1,11 @@
+           │ ├─dbus-broker.service
+           │ ├─iwd.service
+           │ ├─systemd-journald.service
+           │ ├─systemd-logind.service
+           │ ├─systemd-networkd.service
+           │ ├─systemd-resolved.service
+           │ ├─systemd-timesyncd.service
+           │ ├─systemd-udevd.service
+           │ └─systemd-userdbd.service
+               │ ├─604 grep -i --color=auto service
+               └─user@1000.service

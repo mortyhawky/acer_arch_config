@@ -6,8 +6,12 @@ draw_bold_text_with_bright_colors = true
 
 # Default colors
 [colors.primary]
-background = '0x090300'
-foreground = '0xa5a2a2'
+#background = '0x090300'
+background = "#0A0A0A"
+#foreground = '0xa5a2a2'
+#foreground = '0xcdab53'
+#foreground = '0xe4e4e4'
+foreground = "#E6E6E6"
 
 # Colors the cursor will use if `custom_cursor_colors` is true
 [colors.cursor]
@@ -15,6 +19,7 @@ foreground = '0xa5a2a2'
 text = '0xdb2d20'
 #cursor = '0xa5a2a2'
 cursor = '0x01a252'
+#cursor = '0xe8bbd0'
 
 # Normal colors
 [colors.normal]
