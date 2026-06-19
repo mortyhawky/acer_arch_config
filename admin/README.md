@@ -17,3 +17,10 @@ Or even cleaner:
 ```bash
 pacman -S --needed $(<$XDG_CONFIG_HOME/admin/pkglist.txt)
 ```
+
+Create list of running services:
+```bash
+systemctl status |grep service > \
+    $XDG_CONFIG_HOME/admin/services.txt \
+    cat $XDG_CONFIG_HOME/admin/services.txt
+```

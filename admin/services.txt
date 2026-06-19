@@ -1,5 +1,7 @@
            │ ├─dbus-broker.service
            │ ├─iwd.service
+           │ ├─polkit.service
+           │ ├─rtkit-daemon.service
            │ ├─systemd-journald.service
            │ ├─systemd-logind.service
            │ ├─systemd-networkd.service
@@ -7,5 +9,8 @@
            │ ├─systemd-timesyncd.service
            │ ├─systemd-udevd.service
            │ └─systemd-userdbd.service
-               │ ├─604 grep -i --color=auto service
                └─user@1000.service
+                 │ ├─at-spi-dbus-bus.service
+                 │ ├─dbus-broker.service
+                 │ └─pulseaudio.service
+                   └─2652 grep service
