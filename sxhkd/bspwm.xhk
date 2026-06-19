@@ -13,11 +13,16 @@
 #    lowercase, (X keysym conventions)
 ## ####################################
 
+super + F8
+    env > /tmp/sxhkd-env
+
 super + Return
-   $TERM
+  $TERMINAL
+  #/usr/bin/alacritty
 
 super + w
-    $BROWSER
+  $BROWSER
+  #firefox
 
 super + r
   rofi -show drun
@@ -27,8 +32,8 @@ ctrl + super + r
   pkill -USR1 -x sxhkd
 
 ## Reload bspwm
-super + alt + r
-	bspc wm -r
+#super + alt + r
+#  bspc wm -r
 
 ## ###############################################
 ##   BSPWM   HOTKEYS

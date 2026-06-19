@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
-### KEYBOARD ###
-setxkbmap -layout no -model pc105 -variant nodeadkeys -option caps:escape
+### ENVIRONMET ###
+mkdir -p ~/.local/share
+: "${XDG_CONFIG_HOME:=$HOME/.config}"
+source $HOME/.config/bash/exports
+
+### INPUT CONFIGURATION ###
+setxkbmap -layout no -model pc105 \
+          -variant nodeadkeys -option caps:escape
 xmodmap "$XDG_CONFIG_HOME/x11/.Xmodmap"
 
 ### WALLPAPER ###
@@ -10,11 +16,15 @@ xmodmap "$XDG_CONFIG_HOME/x11/.Xmodmap"
 ### SCREEN SAVER ###
 xset -dpms s 2400
 
-### HOTKEY DAEMON ###
-sxhkd -c "$XDG_CONFIG_HOME/sxhkd/bspwm.xhk" &
-
 ### COMPOSITOR ###
-picom --config "$XDG_CONFIG_HOME/picom/picom.conf" &
+pkill --exact picom 2>/dev/null
+picom --config "$XDG_CONFIG_HOME/picom/picom.conf"  \
+    >> ~/.local/share/picom.log 2>&1 &
+
+### HOTKEY DAEMON ###
+pkill --exact sxhkd 2>/dev/null
+sxhkd -c "$XDG_CONFIG_HOME/sxhkd/bspwm.xhk" \
+    >> ~/.local/share/sxhkd.log 2>&1 &
 
 ### WINDOW MANAGER ###
 exec bspwm
