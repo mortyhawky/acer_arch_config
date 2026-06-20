@@ -8,15 +8,18 @@ echo " ~/.config/bash/bashrc"
 for file in ~/.config/bash/{exports,aliases,functions,prompt,completion}; do
     [ -f "$file" ] && source "$file"
 done
-#
+
 # Make CapsLock a secondary Escape key
-sudo loadkeys $XDG_CONFIG_HOME/kbd/esc.map
-sudo loadkeys $XDG_CONFIG_HOME/kbd/custom.map
+#sudo loadkeys $XDG_CONFIG_HOME/kbd/esc.map
+#sudo loadkeys $XDG_CONFIG_HOME/kbd/custom.map
+# /usr/local/share/kbd/keymaps/no-custom.map.gz
+# /etc/vconsole.conf    ->  KEYMAP=no-custom
+
 # Make ctrl+s useable
 stty -ixon
 
-# Uncomment to turn on debugging
-source ~/.config/bash/debug
+# Uncomment to add debug info
+#source ~/.config/bash/debug
 
 #fastfetch
 #neofetch

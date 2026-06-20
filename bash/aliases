@@ -65,7 +65,7 @@ alias sc="sudo systemctl"
 ####################################################
 alias dm="sudo dmesg"
 alias fdisk="sudo fdisk --list"
-alias lb="lsblk -o NAME,FSTYPE,UUID,MOUNTPOINT"
+alias lb="lsblk -o NAME,SIZE,FSTYPE,UUID,MOUNTPOINT"
 alias pm="paru --color=auto"
 alias poweroff="sudo poweroff"
 alias reboot="sudo reboot"

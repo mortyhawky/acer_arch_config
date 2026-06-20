@@ -1,0 +1,648 @@
+Installation guide - ArchWiki
+
+1 of 12
+
+https://wiki.archlinux.org/title/Installation_guide
+
+This document is a guide for installing Arch Linux using the live system booted from an
+installation medium made from an oﬃcial installation image. The installation medium
+provides accessibility features which are described on the page Install Arch Linux with
+accessibility options. For alternative means of installation, see Category:Installation
+process.
+Before installing, it would be advised to view the FAQ. For conventions used in this
+document, see Help:Reading. In particular, code examples may contain placeholders
+(formatted in italics ) that must be replaced manually.
+This guide is kept concise and you are advised to follow the instructions in the presented
+order per section. For more detailed instructions, see the respective ArchWiki articles or
+the various programs' man pages, both linked from this guide. For interactive help, the IRC
+channel and the forums (https://bbs.archlinux.org/) are also available.
+Arch Linux should run on any x86_64-compatible machine with a minimum of 512 MiB
+RAM, though more memory is needed to boot the live system for installation.[1] (https://lis
+ts.archlinux.org/archives/list/arch-releng@lists.archlinux.org/message/D5HSGOFTPGY
+I6IZUEB3ZNAX4D3F3ID37/) A basic installation should take less than 2 GiB of disk space.
+As the installation process needs to retrieve packages from a remote repository, this guide
+assumes a working internet connection is available.
+
+Visit https://archlinux.org/download for oﬃcial images, and, depending on how you want
+to boot, acquire the ISO ﬁle or a netboot image, and the respective PGP signature.
+
+It is recommended to verify the image signature before use, especially when downloading
+from an HTTP mirror, where downloads are generally prone to be intercepted to serve
+malicious images (https://www2.cs.arizona.edu/stork/packagemanagersecurity/attack
+s-on-package-managers.html).
+Download the ISO PGP signature from https://archlinux.org/download/#checksums to the
+ISO directory and follow the instructions there to verify it.
+Alternatively, from an existing Arch Linux installation run:
+
+6/19/26, 22:35
+
+Installation guide - ArchWiki
+
+2 of 12
+
+https://wiki.archlinux.org/title/Installation_guide
+
+$ pacman-key -v archlinux-version-x86_64.iso.sig
+
+Note
+▪ The signature itself could be manipulated if it is downloaded from a mirror site, instead of
+from
+. In this case, ensure that the public
+key, which is used to decode the signature, is signed by another, trustworthy key. The
+gpg command will output the fingerprint of the public key.
+▪ Another method to verify the authenticity of the signature is to ensure that the public key's
+fingerprint is identical to the key fingerprint of the
+who signed the ISO-file. See
+for more information on the public-key process to authenticate keys.
+
+The ISO can be supplied to the target machine via a USB ﬂash drive, an optical disc or a
+network with PXE: follow the appropriate article to prepare yourself an installation
+medium from the ISO ﬁle.
+For the netboot image, follow Netboot#Boot from a USB ﬂash drive to prepare a USB ﬂash
+drive for UEFI booting.
+
+Note
+Arch Linux installation images do not support Secure Boot. You will need to disable
+Secure Boot to boot the installation medium. If desired, Secure Boot can be set up
+after completing the installation.
+1. Point the current boot device to the one which has the Arch Linux installation medium.
+Typically it is achieved by pressing a key during the
+phase, as indicated on the splash
+screen. Refer to your motherboard's manual for details.
+2. When the installation medium's boot loader menu appears,
+▪ if you used the ISO, select
+installation environment.
+
+and press Enter to enter the
+
+▪ if you used the Netboot image, choose a geographically close mirror from
+then select
+and press Enter .
+
+▪ The ISO uses
+
+for UEFI and
+
+menu,
+
+for BIOS booting. Use
+
+6/19/26, 22:35
+
+Installation guide - ArchWiki
+
+3 of 12
+
+https://wiki.archlinux.org/title/Installation_guide
+
+respectively e or Tab to enter the
+. The Netboot image uses
+iPXE and the boot parameters can be specified in the
+menu. See
+
+for a list.
+▪ A common example of manually defined boot parameter would be the font size.
+For better readability on HiDPI screens—when they are not already recognized as
+such—using fbcon=font:TER16x32 can help. See
+for a detailed explanation.
+3.
+4. You will be logged in on the first
+shell prompt.
+
+as the root user, and presented with a
+
+To switch to a different console—for example, to view this guide with Lynx (https://lynx.in
+visible-island.net/lynx_help/Lynx_users_guide.html) alongside the installation—use the
+Alt+arrow keyboard shortcut. To edit conﬁguration ﬁles, mcedit(1) (https://ma
+n.archlinux.org/man/mcedit.1), nano and vim are available. See pkglist.x86_64.txt
+(https://geo.mirror.pkgbuild.com/iso/latest/arch/pkglist.x86_64.txt) for a list of the
+packages included in the installation medium.
+
+The default console keymap is US. Available layouts can be listed with:
+# localectl list-keymaps
+
+To set the keyboard layout, pass its name to loadkeys(1) (https://man.archlinux.o
+rg/man/loadkeys.1). For example, to set a German keyboard layout:
+# loadkeys de-latin1
+
+Console fonts are located in /usr/share/kbd/consolefonts/ and can likewise be set
+with setfont(8) (https://man.archlinux.org/man/setfont.8) omitting the path
+and ﬁle extension. For example, to use one of the largest fonts suitable for HiDPI screens,
+run:
+# setfont ter-132b
+
+To verify the boot mode, check the UEFI bitness:
+# cat /sys/firmware/efi/fw_platform_size
+
+6/19/26, 22:35
+
+Installation guide - ArchWiki
+
+4 of 12
+
+https://wiki.archlinux.org/title/Installation_guide
+
+▪ If the command returns 64 , the system is booted in UEFI mode and has a 64-bit x64 UEFI.
+▪ If the command returns 32 , the system is booted in UEFI mode and has a 32-bit IA32 UEFI.
+While this is supported, it will limit the boot loader choice to those that support mixed mode
+booting.
+▪ If it returns No such file or directory , the system may be booted in
+mode.
+
+(or
+
+)
+
+If the system did not boot in the mode you desired (UEFI vs BIOS), refer to your
+motherboard's manual.
+
+To set up a network connection in the live environment, go through the following steps:
+1. Ensure your
+is listed and enabled, for example with ip-link(8) (http
+s://man.archlinux.org/man/ip-link.8):
+# ip link
+
+2. For wireless and WWAN, make sure the card is not blocked with
+
+.
+
+3. Connect to the network:
+▪ Ethernet—plug in the cable.
+▪ Wi-Fi—authenticate to the wireless network using
+
+.
+
+▪ Mobile broadband modem—connect to the mobile network with the
+
+utility.
+
+4. Configure your network connection:
+▪
+
+: dynamic IP address and DNS server assignment (provided by
+and
+) should work out of the box for Ethernet, WLAN, and WWAN network
+interfaces.
+
+▪ Static IP address: follow
+5. The connection may be verified with
+
+.
+:
+
+# ping ping.archlinux.org
+
+Note
+In the installation image, systemd-networkd, systemd-resolved, iwd and
+ModemManager are preconﬁgured and enabled by default. That will not be the case
+for the installed system.
+
+6/19/26, 22:35
+
+Installation guide - ArchWiki
+
+5 of 12
+
+https://wiki.archlinux.org/title/Installation_guide
+
+The live system needs accurate time to prevent package signature veriﬁcation failures and
+TLS certiﬁcate errors. The systemd-timesyncd service is enabled by default in the live
+environment and time will be synchronized automatically once a connection to the
+internet is established.
+Use timedatectl(1)
+(https://man.archlinux.org/man/timedatectl.1)
+ensure the system clock is synchronized:
+
+to
+
+# timedatectl
+
+When recognized by the live system, disks are assigned to a block device such as
+/dev/sda , /dev/nvme0n1 or /dev/mmcblk0 . To identify these devices, use lsblk or
+fdisk.
+# fdisk -l
+
+Results ending in rom , loop or airootfs may be ignored. mmcblk* devices ending in
+rpmb , boot0 and boot1 can be ignored.
+Note
+If the disk does not show up, make sure the disk controller is not in RAID mode.
+Tip
+Check that your NVMe drives and Advanced Format hard disk drives are using the
+optimal logical sector size before partitioning.
+The following partitions are required for a chosen device:
+▪ One partition for the
+▪ For booting in
+
+mode: an
+
+/.
+.
+
+Use a partitioning tool like fdisk to modify partition tables. For example:
+# fdisk /dev/the_disk_to_be_partitioned
+
+Note
+▪ Take time to plan a long-term partitioning scheme to avoid risky and complicated
+conversion or re-partitioning procedures in the future.
+▪ If you want to create any stacked block devices for
+
+,
+
+or
+
+, do it
+
+6/19/26, 22:35
+
+Installation guide - ArchWiki
+
+6 of 12
+
+https://wiki.archlinux.org/title/Installation_guide
+
+now.
+▪ If the disk from which you want to boot
+another one, but use the existing partition instead.
+▪
+
+, do not create
+
+space can be set on a
+for file systems supporting it. Alternatively, disk
+based swap can be avoided entirely by setting up
+after installing the
+system.
+
+UEFI with
+
+/boot 1
+
+/dev/
+efi_system_partition
+
+[SWAP]
+
+/dev/swap_partition
+
+Linux swap
+
+At least 4 GiB
+
+/
+
+/dev/root_partition
+
+Linux x86-64
+root (/)
+
+Remainder of the device. At
+least 23–32 GiB.
+
+1.
+
+1 GiB
+
+, such as /efi , are possible, provided that the used boot loader is
+capable of loading the kernel and initramfs images from the root volume. See the warning in
+.
+BIOS with
+
+[SWAP]
+
+/dev/
+swap_partition
+
+Linux swap
+
+At least 4 GiB
+
+/
+
+/dev/
+root_partition
+
+Linux
+
+Remainder of the device. At least
+23–32 GiB.
+
+See also Partitioning#Example layouts.
+
+Once the partitions have been created, each newly created partition must be formatted
+with an appropriate ﬁle system. See File systems#Create a ﬁle system for details.
+For example, to create an Ext4 ﬁle system on /dev/root_partition , run:
+# mkfs.ext4 /dev/root_partition
+
+If you created a partition for swap, initialize it with mkswap(8) (https://man.archlin
+ux.org/man/mkswap.8):
+
+6/19/26, 22:35
+
+Installation guide - ArchWiki
+
+7 of 12
+
+https://wiki.archlinux.org/title/Installation_guide
+
+# mkswap /dev/swap_partition
+
+Note
+For stacked block devices replace /dev/*_partition with the appropriate block
+device path.
+If you created an EFI system partition, format it to FAT32 using mkfs.fat(8) (https://
+man.archlinux.org/man/mkfs.fat.8).
+Warning
+Only format the EFI system partition if you created it during the partitioning step. If
+there already was an EFI system partition on disk beforehand, reformatting it can
+destroy the boot loaders of other installed operating systems.
+# mkfs.fat -F 32 /dev/efi_system_partition
+
+Mount the root volume
+/dev/root_partition :
+
+to
+
+/mnt .
+
+For
+
+example,
+
+if
+
+the
+
+root
+
+volume
+
+is
+
+# mount /dev/root_partition /mnt
+
+Create any remaining mount points under /mnt (such as /mnt/boot for /boot ) and
+mount the volumes in their corresponding hierarchical order.
+Tip
+Run mount(8) (https://man.archlinux.org/man/mount.8) with the --mkdir
+option to create the speciﬁed mount point. Alternatively, create it using mkdir(1) (h
+ttps://man.archlinux.org/man/mkdir.1) beforehand.
+For UEFI systems, mount the EFI system partition. For example:
+# mount --mkdir /dev/efi_system_partition /mnt/boot
+
+If you created a swap volume, enable it with swapon(8) (https://man.archlinux.or
+g/man/swapon.8):
+# swapon /dev/swap_partition
+
+genfstab(8)
+
+(https://man.archlinux.org/man/genfstab.8) will later detect
+
+6/19/26, 22:35
+
+Installation guide - ArchWiki
+
+8 of 12
+
+https://wiki.archlinux.org/title/Installation_guide
+
+mounted ﬁle systems and swap space.
+
+Packages to be installed must be downloaded from mirror servers, which are deﬁned in
+/etc/pacman.d/mirrorlist . The higher a mirror is placed in the list, the more priority
+it is given when downloading a package.
+On the live system, all HTTPS mirrors are enabled (i.e. uncommented). The topmost
+worldwide mirror should be fast enough for most people, but you may still want to inspect
+the ﬁle to see if it is satisfactory. If it is not, edit the ﬁle accordingly, and move the
+geographically closest mirrors to the top of the list, although other criteria should be taken
+into account. Alternatively, you can use reﬂector to create a mirrorlist ﬁle based on
+various criteria.
+This ﬁle will later be copied to the new system by pacstrap, so it is worth getting right.
+
+No conﬁguration (except for /etc/pacman.d/mirrorlist ) gets carried over from the
+live environment to the installed system. The only mandatory package to install is base (h
+ttps://archlinux.org/packages/?name=base), which does not include all tools
+from the live installation, so installing more packages is frequently necessary.
+In particular, review the following software and install everything that you need:
+▪ CPU
+updates—amd-ucode (https://archlinux.org/packages/?name=a
+md-ucode) or intel-ucode (https://archlinux.org/packages/?name=intelucode)—for hardware bug and security fixes,
+that will be used on the system—for the purposes of e.g.
+
+▪
+file system creation and
+
+,
+
+▪ utilities for accessing and managing
+
+or
+
+if they will be used on the system,
+
+▪ specific
+for other devices not included in linux-firmware (https://archlin
+ux.org/packages/?name=linux-firmware) (e.g. sof-firmware (https://arch
+linux.org/packages/?name=sof-firmware) for
+, linux-firmwaremarvell (https://archlinux.org/packages/?name=linux-firmware-marvel
+l) for Marvell wireless and any of the multiple firmware packages for
+),
+▪ software necessary for
+
+(e.g.
+
+,
+
+for Wi-Fi,
+▪ a
+
+(e.g
+
+for mobile broadband connections),
+
+) to allow editing configuration files from the console,
+
+▪ packages for accessing documentation in
+
+and
+
+pages: man-db (https://archli
+
+6/19/26, 22:35
+
+Installation guide - ArchWiki
+
+9 of 12
+
+https://wiki.archlinux.org/title/Installation_guide
+
+nux.org/packages/?name=man-db), man-pages (https://archlinux.org/pack
+ages/?name=man-pages) and texinfo (https://archlinux.org/packages/?na
+me=texinfo).
+For comparison, packages available in the live system can be found in pkglist.x86_64.txt (h
+ttps://geo.mirror.pkgbuild.com/iso/latest/arch/pkglist.x86_64.txt).
+To install more packages or package groups, append the names to the pacstrap(8) (htt
+ps://man.archlinux.org/man/pacstrap.8) command below (space separated) or use
+pacman to install them while chrooted into the new system.
+For example, a basic installation with the Linux kernel and ﬁrmware for common
+hardware:
+# pacstrap -K /mnt base linux linux-firmware
+
+Tip
+▪ You can substitute linux (https://archlinux.org/packages/?name=linux)
+with a
+package of your choice, or you could omit it entirely when installing in a
+.
+▪ You could omit the installation of the firmware package when installing in a virtual
+machine or container.
+▪ This initial package selection in pacstrap only needs to include what is required for the
+system to boot; all other software can be installed or replaced post-installation.
+
+To get needed ﬁle systems (like the one used for the boot directory /boot ) mounted on
+startup, generate an fstab ﬁle with persistent block device naming using genfstab(8)
+(https://man.archlinux.org/man/genfstab.8). For example, reference ﬁle systems
+by their UUIDs with -U :
+# genfstab -U /mnt >> /mnt/etc/fstab
+
+Check the resulting /mnt/etc/fstab ﬁle, and edit it in case of errors.
+
+To directly interact with the new system's environment, tools, and conﬁgurations for the
+next steps as if you were booted into it, change root into the new system:
+
+6/19/26, 22:35
+
+Installation guide - ArchWiki
+
+10 of 12
+
+https://wiki.archlinux.org/title/Installation_guide
+
+# arch-chroot /mnt
+
+Note
+Some systemd tools such as hostnamectl(1) (https://man.archlinux.org/ma
+n/hostnamectl.1), localectl(1) (https://man.archlinux.org/man/local
+ectl.1) and timedatectl(1) (https://man.archlinux.org/man/timedatec
+tl.1) cannot be used inside a chroot(1) (https://man.archlinux.org/man/c
+hroot.1), as they require an active dbus connection. [2] (https://github.com/system
+d/systemd/issues/798#issuecomment-126568596)
+
+For human convenience (e.g. showing the correct local time or handling Daylight Saving
+Time), set the time zone:
+# ln -sf /usr/share/zoneinfo/Area/Location /etc/localtime
+
+Run hwclock(8)
+/etc/adjtime :
+
+(https://man.archlinux.org/man/hwclock.8)
+
+to
+
+generate
+
+# hwclock --systohc
+
+This command assumes the hardware clock is set to UTC. See System time#Time standard
+for details.
+To prevent clock drift and ensure accurate time, set up time synchronization using a
+Network Time Protocol (NTP) client such as systemd-timesyncd.
+
+To use the correct region and language speciﬁc formatting (like dates, currency, decimal
+separators), edit /etc/locale.gen and uncomment the UTF-8 locales you will be using.
+Generate the locales by running:
+# locale-gen
+
+Create the locale.conf(5) (https://man.archlinux.org/man/locale.conf.5)
+ﬁle, and set the LANG variable accordingly:
+/etc/locale.conf
+LANG=en_US.UTF-8
+
+If
+
+you
+
+set
+
+the
+
+console
+
+keyboard
+
+layout,
+
+make
+
+the
+
+changes
+
+persistent
+
+in
+
+6/19/26, 22:35
+
+Installation guide - ArchWiki
+
+11 of 12
+
+https://wiki.archlinux.org/title/Installation_guide
+
+vconsole.conf(5) (https://man.archlinux.org/man/vconsole.conf.5):
+/etc/vconsole.conf
+KEYMAP=de-latin1
+
+To assign a consistent, identiﬁable name to your system (particularly useful in a networked
+environment), create the hostname ﬁle:
+/etc/hostname
+
+yourhostname
+
+Tip
+For advice on choosing a hostname, see RFC 1178. As explained in hostname(7) (ht
+tps://man.archlinux.org/man/hostname.7), it must contain from 1 to 63
+characters, using only lowercase a to z , 0 to 9 , and - , and must not start with - .
+Complete the network conﬁguration for the newly installed environment. That may
+include installing suitable network management software, conﬁguring it if necessary and
+enabling its systemd unit so that it starts at boot.
+
+Creating a new initramfs is usually not required, because mkinitcpio was run on
+installation of the kernel package with pacstrap.
+For LVM, system encryption or RAID, modify mkinitcpio.conf(5) (https://man.ar
+chlinux.org/man/mkinitcpio.conf.5) and recreate the initramfs image. If you have
+changed the default console keymap, only recreating the initramfs is required:
+# mkinitcpio -P
+
+Set a secure password for the root user to allow performing administrative actions:
+# passwd
+
+Choose a boot loader applicable to your partitioning scheme and install it. See the
+
+6/19/26, 22:35
+
+Installation guide - ArchWiki
+
+12 of 12
+
+https://wiki.archlinux.org/title/Installation_guide
+
+explanations and the comparison table in Arch boot process#Boot loader to make your
+choice, then follow the installation instructions on its dedicated page.
+
+Exit the chroot environment by typing exit or pressing Ctrl+d .
+Optionally manually unmount all the partitions with umount -R /mnt : this allows
+noticing any "busy" partitions, and ﬁnding the cause with fuser(1) (https://man.arc
+hlinux.org/man/fuser.1).
+Finally, restart the machine by typing reboot : any partitions still mounted will be
+automatically unmounted by systemd. Remember to remove the installation medium and
+then login into the new system with the root account.
+
+See General recommendations for system management directions and post-installation
+tutorials (like creating unprivileged user accounts, setting up a graphical user interface,
+sound or a touchpad).
+For a list of applications that may be of interest, see List of applications.
+Retrieved from "https://wiki.archlinux.org/index.php?title=Installation_guide&oldid=876209"
+
+6/19/26, 22:35
+
+
