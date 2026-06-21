@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
 f_eza() {
-    command eza                \
+    command eza               \
+        "${1:-.}"              \
         --almost-all            \
         --git                    \
         --group-directories-first \
-        --icons=auto "${1:-.}"     \
+        --icons=auto               \
         --long                      \
         --sort=name                  \
         || return
