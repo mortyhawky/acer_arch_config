@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
 f_eza() {
-    command eza               \
-        "${1:-.}"              \
-        --almost-all            \
-        --git                    \
-        --group-directories-first \
-        --icons=auto               \
-        --long                      \
-        --sort=name                  \
-        --time-style=iso              \
-        || return
+  command eza              \
+    --almost-all            \
+    --git                    \
+    --group-directories-first \
+    --icons=auto               \
+    --sort=name                 \
+    --time-style=iso             \
+    "$@"                          \
+    || return
+        
+    git status --short 2>/dev/null
 }
 
 f_cdls() {
