@@ -5,7 +5,7 @@
 ####################################################
 alias a="alias"
 alias b="bat"
-alias c="f_cdls"
+alias c=f_cdls
 alias g="grep -i --color=auto"
 alias ff="clear && fastfetch"
 alias t="tmux"
@@ -18,6 +18,8 @@ alias x="startx"
 ## EDIT CONFIGS
 ####################################################
 alias ev="nvim $XDG_CONFIG_HOME/nvim/init.lua"
+
+#alias et="nvim $XDG_CONFIG_HOME/tmux/tumx.conf"
 
 alias eb="nvim $XDG_CONFIG_HOME/bash/aliases    \
                $XDG_CONFIG_HOME/bash/functions  \
@@ -54,8 +56,8 @@ alias gitall="gr && gs && ga && gc && gp"
 ####################################################
 ## FILESYSTEM
 ####################################################
-alias l="f_eza"
-alias mkcd="f_mkcd"
+alias l=f_eza
+alias mkcd=f_mkcd
 alias sb="clear && source $HOME/.bashrc"
 alias sc="sudo systemctl"
 
@@ -66,6 +68,6 @@ alias sc="sudo systemctl"
 alias dm="sudo dmesg"
 alias fdisk="sudo fdisk --list"
 alias lb="lsblk -o NAME,SIZE,FSTYPE,UUID,MOUNTPOINT"
-alias pm="paru --color=auto"
+alias upd=f_update
 alias poweroff="sudo poweroff"
 alias reboot="sudo reboot"

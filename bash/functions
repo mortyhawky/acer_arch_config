@@ -1,15 +1,47 @@
 #!/usr/bin/env bash
 
-function f_eza() {
-    command eza $1 -alh --sort=name --group-directories-first --icons=auto --git
+f_eza() {
+    command eza                \
+        --almost-all            \
+        --git                    \
+        --group-directories-first \
+        --icons=auto "${1:-.}"     \
+        --long                      \
+        --sort=name                  \
+        || return
 }
 
-function f_cdls() {
-  cd $1
-  f_eza
+f_cdls() {
+    if [ -n "$1" ]; then
+        # if argument is given cd into directory
+        cd "$1"
+    else
+        # if no argument, cd $HOME
+        cd ~
+    fi
+    # Always list directory
+    f_eza
 }
 
-function f_mkcd() {
-  mkdir -p "$1"
-  f_cdls $1
+f_mkcd() {
+    # Make given directory
+    mkdir -p "$1" || return
+    # Cd into the new directory and list (check it it empty)
+    f_cdls "$1"
 }
+
+
+f_update() {
+    if command -v paru >/dev/null 2>&1; then
+        echo "Using paru -Syu"
+        paru -Syu
+    else
+        echo "Using pacman -Syu"
+        sudo -v
+        sudo pacman -Syu
+    fi
+}
+
+f_edit_bash() {
+    echo "f_edit_bash()"
+} 
