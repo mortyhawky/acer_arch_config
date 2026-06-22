@@ -34,14 +34,14 @@ f_mkcd() {
 }
 
 
-f_update() {
+f_pacman() {
     if command -v paru >/dev/null 2>&1; then
-        echo "Using paru -Syu"
-        paru -Syu
+        echo "Using: paru"
+        paru $1
     else
-        echo "Using pacman -Syu"
+        echo "Using: sudo pacman"
         sudo -v
-        sudo pacman -Syu
+        sudo pacman $1
     fi
 }
 

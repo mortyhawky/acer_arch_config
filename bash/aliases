@@ -61,6 +61,6 @@ alias eg="sudo nvim /etc/default/grub && sudo grub-mkconfig -o /boot/grub/grub.c
 alias dm="sudo dmesg"
 alias fdisk="sudo fdisk --list"
 alias lb="lsblk -o NAME,SIZE,FSTYPE,UUID,MOUNTPOINT"
-alias upd=f_update
+alias pm="f_pacman"
 alias poweroff="sudo poweroff"
 alias reboot="sudo reboot"
