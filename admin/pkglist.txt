@@ -29,6 +29,7 @@ os-prober
 paru
 paru-debug
 picom
+poppler
 pulseaudio
 rofi
 sof-firmware
@@ -39,9 +40,11 @@ tmux
 tree
 ttf-jetbrains-mono-nerd
 vifm
+wget
 which
 wireless-regdb
 xclip
+xdg-utils
 xf86-video-intel
 xorg-server
 xorg-xinit
