@@ -18,8 +18,10 @@ done
 # Make ctrl+s useable
 stty -ixon
 
-# Uncomment to add debug info
-#source ~/.config/bash/debug
 
+#################################################
+##  DEBUG
+#################################################
+source ~/.config/bash/debug
 #fastfetch
 #neofetch

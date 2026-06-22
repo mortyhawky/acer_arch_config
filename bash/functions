@@ -37,11 +37,11 @@ f_mkcd() {
 f_pacman() {
     if command -v paru >/dev/null 2>&1; then
         echo "Using: paru"
-        paru $1
+        paru "$@" --needed
     else
         echo "Using: sudo pacman"
         sudo -v
-        sudo pacman $1
+        sudo pacman "$@" --needed
     fi
 }
 
