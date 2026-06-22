@@ -1,3 +1,10 @@
 # vim: filetype=sh :
 echo "~/.bash_logout"
-sleep 1
+
+ip address show wlan0
+echo "Disconnecting and forgetting '103B 5'"
+sleep 2
+iwctl known-networks "103B 5" forget
+sleep 2
+ip address show wlan0
+sleep 2
