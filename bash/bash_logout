@@ -1,10 +1,33 @@
 # vim: filetype=sh :
 echo "~/.bash_logout"
 
-ip address show wlan0
+if [[ "$TERM" == "alacritty" || "$TERM" == "tmux-256color" ]]; then
+    echo "Nothing to do"
+    sleep 2
+
+    # return if sourced, otherwise exit
+    return 0 2>/dev/null || exit 0
+fi
+
+#case "$TERM" in
+#    alacritty|tmux-256color)
+#        echo "Nothing to do"
+#        sleep 2
+#        return 0 2>/dev/null || exit 0
+#        ;;
+#esac
+
+sudo ls /var/lib/iwd
+ip address show wlan0 | grep -E --color=always "inet "
+
 echo "Disconnecting and forgetting '103B 5'"
+iwctl known-networks "103B 5" forget 1>/dev/null
 sleep 2
-iwctl known-networks "103B 5" forget
-sleep 2
-ip address show wlan0
+
+ip address show wlan0 | grep -E --color=always "inet "
+sudo systemctl stop iwd.service
+sudo systemctl stop systemd-resolved.service
+sudo systemctl stop systemd-networkd.service
+systemctl status |grep service
+sudo ls /var/lib/iwd
 sleep 2
