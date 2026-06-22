@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+echo "$XDG_CONFIG_HOME/bash/functions"
+null="/dev/null"
 
 f_eza() {
   command eza              \
@@ -11,7 +13,8 @@ f_eza() {
     "$@"                          \
     || return
         
-    git status --short 2>/dev/null
+    git status --short 2>$null
+    git remote --verbose 2>/dev/null
 }
 
 f_cdls() {
