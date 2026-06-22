@@ -1,0 +1,3 @@
+about:keyboard
+about:settings
+

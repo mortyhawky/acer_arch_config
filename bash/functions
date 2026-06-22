@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#source ~/.config/bash/exports
 echo "$XDG_CONFIG_HOME/bash/functions"
 null="/dev/null"
 
@@ -14,7 +15,7 @@ f_eza() {
     || return
         
     git status --short 2>$null
-    git remote --verbose 2>/dev/null
+    git remote --verbose 2>$null
 }
 
 f_cdls() {
@@ -50,4 +51,17 @@ f_pacman() {
 
 f_edit_bash() {
     echo "f_edit_bash()"
+    echo "XDG_CONFIG_HOME=$XDG_CONFIG_HOME"
+    exec nvim $XDG_CONFIG_HOME/bash/aliases    \
+         $XDG_CONFIG_HOME/bash/functions  \
+         $XDG_CONFIG_HOME/bash/exports    \
+         $XDG_CONFIG_HOME/bash/debug      \
+         $XDG_CONFIG_HOME/bash/completion \
+         $XDG_CONFIG_HOME/bash/prompt     \
+         $XDG_CONFIG_HOME/readline/inputrc     \
+         $XDG_CONFIG_HOME/readline/options     \
+         $XDG_CONFIG_HOME/readline/vi-mode     \
+         $XDG_CONFIG_HOME/readline/keybind     \
+         $XDG_CONFIG_HOME/readline/completions \
+          && source $HOME/.bashrc
 } 
