@@ -23,9 +23,5 @@ stty -ixon
 ##  DEBUG
 #################################################
 source ~/.config/bash/debug
-#fastfetch
+fastfetch
 #neofetch
-
-echo '  systemctl start iwd '
-echo '  iwctl station wlan0 connect "103B 5"  '
-

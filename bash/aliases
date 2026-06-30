@@ -21,27 +21,27 @@ alias x="startx"
 ####################################################
 ## GIT
 ####################################################
-alias gr="git remote -v"
-alias gs="git status --verbose"
 alias ga="git add --all --verbose && git status --short"
 alias gc="git commit --message '$(date -Iseconds)'"
-alias gp="git push --set-upstream origin main"
 alias gitall="gr && gs && ga && gc && gp"
+alias gp="git push --set-upstream origin main"
+alias gr="git remote -v"
+alias gs="git status --verbose"
 
 ####################################################
 ## EDIT CONFIGS
 ####################################################
-alias ea="nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml \
-               $XDG_CONFIG_HOME/alacritty/keybidings"
+#alias et="nvim $XDG_CONFIG_HOME/tmux/tumx.conf"
+alias ea="nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml $XDG_CONFIG_HOME/alacritty/keybidings"
 alias eb="f_edit_bash"
 alias eg="sudo nvim /etc/default/grub && sudo grub-mkconfig -o /boot/grub/grub.cfg"
-#alias et="nvim $XDG_CONFIG_HOME/tmux/tumx.conf"
 alias ev="nvim $XDG_CONFIG_HOME/nvim/init.lua"
 alias ew="nvim $XDG_CONFIG_HOME/wezterm/wezterm.lua"
 
 ####################################################
 ## ADMIN
 ####################################################
+#alias su="sudo !!"
 alias dm="sudo dmesg"
 alias fdisk="sudo fdisk --list"
 alias lb="lsblk -o NAME,SIZE,FSTYPE,UUID,MOUNTPOINT"

@@ -15,3 +15,9 @@ echo "XDG_STATE_HOME    = $XDG_STATE_HOME"
 echo "XDG_DATA_HOME     = $XDG_DATA_HOME"
 echo "XAUTHORITY        = $XAUTHORITY"
 echo "XINITRC           = $XINITRC"
+
+echo '  rc-status '
+echo '  #rc-service iwd start '
+echo '  #rc-update del iwd '
+echo '  #rc-update add default '
+echo '  iwctl station wlan0 connect "103B 5"  '
