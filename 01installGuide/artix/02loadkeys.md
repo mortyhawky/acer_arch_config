@@ -2,10 +2,12 @@
 
 ```bash
 cd ~
-loadkeys no
+sudo loadkeys no
 echo "keycode 58=Escape" >> esc.map
-loadkeys esc.map
+sudo loadkeys esc.map
 set -o vi
+vim ~/.inputrc
+    
 ```
 
 ~/.inputrc
