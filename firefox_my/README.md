@@ -1,8 +1,18 @@
 ### Firefox Configurations
 
-#### Extentions:
-- Dark Reader
+#### Extentions
+- uBlock origin
+- I don't care about cookies
 - Vimium
 
-#### Theme:
-Settings> Dark: A theme with a dark color scheme.
+#### Theme
+Ctrl+L -> about:settings
+Appearance -> Website appearance -> Dark
+Browser theme -> Manage Firefox themes -> Dark
+
+#### Keyboard
+Ctrl+L -> about:keyboard
+New Tab -> Clear
+
+#### Addons
+Ctrl+L -> about:addons

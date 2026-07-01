@@ -55,6 +55,7 @@ nnoremap <C-l> :wincmd l<CR>
 " :mark mark /full/directory/path [filename]
 mark a /a/
 mark c ~/.config/
+mark e /etc/
 mark h ~/
 mark l /a/linux/
 mark r /

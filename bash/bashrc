@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
+echo " ~/.config/bash/bashrc"
 #
 # see also the settings in ~/.config/readline/
-#
-echo " ~/.config/bash/bashrc"
 #
 # Load modular components
 for file in ~/.config/bash/{exports,aliases,functions,prompt,completion}; do
@@ -14,6 +13,8 @@ done
 #sudo loadkeys $XDG_CONFIG_HOME/kbd/custom.map
 # /usr/local/share/kbd/keymaps/no-custom.map.gz
 # /etc/vconsole.conf    ->  KEYMAP=no-custom
+# Artix Linux: /etc/conf.d/keymaps:
+#   keymap="home/m/.config/kbd/no-custom.map.gz"
 
 # Make ctrl+s useable
 stty -ixon
@@ -23,5 +24,5 @@ stty -ixon
 ##  DEBUG
 #################################################
 source ~/.config/bash/debug
-fastfetch
+#fastfetch
 #neofetch

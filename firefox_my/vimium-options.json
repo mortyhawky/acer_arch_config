@@ -1,6 +1,6 @@
 {
   "exclusionRules": [],
-  "keyMappings": "map / enterFindMode\nmap n performFind\nmap g scrollToTop\nmap G scrollToBottom\nmap o Vomnibar.activate\nmap f LinkHints.activateMode\nmap j scrollDown\nmap k scrollUp\nmap <C-d> scrollPageDown\nmap <C-u> scrollPageUp\n\nmap <C-t> createTab https://start.duckduckgo.com\nmap <C-x> removeTab\nmap J nextTab\nmap K previousTab\nmap <C-l> nextTab\nmap <C-h> previousTab\nmap H goBack\nmap L goForward",
+  "keyMappings": "map / enterFindMode\nmap n performFind\nmap g scrollToTop\nmap G scrollToBottom\nmap o Vomnibar.activate\nmap f LinkHints.activateMode\nmap j scrollDown\nmap k scrollUp\nmap <C-d> scrollPageDown\nmap <C-u> scrollPageUp\n\nmap <C-t> createTab https://start.duckduckgo.com\nmap <C-x> removeTab\nmap J nextTab\nmap K previousTab\n#map <C-l> nextTab\n#map <C-h> previousTab\nmap H goBack\nmap L goForward",
   "newTabCustomUrl": "https://start.duckduckgo.com",
   "newTabDestination": "customUrl",
   "openVomnibarOnNewTabPage": false,

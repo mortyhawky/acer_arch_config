@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-#source ~/.config/bash/exports
-echo "$XDG_CONFIG_HOME/bash/functions"
+source ~/.config/bash/exports
+echo "  $XDG_CONFIG_HOME/bash/functions"
 null="/dev/null"
 
 f_eza() {
@@ -39,32 +39,37 @@ f_mkcd() {
 
 
 f_pacman() {
-    if command -v paru >/dev/null 2>&1; then
+    if command -v paru >$null 2>&1; then
         echo "Using: paru"
         paru "$@" --needed
     else
         echo "Using: sudo pacman"
         sudo -v
-        sudo pacman "$@"
+        sudo pacman "$@" --color=auto
     fi
 }
 
 f_edit_bash() {
-    echo "f_edit_bash()"
-    echo "XDG_CONFIG_HOME=$XDG_CONFIG_HOME"
-    sleep 2
-    nvim $XDG_CONFIG_HOME/bash/bashrc       \
-              $XDG_CONFIG_HOME/bash/aliases      \
-              $XDG_CONFIG_HOME/bash/functions    \
-              $XDG_CONFIG_HOME/bash/exports      \
-              $XDG_CONFIG_HOME/bash/debug        \
-              $XDG_CONFIG_HOME/bash/completion   \
-              $XDG_CONFIG_HOME/bash/prompt       \
-              $XDG_CONFIG_HOME/bash/bash_logout  \
-              $XDG_CONFIG_HOME/readline/inputrc     \
-              $XDG_CONFIG_HOME/readline/options     \
-              $XDG_CONFIG_HOME/readline/vi-mode     \
-              $XDG_CONFIG_HOME/readline/keybind     \
-              $XDG_CONFIG_HOME/readline/completions \
+    #echo "f_edit_bash()"
+    #echo "XDG_CONFIG_HOME=$XDG_CONFIG_HOME"
+    #sleep 2
+    nvim  $XDG_CONFIG_HOME/bash/bashrc       \
+          $XDG_CONFIG_HOME/bash/aliases      \
+          $XDG_CONFIG_HOME/bash/bash_logout  \
+          $XDG_CONFIG_HOME/bash/completion   \
+          $XDG_CONFIG_HOME/bash/debug        \
+          $XDG_CONFIG_HOME/bash/exports      \
+          $XDG_CONFIG_HOME/bash/functions    \
+          $XDG_CONFIG_HOME/bash/prompt       \
+          $XDG_CONFIG_HOME/readline/completions \
+          $XDG_CONFIG_HOME/readline/inputrc     \
+          $XDG_CONFIG_HOME/readline/keybind     \
+          $XDG_CONFIG_HOME/readline/options     \
+          $XDG_CONFIG_HOME/readline/vi-mode     \
                 && source $HOME/.bashrc
 } 
+
+f_reboot() {
+    iwctl known-networks "103B 5" forget
+    sudo reboot
+}

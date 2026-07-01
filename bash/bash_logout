@@ -31,3 +31,5 @@
 ##systemctl status |grep service
 ##sudo ls /var/lib/iwd
 ##sleep 2
+
+#iwctl known-networks "103B 5" forget

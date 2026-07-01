@@ -21,7 +21,7 @@
 [window]
   padding = { x = 10, y = 10 }
   dynamic_padding = true
-  opacity = 0.60
+  opacity = 0.90
   #blur = true
   decorations_theme_variant = "Dark"
   resize_increments = true

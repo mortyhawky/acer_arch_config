@@ -4,8 +4,9 @@
 
 Create list of explicitly installed packages:
 ```bash
-pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist.txt
-bat $XDG_CONFIG_HOME/admin/pkglist.txt
+pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist-artix.txt
+pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist-arch.txt
+bat $XDG_CONFIG_HOME/admin/pkglist-artix.txt
 ```
 
 Restore with:
