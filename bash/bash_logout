@@ -1,5 +1,5 @@
-## vim: filetype=sh :
-#echo "~/.bash_logout"
+# vim: filetype=sh :
+echo " ~/.bash_logout"
 #
 #if [[ "$TERM" == "alacritty" || "$TERM" == "tmux-256color" ]]; then
 #    echo "Nothing to do"

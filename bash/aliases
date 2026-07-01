@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo " ~/.config/bash/alias"
 
 ####################################################
 ## GENERAL
