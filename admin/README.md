@@ -24,15 +24,16 @@ pacman -S --needed $(<$XDG_CONFIG_HOME/admin/pkglist.txt)
 Services Arch Systemd:
 ```bash
 systemctl status |grep service > \
-    $XDG_CONFIG_HOME/admin/services-arch.txt \
-    cat $XDG_CONFIG_HOME/admin/services-arch.txt
+    $XDG_CONFIG_HOME/admin/services-arch.txt
+
+cat $XDG_CONFIG_HOME/admin/services-arch.txt
 ```
 
 Services Artix openrc:
 ```bash
 rc-status > $XDG_CONFIG_HOME/admin/services-artix.txt
 
-b $XDG_CONFIG_HOME/admin/services-artix.txt
+cat $XDG_CONFIG_HOME/admin/services-artix.txt
 ```
 
 Check dmesg:

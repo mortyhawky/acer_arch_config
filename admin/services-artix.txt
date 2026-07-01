@@ -1,15 +1,16 @@
 Runlevel: default
- dbus                                                  [  started 02:14:25 (0) ]
- iwd                                                   [  started 02:14:25 (0) ]
+ dbus                                                  [  started 02:18:42 (0) ]
  netmount                                                          [  stopped  ]
+ ntpd                                                  [  started 00:01:15 (0) ]
  local                                                             [  started  ]
- agetty.tty3                                           [  started 02:14:25 (0) ]
- agetty.tty1                                           [  started 02:14:25 (0) ]
- agetty.tty4                                           [  started 02:14:25 (0) ]
- agetty.tty6                                           [  started 02:14:25 (0) ]
- agetty.tty2                                           [  started 02:14:25 (0) ]
- agetty.tty5                                           [  started 02:14:25 (0) ]
+ agetty.tty3                                           [  started 02:18:42 (0) ]
+ agetty.tty1                                           [  started 02:07:06 (2) ]
+ agetty.tty4                                           [  started 02:18:42 (0) ]
+ agetty.tty6                                           [  started 02:18:42 (0) ]
+ agetty.tty2                                           [  started 02:18:42 (0) ]
+ agetty.tty5                                           [  started 02:18:42 (0) ]
 Dynamic Runlevel: hotplugged
- user.m                                                [  started 02:14:23 (0) ]
+ user.m                                                [  started 02:07:04 (0) ]
 Dynamic Runlevel: needed/wanted
 Dynamic Runlevel: manual
+ iwd                                                   [  started 02:06:47 (0) ]
