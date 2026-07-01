@@ -44,7 +44,7 @@ alias ew="nvim $XDG_CONFIG_HOME/wezterm/wezterm.lua"
 ####################################################
 #alias su="sudo !!"
 alias dm="sudo dmesg"
-alias fdisk="sudo fdisk --list"
+alias fdl="sudo fdisk --list"
 alias lb="lsblk -o NAME,SIZE,FSTYPE,UUID,MOUNTPOINT"
 alias pm="f_pacman"
 alias poweroff="f_poweroff"
