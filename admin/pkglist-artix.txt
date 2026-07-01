@@ -14,6 +14,7 @@ fastfetch
 feh
 firefox
 git
+github-cli
 grub
 htop
 intel-ucode
