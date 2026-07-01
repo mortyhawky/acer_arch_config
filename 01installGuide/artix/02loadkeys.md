@@ -5,11 +5,9 @@ cd ~
 sudo loadkeys no
 echo "keycode 58=Escape" >> esc.map
 sudo loadkeys esc.map
-set -o vi
-vim ~/.inputrc
-    
 ```
 
+##### Readline settings for bash
 ~/.inputrc
 ```inputrc
 set editing-mode vi

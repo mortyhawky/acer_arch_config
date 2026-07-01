@@ -18,6 +18,7 @@ rc-status
 rc-service sshd start
 rc-service sshd restart
 rc-update add sshd default
+(rc-update del sshd)
 rc-status
 ```
 
