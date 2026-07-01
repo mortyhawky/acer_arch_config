@@ -18,7 +18,7 @@ end)
 vim.keymap.set( {"n"},         "ZZ",         ":wqall<CR>" )
 
 vim.keymap.set( {"n","i","v"}, "<C-s>",      "<Esc><Cmd>:write<CR><Cmd>:nohls<CR>" )
-vim.keymap.set( {"n"},         "<leader>so", "<Cmd>:source<CR><Cmd>:nohls<CR>:echo 'Sourced'<CR>" )
+--vim.keymap.set( {"n"},         "<leader>so", "<Cmd>:source<CR><Cmd>:nohls<CR>:echo 'Sourced'<CR>" )
 vim.keymap.set( {"n","i"},     "<Esc>",      "<Esc><Cmd>:nohls<CR>")
 
 -- Yank from cursor position to end of line

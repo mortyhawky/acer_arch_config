@@ -4,6 +4,7 @@
 
 Create list of explicitly installed packages:
 ```bash
+c ~/.config/admin
 pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist-artix.txt
 pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist-arch.txt
 bat $XDG_CONFIG_HOME/admin/pkglist-artix.txt
@@ -11,7 +12,7 @@ bat $XDG_CONFIG_HOME/admin/pkglist-artix.txt
 
 Restore with:
 ```bash
-pacman -S --needed - <$XDG_CONFIG_HOME/admin/pkglist.txt 
+sudo pacman -S --needed - <$XDG_CONFIG_HOME/admin/pkglist-artix.txt 
 ```
 
 Or even cleaner:
@@ -19,11 +20,18 @@ Or even cleaner:
 pacman -S --needed $(<$XDG_CONFIG_HOME/admin/pkglist.txt)
 ```
 
-Create list of running services:
+Create list of running services,arch:
 ```bash
 systemctl status |grep service > \
-    $XDG_CONFIG_HOME/admin/services.txt \
-    cat $XDG_CONFIG_HOME/admin/services.txt
+    $XDG_CONFIG_HOME/admin/services-arch.txt \
+    cat $XDG_CONFIG_HOME/admin/services-arch.txt
+```
+
+Create list of running services,artix:
+```bash
+rc-status > $XDG_CONFIG_HOME/admin/services-artix.txt
+
+b $XDG_CONFIG_HOME/admin/services-artix.txt
 ```
 
 Check dmesg:
