@@ -13,6 +13,10 @@
     "cpu",
     "gpu",
     "memory",
-    "terminalfont"
+    "terminalfont",
+    {
+      "type": "locale",
+      "key": "Locale"
+    }
   ]
 }

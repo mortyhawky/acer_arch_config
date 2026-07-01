@@ -1,7 +1,7 @@
 #### timezone
 
 ```bash
-ln -sf /usr/share/zoneinfo/Europe/Oslo /etc/localtime
+ln -fsv /usr/share/zoneinfo/Europe/Oslo /etc/localtime
 ls -l --color /etc/localtime
 
 hwclock --systohc
