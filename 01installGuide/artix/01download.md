@@ -12,9 +12,11 @@ c $Env:USERPROFILE\Downloads
 rm -Force artix*
 
 linux:
-c $HOME/Downloads/
+c $HOME/Downloads
 rm -rf artix*
+
 wget https://mirrors.dotsrc.org/artix-linux/iso/artix-base-openrc-20260402-x86_64.iso.sig
+
 wget https://mirrors.dotsrc.org/artix-linux/iso/artix-base-openrc-20260402-x86_64.iso
 ```
 
