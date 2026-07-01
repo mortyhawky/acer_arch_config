@@ -2,9 +2,10 @@
 
 #### Info and scripts for administration of config files.  
 
-Create list of explicitly installed packages:
+Export a list of explicitly installed packages:
 ```bash
 c ~/.config/admin
+c $XDG_CONFIG_HOME/admin
 pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist-artix.txt
 pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist-arch.txt
 bat $XDG_CONFIG_HOME/admin/pkglist-artix.txt
@@ -20,14 +21,14 @@ Or even cleaner:
 pacman -S --needed $(<$XDG_CONFIG_HOME/admin/pkglist.txt)
 ```
 
-Create list of running services,arch:
+Services Arch Systemd:
 ```bash
 systemctl status |grep service > \
     $XDG_CONFIG_HOME/admin/services-arch.txt \
     cat $XDG_CONFIG_HOME/admin/services-arch.txt
 ```
 
-Create list of running services,artix:
+Services Artix openrc:
 ```bash
 rc-status > $XDG_CONFIG_HOME/admin/services-artix.txt
 
