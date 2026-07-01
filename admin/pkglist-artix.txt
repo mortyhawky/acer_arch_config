@@ -26,6 +26,8 @@ linux-firmware
 man-db
 neovim
 ntfs-3g
+ntp
+ntp-openrc
 openrc
 os-prober
 picom

@@ -18,6 +18,8 @@ nvim /etc/hosts
 127.0.0.1        localhost
 ::1              localhost
 127.0.1.1        artix.localdomain  artix
+
+b /etc/host
 ```
 
 #### wifi
@@ -169,4 +171,3 @@ and we can pinpoint exactly where the DNS configuration is failing.
 pacman -S dhcpcd networkmanager networkmanager-openrc --needed
 rc-update add NetworkManager default
 ```
-
