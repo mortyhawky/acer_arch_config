@@ -4,7 +4,7 @@ GREEN="\[$(tput setaf 2)\]"
 RESET="\[$(tput sgr0)\]"
 
 #PS0="PS0: "
-PS1="\u@\h:\w\$ "
+PS1="\u@\h:\w\\n >> "
 #PS1="\n\w${GREEN}>> ${RESET}"
 #PS1="ret:$? jobs:\j ${GREEN}\A ${PWD} \n>> ${RESET}"
 #PS1="\${PWD}${GREEN}\n>> ${RESET}"
