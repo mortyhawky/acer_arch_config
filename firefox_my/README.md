@@ -1,5 +1,11 @@
 ### Firefox Configurations
 
+#### policies.json
+```
+/usr/lib/firefox/distribution/policies.json
+```
+
+
 #### Extentions
 - uBlock origin
 - I don't care about cookies

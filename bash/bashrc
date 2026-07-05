@@ -26,3 +26,5 @@ stty -ixon
 source ~/.config/bash/debug
 #fastfetch
 #neofetch
+
+#xmodmap $XDG_CONFIG_HOME/x11/.Xmodmap

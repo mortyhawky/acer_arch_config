@@ -27,4 +27,5 @@ sxhkd -c "$XDG_CONFIG_HOME/sxhkd/bspwm.xhk" \
     >> ~/.local/share/sxhkd.log 2>&1 &
 
 ### WINDOW MANAGER ###
+#xmodmap "$XDG_CONFIG_HOME/x11/.Xmodmap"
 exec bspwm
