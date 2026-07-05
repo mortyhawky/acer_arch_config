@@ -52,9 +52,10 @@ nnoremap <C-l> :wincmd l<CR>
 " ------------------------------------------------------------------------------
 "  BOOKMARKS  m+letter to create '+letter to go to mark
 " ------------------------------------------------------------------------------
-" :mark mark /full/directory/path [filename]
+" :mark mark /full/directory/path/ [filename]
 mark a /a/
 mark c ~/.config/
+mark d ~/Downloads/
 mark e /etc/
 mark h ~/
 mark l /a/linux/
