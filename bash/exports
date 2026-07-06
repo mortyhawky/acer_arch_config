@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
 # vim: filetype=sh :
 
-export BROWSER="/usr/bin/firefox"
-export EDITOR="/usr/bin/nvim"
-export MANPAGER="bat -plman"
-export TERMINAL="/usr/bin/alacritty"
-
 export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_STATE_HOME="$HOME/.local"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local"
 
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 export PATH="$XDG_STATE_HOME/bin:$PATH"
+
 export XAUTHORITY="$XDG_CONFIG_HOME/x11/.Xauthority"
 export XINITRC="$XDG_CONFIG_HOME/x11/.xinitrc"
+
+export BROWSER="/usr/bin/firefox"
+export BSPC="/usr/bin/bspc"
+export EDITOR="/usr/bin/nvim"
+export MANPAGER="bat -plman"
+export SXHKD_SHELL="/usr/bin/dash"
+export TERMINAL="/usr/bin/alacritty"

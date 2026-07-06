@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 source ~/.config/bash/exports
-echo "  $XDG_CONFIG_HOME/bash/functions"
+#echo "  $XDG_CONFIG_HOME/bash/functions"
 null="/dev/null"
 
 f_eza() {
@@ -61,16 +61,16 @@ f_edit_bash() {
           $XDG_CONFIG_HOME/bash/exports      \
           $XDG_CONFIG_HOME/bash/functions    \
           $XDG_CONFIG_HOME/bash/prompt       \
-          $XDG_CONFIG_HOME/readline/completions \
           $XDG_CONFIG_HOME/readline/inputrc     \
-          $XDG_CONFIG_HOME/readline/keybind     \
+          $XDG_CONFIG_HOME/readline/completions \
+          $XDG_CONFIG_HOME/readline/keybinds    \
           $XDG_CONFIG_HOME/readline/options     \
           $XDG_CONFIG_HOME/readline/vi-mode     \
                 && source $HOME/.bashrc
 } 
 
 f_reboot() {
-    iwctl known-networks "103B 5" forget
+    #iwctl known-networks "103B 5" forget
     sudo reboot
 }
 

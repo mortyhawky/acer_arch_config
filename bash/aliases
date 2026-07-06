@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-echo " ~/.config/bash/alias"
+#echo " ~/.config/bash/alias"
 
 ####################################################
 ## GENERAL
@@ -32,7 +32,7 @@ alias gs="git status --verbose"
 ####################################################
 ## EDIT CONFIGS
 ####################################################
-#alias et="nvim $XDG_CONFIG_HOME/tmux/tumx.conf"
+alias et="nvim $XDG_CONFIG_HOME/tmux/tmux.conf"
 alias ea="nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml $XDG_CONFIG_HOME/alacritty/keybidings"
 alias eb="f_edit_bash"
 alias eg="sudo nvim /etc/default/grub && sudo grub-mkconfig -o /boot/grub/grub.cfg"

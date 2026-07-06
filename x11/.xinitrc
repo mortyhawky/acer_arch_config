@@ -8,6 +8,7 @@ source $HOME/.config/bash/exports
 ### INPUT CONFIGURATION ###
 setxkbmap -layout no -model pc105 \
           -variant nodeadkeys -option caps:escape
+xset    r rate 200 40
 xmodmap "$XDG_CONFIG_HOME/x11/.Xmodmap"
 
 ### WALLPAPER ###

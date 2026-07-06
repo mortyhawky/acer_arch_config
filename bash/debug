@@ -1,20 +1,25 @@
 #!/usr/bin/env bash
 
-echo " ~/.config/debug"
 
-echo "TERM              = $TERM"
-echo "TERMINAL          = $TERMINAL"
-echo "SHELL             = $SHELL"
-echo "INPUTRC           = $INPUTRC"
-
-echo "BROWSER           = $BROWSER"
-echo "EDITOR            = $EDITOR"
-echo "HOME              = $HOME"
 echo "XDG_CONFIG_HOME   = $XDG_CONFIG_HOME"
-echo "XDG_STATE_HOME    = $XDG_STATE_HOME"
 echo "XDG_DATA_HOME     = $XDG_DATA_HOME"
+echo "XDG_STATE_HOME    = $XDG_STATE_HOME"
+
+echo "INPUTRC           = $INPUTRC"
+#echo "PATH              = $PATH"
+
 echo "XAUTHORITY        = $XAUTHORITY"
 echo "XINITRC           = $XINITRC"
+
+echo "BROWSER           = $BROWSER"
+echo "BSPC              = $BSPC"
+echo "EDITOR            = $EDITOR"
+echo "MANPAGER          = $MANPAGER"
+echo "SXHKD_SHELL       = $SXHKD_SHELL"
+echo "TERMINAL          = $TERMINAL"
+
+echo "TERM              = $TERM"
+echo "SHELL             = $SHELL"
 
 echo '  ip a '
 echo '  sc status       /   rc-status '

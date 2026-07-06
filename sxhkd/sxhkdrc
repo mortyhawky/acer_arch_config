@@ -16,11 +16,11 @@
 ctrl + super + F8
     env > ~/sxhkd-env
 
-super + Return
-  $TERMINAL
-
-super + w
-  $BROWSER
+#super + Return
+#  $TERMINAL
+#
+#super + w
+#  $BROWSER
 
 super + r
   rofi -show drun
@@ -31,7 +31,7 @@ ctrl + super + r
 
 ## Reload bspwm
 super + alt + r
-  $BSPC wm -r
+  bspc wm -r
 
 ## ###############################################
 ##   BSPWM   HOTKEYS
@@ -39,53 +39,53 @@ super + alt + r
 
 ## focus the node in the given direction
 super + {h,j,k,l}
-	$BSPC node --focus {west,south,north,east}
+	bspc node --focus {west,south,north,east}
 
 # Resize window (Super + Shift + hl)
 # Resize focused window - Horizontal (h = narrower, l = wider)
 super + shift + h
-    $BSPC node --resize left -20 0 || $BSPC node -z right -20 0
+    bspc node --resize left -20 0 || bspc node -z right -20 0
 
 super + shift + l
-    $BSPC node -z right 20 0 || $BSPC node -z left 20 0
+    bspc node -z right 20 0 || bspc node -z left 20 0
 
 # Resize window (Super + Shift + jk)
 # Resize focused window - Vertical (j = shorter, k = taller)
 super + shift + j
-    $BSPC node -z bottom 0 20 || $BSPC node -z top 0 20
+    bspc node -z bottom 0 20 || bspc node -z top 0 20
 
 super + shift + k
-    $BSPC node -z top 0 -20 || $BSPC node -z bottom 0 -20
+    bspc node -z top 0 -20 || bspc node -z bottom 0 -20
 
 ## Close focused window
 super + q
-  $BSPC node --close
+  bspc node --close
 
 ## quit bspwm
 super + shift + q
-  $BSPC quit
+  bspc quit
 
 ## alternate between the tiled and monocle layout
 super + m
-	$BSPC desktop -l next
+	bspc desktop -l next
 
 ## Promote window
 super + shift + Return
-  $BSPC node --swap biggest.local
+  bspc node --swap biggest.local
 
 # focus or send to the given desktop
 # Super + 1-9,0 go to desktop 
 # Super + 1-9,0 send node to given desktop
 super + {_, shift + }{1-9,0}
-	$BSPC {desktop --focus, node --to-desktop} '^{1-9,10}'
+	bspc {desktop --focus, node --to-desktop} '^{1-9,10}'
 
 ## send the newest marked node to the newest preselected node
 #super + y
-#	$BSPC node newest.marked.local -n newest.!automatic.local
+#	bspc node newest.marked.local -n newest.!automatic.local
 #
 ## swap the current node and the biggest window
 #super + g
-#	$BSPC node -s biggest.window
+#	bspc node -s biggest.window
 #
 ##
 ## state/flags
@@ -93,11 +93,11 @@ super + {_, shift + }{1-9,0}
 #
 ## set the window state
 #super + {t,shift + t,s,f}
-#	$BSPC node -t {tiled,pseudo_tiled,floating,fullscreen}
+#	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 #
 ## set the node flags
 #super + ctrl + {m,x,y,z}
-#	$BSPC node -g {marked,locked,sticky,private}
+#	bspc node -g {marked,locked,sticky,private}
 #
 ##
 ## focus/swap
@@ -106,25 +106,25 @@ super + {_, shift + }{1-9,0}
 #
 ## focus the node for the given path jump
 #super + {p,b,comma,period}
-#	$BSPC node -f @{parent,brother,first,second}
+#	bspc node -f @{parent,brother,first,second}
 #
 ## focus the next/previous window in the current desktop
 #super + {_,shift + }c
-#	$BSPC node -f {next,prev}.local.!hidden.window
+#	bspc node -f {next,prev}.local.!hidden.window
 #
 ## focus the next/previous desktop in the current monitor
 #super + bracket{left,right}
-#	$BSPC desktop -f {prev,next}.local
+#	bspc desktop -f {prev,next}.local
 #
 ## focus the last node/desktop
 #super + {grave,Tab}
-#	$BSPC {node,desktop} -f last
+#	bspc {node,desktop} -f last
 #
 ## focus the older or newer node in the focus history
 #super + {o,i}
-#	$BSPC wm -h off; \
-#	$BSPC node {older,newer} -f; \
-#	$BSPC wm -h on
+#	bspc wm -h off; \
+#	bspc node {older,newer} -f; \
+#	bspc wm -h on
 #
 
 ##
@@ -133,20 +133,20 @@ super + {_, shift + }{1-9,0}
 #
 ## preselect the direction
 #super + ctrl + {h,j,k,l}
-#	$BSPC node -p {west,south,north,east}
+#	bspc node -p {west,south,north,east}
 #
 ## preselect the ratio
 #super + ctrl + {1-9}
-#	$BSPC node -o 0.{1-9}
+#	bspc node -o 0.{1-9}
 
 ## cancel the preselection for the focused node
 #super + ctrl + space
-#	$BSPC node -p cancel
+#	bspc node -p cancel
 #
 ## cancel the preselection for the focused desktop
 #super + ctrl + shift + space
-#	$BSPC query -N -d | xargs -I id -n 1 $BSPC node id -p cancel
+#	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 ## move a floating window
 ##super + {Left,Down,Up,Right}
-##	$BSPC node -v {-20 0,0 20,0 -20,20 0}
+##	bspc node -v {-20 0,0 20,0 -20,20 0}
