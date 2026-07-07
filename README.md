@@ -1,4 +1,4 @@
-#l### acer_arch_config.git
+#### acer_arch_config.git
 
 ##### /home/m/.config/  $HOME/.config/   ~/.config/        
 
