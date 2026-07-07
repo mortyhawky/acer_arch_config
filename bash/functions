@@ -57,8 +57,8 @@ f_edit_bash() {
           $XDG_CONFIG_HOME/bash/aliases      \
           $XDG_CONFIG_HOME/bash/bash_logout  \
           $XDG_CONFIG_HOME/bash/completion   \
-          $XDG_CONFIG_HOME/bash/debug        \
           $XDG_CONFIG_HOME/bash/exports      \
+          $XDG_CONFIG_HOME/bash/debug        \
           $XDG_CONFIG_HOME/bash/functions    \
           $XDG_CONFIG_HOME/bash/prompt       \
           $XDG_CONFIG_HOME/readline/inputrc     \
