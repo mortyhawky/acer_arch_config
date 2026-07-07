@@ -14,5 +14,5 @@ cp -vf /etc/zsh/zshenv      /etc/zsh/zshenv_default
 ###############################################################
 #### Create Symlinks:
 ###############################################################
-ln -svf /home/m/.config/_etc_zsh_/zprofile  /etc/zsh/zprofile
-ln -svf /home/m/.config/_etc_zsh_/zshenv    /etc/zsh/zshenv
+ln -svf /home/m/.config/etc/zsh_/zprofile  /etc/zsh/zprofile
+ln -svf /home/m/.config/etc/zsh_/zshenv    /etc/zsh/zshenv

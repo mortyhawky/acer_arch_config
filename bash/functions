@@ -70,12 +70,11 @@ f_edit_bash() {
 } 
 
 f_reboot() {
-    #iwctl known-networks "103B 5" forget
+    iwctl known-networks "103B 5" forget
     sudo reboot
 }
 
 f_poweroff() {
     iwctl known-networks "103B 5" forget
-    sudo rc-service iwd stop
     sudo poweroff
 }

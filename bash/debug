@@ -22,9 +22,9 @@ echo "TERM              = $TERM"
 echo "SHELL             = $SHELL"
 
 echo '  ip a '
-echo '  sc status |g service        /   rc-status '
-echo '  sc start iwd                /   rc-service iwd start '
-echo '  sc start systemd-resolved '
-echo '  sc disable iwd              /   rc-update del iwd '
-echo '  sc enable  iwd              /   rc-update add default '
+echo '  sc status |g service           /  rc-status '
+echo '  sc start iwd systemd-resolved  /  rc-service iwd start '
+echo '  sc disable iwd                 /  rc-update del iwd '
+echo '  sc enable  iwd                 /  rc-update add default '
 echo '  iwctl station wlan0 connect "103B 5"  '
+ip addr show wlan0 |g "inet "
