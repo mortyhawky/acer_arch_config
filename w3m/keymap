@@ -1,0 +1,5 @@
+keymap C-d NEXT_PAGE
+keymap C-u PREV_PAGE
+keymap   H BACK
+keymap   L FORWARD
+keymap   f MARK_URL
