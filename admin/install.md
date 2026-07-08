@@ -18,7 +18,7 @@ Download the Arch Linux ISO from the official website.
 Use the `dd` command to create a bootable USB:
 
 ```bash
-sudo dd bs=4M if=path/to/archlinux.iso of=/dev/sdX status=progress
+sudo dd bs=4M if=path/to/archlinux.iso of=/dev/sdX status=progress   
 ```
 
 Replace `/dev/sdX` with your USB device.
