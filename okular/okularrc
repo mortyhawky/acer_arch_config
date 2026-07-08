@@ -7,7 +7,9 @@ ShowSidebar=true
 
 [Recent Files]
 File1[$e]=/a/prog/c/c-primer/c-primer-annotation01.pdf
+File2[$e]=/a/linux/arch/Installation_guide_arch.pdf
 Name1[$e]=c-primer-annotation01.pdf
+Name2[$e]=Installation_guide_arch.pdf
 
 [UiSettings]
 ColorScheme=BreezeDark

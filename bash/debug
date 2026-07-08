@@ -18,6 +18,7 @@ echo "MANPAGER          = $MANPAGER"
 echo "SXHKD_SHELL       = $SXHKD_SHELL"
 echo "TERMINAL          = $TERMINAL"
 echo "W3M_DIR           = $W3M_DIR"
+echo "ARCH_VERSION      = $ARCH_VERSION"
 
 echo "TERM              = $TERM"
 echo "SHELL             = $SHELL"
