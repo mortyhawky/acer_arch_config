@@ -1,13 +1,1 @@
-[Desktop Entry]
-FullScreen=false
-
-[General]
-LockSidebar=true
-ShowSidebar=true
-
-[Recent Files]
-File1[$e]=/a/prog/c/c-primer/c-primer-annotation01.pdf
-Name1[$e]=c-primer-annotation01.pdf
-
-[UiSettings]
-ColorScheme=BreezeDark
+/home/m/.config/okular/okularrc
