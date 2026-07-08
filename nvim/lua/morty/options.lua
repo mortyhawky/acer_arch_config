@@ -21,7 +21,7 @@ end
 
 vim.g.mapleader         = " "     -- Space as leader
 
---vim.opt.backup          = false   -- Disable backup files
+vim.opt.backup          = false   -- Disable backup files
 vim.opt.swapfile        = false   -- No swapfile (avoids clutter)
 vim.opt.cursorline      = true    -- Highlight current line
 vim.opt.cursorcolumn    = true    -- Highlight current column
@@ -77,6 +77,16 @@ end
 
 vim.opt.backup          = false   -- Do not create backup files
 vim.opt.writebackup     = false   -- Do not write to a backup file
+
+vim.opt.swapfile        = false
+vim.opt.backup          = false
+-- :echo stdpath("data")
+vim.opt.undodir         = vim.fn.stdpath("data") .. "/undodir"
+vim.opt.undofile        = true
+
+vim.opt.clipboard:append("unnamedplus")
+vim.opt.isfname:append("@-@")
+vim.opt.guicursor       = ""
 
 -- Updated hpWin    2026-04-28 14:42 Tue
 -- Updated acerWSL  2026-04-28 18:36 Tue
