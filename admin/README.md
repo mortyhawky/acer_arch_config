@@ -7,18 +7,18 @@ Export a list of explicitly installed packages:
 c ~/.config/admin
 c $XDG_CONFIG_HOME/admin
 pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist-artix.txt
-pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist-arch.txt
+pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist-arch-new.txt
 bat $XDG_CONFIG_HOME/admin/pkglist-artix.txt
 ```
 
 Restore with:
 ```bash
-sudo pacman -S --needed - <$XDG_CONFIG_HOME/admin/pkglist-artix.txt 
+pm -S --needed - <$XDG_CONFIG_HOME/admin/pkglist-arch-new.txt
 ```
 
 Or even cleaner:
 ```bash
-pacman -S --needed $(<$XDG_CONFIG_HOME/admin/pkglist.txt)
+pm -S --needed $(<$XDG_CONFIG_HOME/admin/pkglist-new.txt)
 ```
 
 Services Arch Systemd:

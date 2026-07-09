@@ -1,8 +1,9 @@
-gh/
-dconf/
-mozilla/
-zen/
-mimeapps.list
-pulse/
 BraveSoftware/
+chromium/
+dconf/
+gh/
 go/
+mimeapps.list
+mozilla/
+pulse/
+zen/
