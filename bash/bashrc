@@ -4,7 +4,7 @@
 # see also the settings in ~/.config/readline/
 #
 # Load modular components
-for file in ~/.config/bash/{exports,aliases,functions,prompt,completion}; do
+for file in ~/.config/bash/{exports,functions,aliases,completion,prompt}; do
     [ -f "$file" ] && source "$file"
 done
 

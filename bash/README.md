@@ -1,10 +1,11 @@
-#### M2B = MMB = Minial Modular Bash
+#### MMMB = Morty's Mininal Modular Bash
 
-:r !tree --sort name
 ```bash
 ~/.config/bash
     ├── 01installSyms.sh
+    ├── README.md
     ├── aliases
+    ├── base16_3024.txt
     ├── bash_logout
     ├── bash_profile
     ├── bashrc
@@ -13,6 +14,6 @@
     ├── exports
     ├── functions
     ├── prompt
-    └── README.md
+    └── systemctl_status.sh
 ```
-1 directory, 11 files
+1 directory, 13 files
