@@ -29,4 +29,5 @@ sxhkd -c "$XDG_CONFIG_HOME/sxhkd/bspwm.xhk" \
 
 ### WINDOW MANAGER ###
 #xmodmap "$XDG_CONFIG_HOME/x11/.Xmodmap"
+/usr/bin/alacritty &
 exec bspwm
