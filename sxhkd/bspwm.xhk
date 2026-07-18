@@ -20,7 +20,8 @@ super + Return
   $TERMINAL
 
 super + w
-  $BROWSER
+  /usr/bin/firefox
+  #$BROWSER
 
 super + r
   rofi -show drun
