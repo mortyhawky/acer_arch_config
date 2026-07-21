@@ -1,0 +1,45 @@
+keycode range supported by kernel:           1 - 255
+max number of actions bindable to a key:         256
+number of keymaps in actual use:                 7
+of which 1 dynamically allocated
+ranges of action codes supported by kernel:
+number of function keys supported by kernel: 256
+max nr of compose definitions: 256
+nr of compose definitions in actual use: 68
+Symbols recognized by dumpkeys:
+(numeric value, symbol)
+
+0x0000	nul
+0x0001	Control_a
+0x0002	Control_b
+0x0003	Control_c
+0x0004	Control_d
+0x0005	Control_e
+0x0006	Control_f
+0x0007	Control_g
+0x0008	BackSpace
+0x0009	Tab
+0x000a	Linefeed
+0x000b	Control_k
+0x000c	Control_l
+0x000d	Control_m
+0x000e	Control_n
+0x000f	Control_o
+0x0010	Control_p
+0x0011	Control_q
+0x0012	Control_r
+0x0013	Control_s
+0x0014	Control_t
+0x0015	Control_u
+0x0016	Control_v
+0x0017	Control_w
+0x0018	Control_x
+0x0019	Control_y
+0x001a	Control_z
+0x001b	Escape
+0x001c	Control_backslash
+0x001d	Control_bracketright
+0x001e	Control_asciicircum
+0x001f	Control_underscore
+0x0020	space
+0x0021	exclam

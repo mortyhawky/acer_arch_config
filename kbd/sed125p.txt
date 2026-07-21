@@ -1,0 +1,25 @@
+keymaps 0-2,4,6,8,12
+keycode   1 = Escape           Escape           Escape          
+	control	keycode   1 = Escape          
+	altgr	control	keycode   1 = Escape          
+	alt	keycode   1 = Meta_Escape     
+	control	alt	keycode   1 = Escape          
+keycode   2 = one              exclam          
+	alt	keycode   2 = Meta_one        
+keycode   3 = two              quotedbl         at              
+	control	keycode   3 = nul             
+	alt	keycode   3 = Meta_two        
+keycode   4 = three            numbersign      
+	control	keycode   4 = Escape          
+	alt	keycode   4 = Meta_three      
+keycode   5 = four             dollar           dollar          
+	control	keycode   5 = Control_backslash
+	alt	keycode   5 = Meta_four       
+keycode   6 = five             percent         
+	control	keycode   6 = Control_bracketright
+	alt	keycode   6 = Meta_five       
+keycode   7 = six              ampersand       
+	control	keycode   7 = Control_asciicircum
+	alt	keycode   7 = Meta_six        
+keycode   8 = seven            slash            braceleft       
+	control	keycode   8 = Control_underscore
