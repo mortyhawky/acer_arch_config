@@ -6,22 +6,22 @@ Export a list of explicitly installed packages:
 ```bash
 c ~/.config/admin
 c $XDG_CONFIG_HOME/admin
-pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist-artix.txt
-pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist-arch-new.txt
-bat $XDG_CONFIG_HOME/admin/pkglist-artix.txt
+pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist-arch-$(date -Iseconds).txt
+bat $XDG_CONFIG_HOME/admin/pkglist-.........
 ```
 
 Restore with:
 ```bash
-pm -S --needed - <$XDG_CONFIG_HOME/admin/pkglist-arch-new.txt
+pm -S --needed - <$XDG_CONFIG_HOME/admin/pkglist-...........
 ```
 
 Or even cleaner:
 ```bash
-pm -S --needed $(<$XDG_CONFIG_HOME/admin/pkglist-new.txt)
+pm -S --needed $(<$XDG_CONFIG_HOME/admin/pkglist-.........
 ```
 
 Services Arch Systemd:
+Ctrl + n to toggle line numbers in vim
 ```bash
 systemctl status |grep service > \
     $XDG_CONFIG_HOME/admin/services-arch.txt
