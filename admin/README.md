@@ -26,7 +26,7 @@ Ctrl + n to toggle line numbers in vim
 systemctl status |grep service > \
     $XDG_CONFIG_HOME/admin/services-arch.txt
 
-cat $XDG_CONFIG_HOME/admin/services-arch.txt
+bat $XDG_CONFIG_HOME/admin/services-arch.txt
 ```
 
 Services Artix openrc:
