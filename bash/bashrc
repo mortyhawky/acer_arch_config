@@ -1,20 +1,13 @@
 #!/usr/bin/env bash
 #echo " ~/.config/bash/bashrc"
-#
+
 # see also the settings in ~/.config/readline/
-#
+
 # Load modular components
 for file in ~/.config/bash/{exports,functions,aliases,completion,prompt}; do
     [ -f "$file" ] && source "$file"
 done
 
-# Make CapsLock a secondary Escape key
-#sudo loadkeys $XDG_CONFIG_HOME/kbd/esc.map
-#sudo loadkeys $XDG_CONFIG_HOME/kbd/custom.map
-# /usr/local/share/kbd/keymaps/no-custom.map.gz
-# /etc/vconsole.conf    ->  KEYMAP=no-custom
-# Artix Linux: /etc/conf.d/keymaps:
-#   keymap="home/m/.config/kbd/no-custom.map.gz"
 
 # Make ctrl+s useable
 stty -ixon
@@ -24,7 +17,4 @@ stty -ixon
 ##  DEBUG
 #################################################
 source ~/.config/bash/debug
-#fastfetch
-#neofetch
 
-#xmodmap $XDG_CONFIG_HOME/x11/.Xmodmap

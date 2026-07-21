@@ -1,27 +1,24 @@
 #!/usr/bin/env bash
 
-
+#echo "PATH              = $PATH"
+echo "ARCH_VERSION      = $ARCH_VERSION"
+echo "BROWSER           = $BROWSER"
+echo "BSPC              = $BSPC"
+echo "DISPLAY           = $DISPLAY"
+echo "EDITOR            = $EDITOR"
+echo "GDBINIT           = $GDBINIT"
+echo "INPUTRC           = $INPUTRC"
+echo "MANPAGER          = $MANPAGER"
+echo "SHELL             = $SHELL"
+echo "SXHKD_SHELL       = $SXHKD_SHELL"
+echo "TERM              = $TERM"
+echo "TERMINAL          = $TERMINAL"
+echo "W3M_DIR           = $W3M_DIR"
+echo "XAUTHORITY        = $XAUTHORITY"
 echo "XDG_CONFIG_HOME   = $XDG_CONFIG_HOME"
 echo "XDG_DATA_HOME     = $XDG_DATA_HOME"
 echo "XDG_STATE_HOME    = $XDG_STATE_HOME"
-
-echo "INPUTRC           = $INPUTRC"
-#echo "PATH              = $PATH"
-
-echo "XAUTHORITY        = $XAUTHORITY"
 echo "XINITRC           = $XINITRC"
-
-echo "BROWSER           = $BROWSER"
-echo "BSPC              = $BSPC"
-echo "EDITOR            = $EDITOR"
-echo "MANPAGER          = $MANPAGER"
-echo "SXHKD_SHELL       = $SXHKD_SHELL"
-echo "TERMINAL          = $TERMINAL"
-echo "W3M_DIR           = $W3M_DIR"
-echo "ARCH_VERSION      = $ARCH_VERSION"
-
-echo "TERM              = $TERM"
-echo "SHELL             = $SHELL"
 
 echo '  ip a '
 echo '  sc status |g service           /  rc-status '
@@ -30,3 +27,14 @@ echo '  sc disable iwd                 /  rc-update del iwd '
 echo '  sc enable  iwd                 /  rc-update add default '
 echo '  iwctl station wlan0 connect "103B 5"  '
 ip addr show wlan0 |g "inet "
+
+if [[ "$DISPLAY" = ":0" ]]; then
+    echo "gui mode"
+else
+    echo "tty mode"
+fi
+
+localectl
+
+#fastfetch
+#neofetch

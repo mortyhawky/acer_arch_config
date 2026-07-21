@@ -1,0 +1,17 @@
+set recolor true
+set recolor-darkcolor "#eeeeee"
+set recolor-lightcolor "#111111"
+set default-bg "#111111"
+set default-fg "#eeeeee"
+set recolor-keephue true
+
+set adjust-open "width"
+#set zoom best-fit
+#set smooth-scroll true
+set zoom-min 80
+set zoom-max 200
+set zoom-step 10
+
+map <C-+> zoom in
+map <C--> zoom out
+map <C-0> zoom width

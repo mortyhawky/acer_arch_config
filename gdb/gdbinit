@@ -1,2 +1,6 @@
 set debuginfod enabled on
 set listsize 20
+set environment ASAN_OPTIONS detect_leaks=0
+set print pretty on
+set pagination off
+set disassembly-flavor intel
