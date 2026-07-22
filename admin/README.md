@@ -15,11 +15,6 @@ Restore with:
 pm -S --needed - <$XDG_CONFIG_HOME/admin/pkglist-...........
 ```
 
-Or even cleaner:
-```bash
-pm -S --needed $(<$XDG_CONFIG_HOME/admin/pkglist-.........
-```
-
 Services Arch Systemd:
 Ctrl + n to toggle line numbers in vim
 ```bash
@@ -38,6 +33,6 @@ cat $XDG_CONFIG_HOME/admin/services-artix.txt
 
 Check dmesg:
 ```bash
-sudo dmesg |grep --color error
+sudo dmesg |grep -i --color error
 sudo dmesg |grep --color -i microcode
 ```

@@ -40,6 +40,7 @@ vifm
 vim
 w3m
 which
+wireless-regdb
 xclip
 xdg-utils
 xf86-video-intel

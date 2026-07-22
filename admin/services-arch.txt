@@ -7,8 +7,12 @@
            │ ├─systemd-udevd.service
            │ └─systemd-userdbd.service
                └─user@1000.service
+                 │ ├─at-spi-dbus-bus.service
                  │ ├─dbus-broker.service
                  │ ├─pipewire-pulse.service
                  │ ├─pipewire.service
-                 │ └─wireplumber.service
-                   └─1086 grep service
+                 │ ├─wireplumber.service
+                 │ ├─xdg-desktop-portal.service
+                 │ ├─xdg-document-portal.service
+                 │ └─xdg-permission-store.service
+                   └─1846 grep service

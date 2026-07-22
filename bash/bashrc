@@ -17,4 +17,5 @@ stty -ixon
 ##  DEBUG
 #################################################
 source ~/.config/bash/debug
+source ~/.config/bash/important
 
