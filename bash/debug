@@ -26,7 +26,10 @@ echo '  sc start iwd systemd-resolved  /  rc-service iwd start '
 echo '  sc disable iwd                 /  rc-update del iwd '
 echo '  sc enable  iwd                 /  rc-update add default '
 echo '  iwctl station wlan0 connect "103B 5"  '
-ip addr show wlan0 |g "inet "
+echo "  ip addr show  wlan0: "$(ip addr show wlan0 |g "inet ") 
+echo "    sc start bluetooth.service"
+echo "    sc start --user pipewire"
+
 
 if [[ "$DISPLAY" = ":0" ]]; then
     echo "gui mode"

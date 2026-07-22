@@ -6,14 +6,12 @@
 ####################################################
 alias a="alias"
 alias b="bat"
-alias c=f_cdls
+alias c="f_cdls"
 alias ff="clear && fastfetch"
 alias g="grep -i --color=auto"
 alias l="f_eza"
 alias ll="f_eza --long"
 alias mkcd=f_mkcd
-alias sb="clear && source $HOME/.bashrc"
-alias sc="sudo systemctl"
 alias t="tmux"
 alias v="nvim"
 alias vf="vifm"
@@ -32,13 +30,14 @@ alias gs="git status --verbose"
 ####################################################
 ## EDIT CONFIGS
 ####################################################
-alias et="nvim $XDG_CONFIG_HOME/tmux/tmux.conf"
 alias ea="nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml $XDG_CONFIG_HOME/alacritty/keybidings"
 alias eb="f_edit_bash"
-alias ep="f_edit_profile"
 alias eg="sudo nvim /etc/default/grub && sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias ep="f_edit_profile"
+alias et="nvim $XDG_CONFIG_HOME/tmux/tmux.conf"
 alias ev="nvim $XDG_CONFIG_HOME/nvim/init.lua"
 alias ew="nvim $XDG_CONFIG_HOME/wezterm/wezterm.lua"
+alias evc="sudo nvim /etc/vconsole.conf"
 
 ####################################################
 ## ADMIN
@@ -47,8 +46,11 @@ alias ew="nvim $XDG_CONFIG_HOME/wezterm/wezterm.lua"
 alias dm="sudo dmesg"
 alias fdl="sudo fdisk --list"
 alias lb="lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT,LABEL,PARTLABEL,UUID"
+alias mount="sudo mount -v"
 alias pm="f_pacman"
 alias poweroff="f_poweroff"
 alias reboot="f_reboot"
+alias sb="clear && source $HOME/.bashrc"
+alias sp="clear && source $HOME/.bashrc"
+alias sc="sudo systemctl"
 alias umount="sudo umount -v"
-alias mount="sudo mount -v"
