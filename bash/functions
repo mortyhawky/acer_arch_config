@@ -56,14 +56,15 @@ f_edit_bash() {
     nvim  $XDG_CONFIG_HOME/bash/bashrc       \
           $XDG_CONFIG_HOME/bash/aliases      \
           $XDG_CONFIG_HOME/bash/bash_logout  \
+          $XDG_CONFIG_HOME/bash/bash_profile \
           $XDG_CONFIG_HOME/bash/completion   \
-          $XDG_CONFIG_HOME/bash/exports      \
           $XDG_CONFIG_HOME/bash/debug        \
+          $XDG_CONFIG_HOME/bash/exports      \
           $XDG_CONFIG_HOME/bash/functions    \
           $XDG_CONFIG_HOME/bash/important    \
           $XDG_CONFIG_HOME/bash/prompt       \
-          $XDG_CONFIG_HOME/readline/inputrc     \
           $XDG_CONFIG_HOME/readline/completions \
+          $XDG_CONFIG_HOME/readline/inputrc     \
           $XDG_CONFIG_HOME/readline/keybinds    \
           $XDG_CONFIG_HOME/readline/options     \
           $XDG_CONFIG_HOME/readline/vi-mode     \

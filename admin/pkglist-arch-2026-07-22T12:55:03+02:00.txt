@@ -36,6 +36,7 @@ sxhkd
 texinfo
 tmux
 tree
+ttf-jetbrains-mono-nerd
 vifm
 vim
 w3m
