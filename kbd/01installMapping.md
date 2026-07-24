@@ -33,3 +33,17 @@ sudo nvim /etc/vconsole.conf
 sudo mkinitcpio -P
 rebot
 ```
+
+localectl:
+```bash
+localectl status
+localectl --help
+localectl set-keymap no-esc --no-convert
+localectl set-x11-keymap no pc105 nodeadkeys caps:escape --no-convert
+watch /etc/locale.conf /etc/vconsole.conf
+```
+
+Check what keys send
+```bash
+cat -v
+```
