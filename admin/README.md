@@ -11,15 +11,15 @@ c $XDG_CONFIG_HOME/admin
 rm -rf pkglist-arch* && ll
 
 CURRENT="$(date -Iseconds)" && echo $CURRENT
+
 pacman -Qqe > \
     "$XDG_CONFIG_HOME/admin/pkglist-arch-$CURRENT.txt" \
     && ll
 
-gitall
-
 echo "Number of pkg: $(pm -Qqe | wc -l)" >>\
     "$XDG_CONFIG_HOME/admin/pkglist-arch-$CURRENT.txt"
 
+gitall
 b pkglist-
 ```
 
@@ -31,16 +31,17 @@ pm -S --needed - <$XDG_CONFIG_HOME/admin/pkglist-
 Services Arch Systemd:
 Ctrl + n to toggle line numbers in vim
 ```bash
-systemctl status |grep service > \
-    $XDG_CONFIG_HOME/admin/services-arch.txt
+ll && \
+    systemctl status |grep service > "$XDG_CONFIG_HOME/admin/services-arch.txt" \
+    && ll
 
 bat $XDG_CONFIG_HOME/admin/services-arch.txt
+gitall
 ```
 
 Services Artix openrc:
 ```bash
 rc-status > $XDG_CONFIG_HOME/admin/services-artix.txt
-
 cat $XDG_CONFIG_HOME/admin/services-artix.txt
 ```
 
