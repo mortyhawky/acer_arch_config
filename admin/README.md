@@ -3,10 +3,15 @@
 #### Info and scripts for administration of config files.  
 
 Export a list of explicitly installed packages:
+Ctrl + n to toggle line numbers in vim
 ```bash
 c ~/.config/admin
 c $XDG_CONFIG_HOME/admin
-pacman -Qqe > $XDG_CONFIG_HOME/admin/pkglist-arch-$(date -Iseconds).txt
+rm -rf pkglist-arch* && ll
+
+pacman -Qqe > $XDG_CONFIG_HOME/admin\
+/pkglist-arch-$(date -Iseconds).txt && ll
+
 bat $XDG_CONFIG_HOME/admin/pkglist-.........
 ```
 
