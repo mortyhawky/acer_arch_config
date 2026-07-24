@@ -22,21 +22,22 @@ echo "XDG_RUNTIME_DIR           = $XDG_RUNTIME_DIR"
 echo "XDG_STATE_HOME            = $XDG_STATE_HOME"
 echo "XINITRC                   = $XINITRC"
 
-echo '  ip a '
-echo '  sc status |g service           /  rc-status '
+#echo 'ip a && sc start iwd systemd-resolved && sleep 3 && \'
+#echo 'iwctl station wlan0 connect "103B 5" --passphrase "sdbyorgufjuad" && ip a'
+#echo '  ip a '
+#echo '  sc status |g service           /  rc-status '
 echo '  sc start iwd systemd-resolved  /  rc-service iwd start '
-echo '  sc disable iwd                 /  rc-update del iwd '
-echo '  sc enable  iwd                 /  rc-update add default '
-echo '  iwctl station wlan0 connect "103B 5"  '
-echo "  ip addr show  wlan0: "$(ip addr show wlan0 |g "inet ") 
-echo "    sc start bluetooth.service"
-echo "    sc start --user pipewire"
-
+#echo '  sc disable iwd                 /  rc-update del iwd '
+#echo '  sc enable  iwd                 /  rc-update add default '
+echo ' iwctl station wlan0 connect "103B 5" --passphrase "sdbyorgufjuad" && ip a '
+#echo "  ip addr show  wlan0: "$(ip addr show wlan0 |g "inet ") 
+#echo "    sc start bluetooth.service"
+#echo "    sc start --user pipewire"
 
 if [[ "$DISPLAY" = ":0" ]]; then
-    echo "gui mode"
+    echo "GUI-mode"
 else
-    echo "tty mode"
+    echo "TTY-mode"
 fi
 
 localectl

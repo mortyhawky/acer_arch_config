@@ -1,4 +1,18 @@
 # $XDG_CONFIG_HOME/alacritty/alacritty.toml
+# https://alacritty.org/config-alacritty.html
+
+
+[font]
+#  normal      = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+#  bold        = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+#  italic      = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
+#  bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
+  size = 10.25
+#  offset = { x = 0, y = 0 }
+#  glyph_offset = { x = 0, y = 0 }
+#  builtin_box_drawing = true
+
+
 [general]
   import = [
     #"~/.config/alacritty/keybindings.toml",
@@ -14,10 +28,11 @@
 #  live_config_reload = true
 
 
-# Environment variables that are set when running alacritty
 [env]
+# Environment variables that are set when running alacritty
   MY_ENV_VAR = "my_env_variable"
   ALACRITTY_VERSION="alacritty 0.17.0 (94e7c887)"
+
 
 #[window]
 #  padding = { x = 10, y = 10 }
@@ -33,15 +48,6 @@
 #  multiplier = 3  # default is     3
 #
 #
-#[font]
-#  normal      = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
-#  bold        = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
-#  italic      = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
-#  bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
-#  size = 10.25
-#  offset = { x = 0, y = 0 }
-#  glyph_offset = { x = 0, y = 0 }
-#  builtin_box_drawing = true
 #
 #
 #[colors]
