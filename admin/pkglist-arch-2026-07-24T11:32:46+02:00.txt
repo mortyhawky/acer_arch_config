@@ -53,3 +53,4 @@ xorg-xinit
 xorg-xset
 zathura
 zathura-pdf-mupdf
+Number of pkg: 56
