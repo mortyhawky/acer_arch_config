@@ -10,13 +10,15 @@ c $XDG_CONFIG_HOME/admin
 
 rm -rf pkglist-arch* && ll
 
+CURRENT="$(date -Iseconds)" && echo $CURRENT
 pacman -Qqe > \
-"$XDG_CONFIG_HOME/admin/pkglist-arch-$(date -Iseconds).txt" \
-&& ll
+    "$XDG_CONFIG_HOME/admin/pkglist-arch-$CURRENT.txt" \
+    && ll
 
 gitall
 
-pm -Qqe | wc -l >> "$XDG_CONFIG_HOME/admin/pkglist-arch-*" 
+echo "Number of pkg: $(pm -Qqe | wc -l)" >>\
+    "$XDG_CONFIG_HOME/admin/pkglist-arch-$CURRENT.txt"
 
 b pkglist-
 ```
