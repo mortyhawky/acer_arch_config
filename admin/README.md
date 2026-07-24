@@ -7,17 +7,23 @@ Ctrl + n to toggle line numbers in vim
 ```bash
 c ~/.config/admin
 c $XDG_CONFIG_HOME/admin
+
 rm -rf pkglist-arch* && ll
 
-pacman -Qqe > $XDG_CONFIG_HOME/admin\
-/pkglist-arch-$(date -Iseconds).txt && ll
+pacman -Qqe > \
+"$XDG_CONFIG_HOME/admin/pkglist-arch-$(date -Iseconds).txt" \
+&& ll
 
-bat $XDG_CONFIG_HOME/admin/pkglist-.........
+gitall
+
+b pkglist-
+
+pm -Qqe | wc -l >> "$XDG_CONFIG_HOME/admin/pkglist-arch-$(date -Iseconds).txt" 
 ```
 
 Restore with:
 ```bash
-pm -S --needed - <$XDG_CONFIG_HOME/admin/pkglist-...........
+pm -S --needed - <$XDG_CONFIG_HOME/admin/pkglist-
 ```
 
 Services Arch Systemd:
