@@ -1,8 +1,8 @@
 #### Keyboard Layout tty TERM=linux
 
 ```bash
-sudo cp /usr/share/kbd/keymaps/i386/qwerty/no.map.gz \
-        /usr/local/share/keymaps/no-custom.map.gz
+sudo cp /a/usr/share/kbd/keymaps/i386/qwerty/no-esc.map \
+        /usr/local/share/keymaps/no-esc.map
 ```
 
 Add mappings to no-custom.map.gz:
@@ -23,9 +23,9 @@ keycode  53 = minus            underscore
 	alt     keycode  53 = F14
 ```
 
-Loadkeys vconsole.conf  mkinitcpio -P
+loadkeys   /  vconsole.conf   mkinitcpio -P
 ```bash
-sudo loadkeys /usr/local/share/kbd/keymaps/no-custom.map.gz
+sudo loadkeys /usr/local/share/kbd/keymaps/no-esc.map
 
 sudo nvim /etc/vconsole.conf
     KEYMAP=/usr/local/share/kbd/keymaps/no-custom.map.gz

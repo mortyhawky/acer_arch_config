@@ -10,6 +10,7 @@ bspwm
 dash
 efibootmgr
 eza
+fastfetch
 feh
 firefox
 gcc

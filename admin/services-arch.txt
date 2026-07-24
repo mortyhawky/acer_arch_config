@@ -1,4 +1,3 @@
-           │ ├─bluetooth.service
            │ ├─dbus-broker.service
            │ ├─iwd.service
            │ ├─systemd-journald.service
@@ -15,4 +14,4 @@
                  │ ├─xdg-desktop-portal.service
                  │ ├─xdg-document-portal.service
                  │ └─xdg-permission-store.service
-                   └─1846 grep service
+                   └─10072 grep service

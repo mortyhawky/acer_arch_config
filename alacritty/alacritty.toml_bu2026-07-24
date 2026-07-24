@@ -1,0 +1,66 @@
+# $XDG_CONFIG_HOME/alacritty/alacritty.toml
+[general]
+  import = [
+    "~/.config/alacritty/keybindings.toml",
+    #"~/.config/alacritty/themes/acme.toml",
+    "~/.config/alacritty/themes/base16-3024.toml",
+    #"~/.config/alacritty/myThemes/my_horizon_dark.toml",
+    #"~/.config/alacritty/themes/base16_default_dark.toml",
+    #"~/.config/alacritty/themes/Cobalt2.toml",
+    #"~/.config/alacritty/themes/gruvbox_dark.toml",
+  ] 
+
+  working_directory  = "~"
+  live_config_reload = true
+
+
+[env]
+  MY_ENV_VAR = "my_env_variable"
+
+
+[window]
+  padding = { x = 10, y = 10 }
+  dynamic_padding = true
+  opacity = 0.90
+  #blur = true
+  decorations_theme_variant = "Dark"
+  resize_increments = true
+
+
+[scrolling]
+  history = 1000  # default is 10000
+  multiplier = 3  # default is     3
+
+
+[font]
+  normal      = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+  bold        = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+  italic      = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
+  bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
+  size = 10.25
+  offset = { x = 0, y = 0 }
+  glyph_offset = { x = 0, y = 0 }
+  builtin_box_drawing = true
+
+
+[colors]
+  #draw_bold_text_with_bright_colors = false
+  ## Set cursor colors redish              green
+  #cursor = { text = "0x090300", cursor = "0xa5a2a2" }
+  #vi_mode_cursor = { text = "#fded02", "#000000" }
+
+# Default colors
+[colors.primary]
+  #background = '0x090300'
+  #foreground = '0xa5a2a2'
+  #dim_foreground = "#111111"
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 250
+blink_timeout = 3
+unfocused_hollow = true
+thickness = 0.10
+
+[terminal]
+shell = { program = "/usr/bin/bash", args = ["--login"] }
