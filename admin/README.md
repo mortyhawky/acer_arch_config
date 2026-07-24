@@ -16,9 +16,9 @@ pacman -Qqe > \
 
 gitall
 
-b pkglist-
+pm -Qqe | wc -l >> "$XDG_CONFIG_HOME/admin/pkglist-arch-*" 
 
-pm -Qqe | wc -l >> "$XDG_CONFIG_HOME/admin/pkglist-arch-$(date -Iseconds).txt" 
+b pkglist-
 ```
 
 Restore with:
