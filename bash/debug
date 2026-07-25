@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
 #echo "PATH                      = $PATH"
-echo "DBUS_SESSION_BUS_ADDRESS  = $DBUS_SESSION_BUS_ADDRESS"
 echo "ARCH_VERSION              = $ARCH_VERSION"
 echo "BROWSER                   = $BROWSER"
 echo "BSPC                      = $BSPC"
+echo "DBUS_SESSION_BUS_ADDRESS  = $DBUS_SESSION_BUS_ADDRESS"
 echo "DISPLAY                   = $DISPLAY"
 echo "EDITOR                    = $EDITOR"
 echo "GDBINIT                   = $GDBINIT"
 echo "INPUTRC                   = $INPUTRC"
+echo "LANG                      = $LANG"
 echo "MANPAGER                  = $MANPAGER"
 echo "SHELL                     = $SHELL"
 echo "SXHKD_SHELL               = $SXHKD_SHELL"
@@ -26,11 +27,11 @@ echo "XINITRC                   = $XINITRC"
 #echo 'iwctl station wlan0 connect "103B 5" --passphrase "sdbyorgufjuad" && ip a'
 #echo '  ip a '
 #echo '  sc status |g service           /  rc-status '
-echo '  sc start iwd systemd-resolved  /  rc-service iwd start '
+echo '  sc start iwd systemd-resolved   ' #/  rc-service iwd start '
 #echo '  sc disable iwd                 /  rc-update del iwd '
 #echo '  sc enable  iwd                 /  rc-update add default '
 echo ' iwctl station wlan0 connect "103B 5" --passphrase "sdbyorgufjuad" && ip a '
-#echo "  ip addr show  wlan0: "$(ip addr show wlan0 |g "inet ") 
+echo "  ip addr show  wlan0: "$(ip addr show wlan0 |g "inet ") 
 #echo "    sc start bluetooth.service"
 #echo "    sc start --user pipewire"
 

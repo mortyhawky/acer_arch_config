@@ -23,7 +23,7 @@ alias x="startx"
 ####################################################
 alias ga="git add --all --verbose && git status --short"
 alias gc="git commit --message '$(date -Iseconds)'"
-alias gitall="gr && gs && ga && gc && gp"
+alias gitall="gr && gs && ga && gc && gp && l"
 alias gp="git push --set-upstream origin main"
 alias gr="git remote -v"
 alias gs="git status --verbose"

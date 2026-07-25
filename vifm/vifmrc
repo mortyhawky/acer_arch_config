@@ -59,6 +59,7 @@ mark d ~/Downloads/
 mark e /etc/
 mark h ~/
 mark l /a/linux/
+mark p /a/prog
 mark r /
 mark w /a/win/
 
