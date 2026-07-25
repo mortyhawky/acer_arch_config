@@ -1,4 +1,5 @@
-autocmd FileType md colorscheme default  
+autocmd FileType md colorscheme desert
+autocmd FileType c colorscheme desert
 
 autocmd FileType python colorscheme desert
 autocmd FileType javascript colorscheme gruvbox
