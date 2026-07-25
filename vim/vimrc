@@ -1,7 +1,12 @@
+autocmd FileType md colorscheme default  
+
 autocmd FileType python colorscheme desert
 autocmd FileType javascript colorscheme gruvbox
 autocmd FileType markdown colorscheme palenight
 autocmd FileType sh colorscheme murphy
+
+autocmd FileType vim colorscheme blue
+syntax on
 
 """ """"""""""""""""""""""""""""""""""""""""""""""
 """  SETTINGS
