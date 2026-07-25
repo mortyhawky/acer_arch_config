@@ -5,7 +5,7 @@ autocmd FileType javascript colorscheme gruvbox
 autocmd FileType markdown colorscheme palenight
 autocmd FileType sh colorscheme murphy
 
-autocmd FileType vim colorscheme catpppuccin
+autocmd FileType vim colorscheme darkblue
 syntax on
 
 """ """"""""""""""""""""""""""""""""""""""""""""""
