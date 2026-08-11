@@ -25,14 +25,15 @@ gitall
 
 Restore with:
 ```bash
-pm -S --needed - <$XDG_CONFIG_HOME/admin/pkglist-
+pm -S --needed - <$XDG_CONFIG_HOME/admin/pkglist- [Tab-completion]
+// error: target not found: Number of pkg: 57.
+// ignore this line.
 ```
 
 Services Arch Systemd:
-Ctrl + n to toggle line numbers in vim
 ```bash
 ll && \
-    systemctl status |grep service > \
+    systemctl list-units --state=running |grep service > \
     "$XDG_CONFIG_HOME/admin/services-arch.txt" \
     && ll
 
