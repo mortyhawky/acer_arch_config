@@ -32,7 +32,8 @@ Services Arch Systemd:
 Ctrl + n to toggle line numbers in vim
 ```bash
 ll && \
-    systemctl status |grep service > "$XDG_CONFIG_HOME/admin/services-arch.txt" \
+    systemctl status |grep service > \
+    "$XDG_CONFIG_HOME/admin/services-arch.txt" \
     && ll
 
 bat $XDG_CONFIG_HOME/admin/services-arch.txt
