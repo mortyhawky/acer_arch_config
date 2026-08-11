@@ -26,6 +26,7 @@ linux-firmware
 man-db
 man-pages
 neovim
+noto-fonts-emoji
 os-prober
 pavucontrol
 picom
@@ -53,4 +54,4 @@ xorg-xinit
 xorg-xset
 zathura
 zathura-pdf-mupdf
-Number of pkg: 56
+Number of pkg: 57

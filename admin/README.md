@@ -7,7 +7,7 @@ Ctrl + n to toggle line numbers in vim
 ```bash
 c ~/.config/admin
 c $XDG_CONFIG_HOME/admin
-
+ll
 rm -rf pkglist-arch* && ll
 
 CURRENT="$(date -Iseconds)" && echo $CURRENT
@@ -19,8 +19,8 @@ pacman -Qqe > \
 echo "Number of pkg: $(pm -Qqe | wc -l)" >>\
     "$XDG_CONFIG_HOME/admin/pkglist-arch-$CURRENT.txt"
 
+b pkglist- [Tab-completion]
 gitall
-b pkglist-
 ```
 
 Restore with:
