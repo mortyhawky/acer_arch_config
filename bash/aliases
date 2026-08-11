@@ -36,9 +36,11 @@ alias eb=f_edit_bash
 alias eg="sudo nvim /etc/default/grub && sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias ep=f_edit_profile
 alias et="nvim $XDG_CONFIG_HOME/tmux/tmux.conf"
-alias ev="nvim $XDG_CONFIG_HOME/nvim/init.lua"
+alias en="nvim $XDG_CONFIG_HOME/nvim/init.lua"
+alias ev="nvim $XDG_CONFIG_HOME/vim/vimrc"
 alias ew="nvim $XDG_CONFIG_HOME/wezterm/wezterm.lua"
 alias evc="sudo nvim /etc/vconsole.conf"
+alias elo="sudo nvim /etc/locale.conf"
 
 ####################################################
 ## ADMIN

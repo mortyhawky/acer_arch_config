@@ -12,6 +12,7 @@ echo "INPUTRC                   = $INPUTRC"
 echo "LANG                      = $LANG"
 echo "MANPAGER                  = $MANPAGER"
 echo "SHELL                     = $SHELL"
+echo "SHLVL                     = $SHLVL"
 echo "SXHKD_SHELL               = $SXHKD_SHELL"
 echo "TERM                      = $TERM"
 echo "TERMINAL                  = $TERMINAL"
@@ -26,12 +27,15 @@ echo "XINITRC                   = $XINITRC"
 #echo 'ip a && sc start iwd systemd-resolved && sleep 3 && \'
 #echo 'iwctl station wlan0 connect "103B 5" --passphrase "sdbyorgufjuad" && ip a'
 #echo '  ip a '
+echo "localectl ; timedatectl"
+#echo " systemctl list-units --type=service --state=running"
+echo ' systemctl list-units --state=running |g -E "iwd|resolved|timesyncd"'
 #echo '  sc status |g service           /  rc-status '
-echo '  sc start iwd systemd-resolved   ' #/  rc-service iwd start '
+echo '  sc start iwd systemd-resolved systemd-timesyncd   ' #/  rc-service iwd start '
 #echo '  sc disable iwd                 /  rc-update del iwd '
 #echo '  sc enable  iwd                 /  rc-update add default '
-echo ' iwctl station wlan0 connect "103B 5" --passphrase "sdbyorgufjuad" && ip a '
-echo "  ip addr show  wlan0: "$(ip addr show wlan0 |g "inet ") 
+echo '   iwctl station wlan0 connect "103B 5" --passphrase=sdbyorgufjuad && ip a'
+echo "    ip addr show wlan0: "$(ip -c addr show wlan0 |g "inet ") 
 #echo "    sc start bluetooth.service"
 #echo "    sc start --user pipewire"
 
@@ -41,7 +45,6 @@ else
     echo "TTY-mode"
 fi
 
-localectl
 
 #fastfetch
 #neofetch

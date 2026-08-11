@@ -12,7 +12,7 @@ xset    r rate 250 40
 xmodmap "$XDG_CONFIG_HOME/x11/.Xmodmap"
 
 ### WALLPAPER ###
-"$XDG_CONFIG_HOME/feh/setWallPaper.sh" &
+#"$XDG_CONFIG_HOME/feh/setWallPaper.sh" &
 
 ### SCREEN SAVER ###
 xset -dpms s 2400
@@ -29,5 +29,5 @@ sxhkd -c "$XDG_CONFIG_HOME/sxhkd/bspwm.xhk" \
 
 ### WINDOW MANAGER ###
 #xmodmap "$XDG_CONFIG_HOME/x11/.Xmodmap"
-/usr/bin/alacritty &
+#/usr/bin/alacritty &
 exec bspwm

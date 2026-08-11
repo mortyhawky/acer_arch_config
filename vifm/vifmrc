@@ -4,8 +4,11 @@
 " ------------------------------------------------------------------------------
 "  SETTINGS   ~/.config/vifm/vifmrc
 " ------------------------------------------------------------------------------
-"set vicmd=vim
-set vicmd=nvim
+"set timeout
+set mintimeoutlen=1000
+set timeoutlen=5000
+set vicmd=vim
+"set vicmd=nvim
 set dotfiles
 set relativenumber  
 " List of color schemes to try (picks the first one supported by the terminal)
@@ -15,14 +18,21 @@ colorscheme istib-solarized-dark Default-256 Default
 " ------------------------------------------------------------------------------
 "  MAPPINGS
 " ------------------------------------------------------------------------------
-nnoremap s :shell<cr>
+" Display sorting dialog
+nnoremap S :sort<cr>
+" ,sd = Sort Descending     ,sa = Sort Acending
+nnoremap sd :set sort=-name<CR>
+nnoremap sa :set sort=name<CR>
+
+nnoremap sh :shell<cr>
+
 " X set file executable, x set file non-executable
 nnoremap X :!sudo chmod +x "%f"<cr>
 nnoremap x :!sudo chmod -x "%f"<cr>
 " Shift-Ctrl+E to edit as root
 nnoremap <C-e> :!sudo nvim "%f"<cr>
 " Open editor to edit vifmrc and apply settings after returning to vifm
-nnoremap ,er :write | edit ~/.config/vifm/vifmrc
+nnoremap ev :write | edit ~/.config/vifm/vifmrc<cr>:write
 nnoremap ,r :run<cr>
 nnoremap ,c :edit ~/.config/vifm/vifmrc<cr>:write | restart full<cr>
 
@@ -538,8 +548,6 @@ filextype */
 " Start shell in current directory
 "nnoremap s :shell<cr>
 
-" Display sorting dialog
-nnoremap S :sort<cr>
 
 " Toggle visibility of preview window
 nnoremap w :view<cr>

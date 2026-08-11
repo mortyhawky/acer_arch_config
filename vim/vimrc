@@ -1,61 +1,70 @@
-autocmd FileType md colorscheme desert
-autocmd FileType c colorscheme desert
-
-autocmd FileType python colorscheme desert
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" COLORSCHEMES 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType c 		    colorscheme desert
 autocmd FileType javascript colorscheme gruvbox
-autocmd FileType markdown colorscheme palenight
-autocmd FileType sh colorscheme murphy
+autocmd FileType markdown 	colorscheme default
+autocmd FileType python 	colorscheme desert
+autocmd FileType sh 		colorscheme murphy
+autocmd FileType text 		colorscheme habamax
+autocmd FileType vim 		colorscheme default
+syntax  on
 
-autocmd FileType vim colorscheme darkblue
-syntax on
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" SETTINGS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set splitbelow splitright
 
-""" """"""""""""""""""""""""""""""""""""""""""""""
-"""  SETTINGS
-""" """"""""""""""""""""""""""""""""""""""""""""""
-"" :echo &term
-" 
-"set viminfofile=$XDG_STATE_HOME/vim/viminfo
-"set viminfo='100,<1000,s100,h
-"
-"colorscheme default
-"syntax on
-"set relativenumber
-"set number
-"
-"set colorcolumn=100
-""set cursorline
-""set cursorcolumn
-"
-"set tabstop=4
-"set expandtab       " Convert Tabs to Spaces
-"set shiftwidth=4
-"
-"set nowrap
-"
-"
-""" """"""""""""""""""""""""""""""""""""""""""""""
-"""  MAPPINGS
-""" """"""""""""""""""""""""""""""""""""""""""""""
-"let mapleader = " "
-"
-"" :sp	Split Hor	" :vs	Split Vert
-"nnoremap <leader>=  <c-w>=         " Equalize splits
-"nnoremap <leader>00 <c-w>=         " Equalize splits 
-"
-"nnoremap <c-h> <c-w>h	" ctrl + hjkl
-"nnoremap <c-j> <c-w>j   " navigate
-"nnoremap <c-k> <c-w>k	" vim
-"nnoremap <c-l> <c-w>l	" windows
-"
-"nnoremap <leader>ff :Explore<cr>
-"nnoremap <leader>nn :bn<cr>        " Buffer Next
-"nnoremap <leader>pp :bn<cr>        " Buffer Previous
-"
-"nnoremap <c-s>      :wall<cr>
-"inoremap <c-s> <esc>:wall<cr>
-"
-"
-""nnoremap <c-0>   :echo "C-0"<cr>    " Works
-""nnoremap <s-c-0> :echo "S-C-0"<cr>  " Not Working
-""nnoremap <c-=>   :echo "C-="<cr>    " Not Working
-""nnoremap <s-c-=> :echo "S-C-="<cr>  " Not Working
+set colorcolumn=64
+hi ColorColumn ctermbg=darkgrey guibg=darkgrey
+
+set noswapfile
+
+set autoindent
+set expandtab
+set softtabstop=4
+set tabstop=4
+
+set hlsearch
+set incsearch
+
+set nowrap
+
+set timeout timeoutlen=3000 ttimeoutlen=100
+
+set number
+set relativenumber
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" MAPPINGS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = " "
+" Use "Very Magic" regex searching
+nnoremap / /\v
+nnoremap <C-s> :nohls<CR>:w<CR>
+inoremap <C-s> <Esc>l:nohls<CR>:w<CR>
+nnoremap <Leader>s :source $MYVIMRC<CR>:echo "\<Leader\>s"$MYVIMRC<CR>
+nnoremap ,s :source $MYVIMRC<CR>:echo ",s"$MYVIMRC<CR>
+nnoremap ,c :vs $MYVIMRC<CR>
+
+nnoremap <Tab> <C-w><C-w>
+nnoremap <S-Tab>   i<Tab><Esc>
+"nnoremap <S-Space> i        
+nnoremap <Bs> i<Bs><Esc>
+
+nnoremap <Leader>bn :bn<CR>
+nnoremap <Leader>bp :bn<CR>
+
+" Toggle line numbers with Ctrl-n
+nnoremap <C-n> :call ToggleLineNumbers()<CR>
+
+function! ToggleLineNumbers()
+  if &number
+    setlocal nonumber
+    setlocal norelativenumber
+  else
+    setlocal number
+    setlocal relativenumber
+  endif
+endfunction

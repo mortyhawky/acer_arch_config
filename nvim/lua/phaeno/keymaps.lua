@@ -2,16 +2,31 @@
 -- KEYMAPS
 -- =====================================
 
--- Toggle line numbers with Ctrl n
-vim.keymap.set("n", "<C-n>", function()
+-- Define the function first, with a clear name
+local function ToggleLineNumbers()
   if vim.wo.number then
-    vim.wo.number         = false
+    vim.wo.number = false
     vim.wo.relativenumber = false
   else
-    vim.wo.number         = true
+    vim.wo.number = true
     vim.wo.relativenumber = true
   end
-end)
+end
+
+-- Now map Ctrl-n to call that function
+vim.keymap.set("n", "<C-n>", ToggleLineNumbers)
+
+-- Using lua inline function
+-- Toggle line numbers with Ctrl n
+--vim.keymap.set("n", "<C-n>", function()
+--  if vim.wo.number then
+--    vim.wo.number         = false
+--    vim.wo.relativenumber = false
+--  else
+--    vim.wo.number         = true
+--    vim.wo.relativenumber = true
+--  end
+--end)
 
 -- Save & Exit
 -- Write all changed buffers and exit
