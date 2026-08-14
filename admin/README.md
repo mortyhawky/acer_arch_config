@@ -33,7 +33,7 @@ pm -S --needed - <$XDG_CONFIG_HOME/admin/pkglist- [Tab-completion]
 Services Arch Systemd:
 ```bash
 ll && \
-    systemctl list-units --state=running |grep service > \
+    systemctl list-units --state=running > \
     "$XDG_CONFIG_HOME/admin/services-arch.txt" \
     && ll
 
