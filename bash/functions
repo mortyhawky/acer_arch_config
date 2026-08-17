@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-source ~/.config/bash/exports
-#echo "  $XDG_CONFIG_HOME/bash/functions"
+echo "~/.config/bash/functions"
+
+#source ~/.config/bash/exports
 null="/dev/null"
 
 f_eza() {
@@ -52,25 +53,22 @@ f_pacman() {
 }
 
 f_edit_bash() {
-    #echo "f_edit_bash()"
-    #echo "XDG_CONFIG_HOME=$XDG_CONFIG_HOME"
-    #sleep 2
-    nvim  $XDG_CONFIG_HOME/bash/bashrc       \
-          $XDG_CONFIG_HOME/bash/aliases      \
-          $XDG_CONFIG_HOME/bash/bash_logout  \
-          $XDG_CONFIG_HOME/bash/bash_profile \
-          $XDG_CONFIG_HOME/bash/completion   \
-          $XDG_CONFIG_HOME/bash/debug        \
-          $XDG_CONFIG_HOME/bash/exports      \
-          $XDG_CONFIG_HOME/bash/functions    \
-          $XDG_CONFIG_HOME/bash/important    \
-          $XDG_CONFIG_HOME/bash/prompt       \
-          $XDG_CONFIG_HOME/readline/completions \
-          $XDG_CONFIG_HOME/readline/inputrc     \
-          $XDG_CONFIG_HOME/readline/keybinds    \
-          $XDG_CONFIG_HOME/readline/options     \
-          $XDG_CONFIG_HOME/readline/vi-mode     \
-            && clear && source $HOME/.bashrc
+    $EDITOR $XDG_CONFIG_HOME/bash/bash_profile \
+            $XDG_CONFIG_HOME/bash/bashrc       \
+            $XDG_CONFIG_HOME/bash/exports      \
+            $XDG_CONFIG_HOME/bash/aliases      \
+            $XDG_CONFIG_HOME/bash/bash_logout  \
+            $XDG_CONFIG_HOME/bash/completion   \
+            $XDG_CONFIG_HOME/bash/debug        \
+            $XDG_CONFIG_HOME/bash/functions    \
+            $XDG_CONFIG_HOME/bash/important    \
+            $XDG_CONFIG_HOME/bash/prompt       \
+            $XDG_CONFIG_HOME/readline/completions \
+            $XDG_CONFIG_HOME/readline/inputrc     \
+            $XDG_CONFIG_HOME/readline/keybinds    \
+            $XDG_CONFIG_HOME/readline/options     \
+            $XDG_CONFIG_HOME/readline/vi-mode     \
+                && clear && source $HOME/.bash_profile
 } 
 
 f_reboot() {

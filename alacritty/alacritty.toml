@@ -1,37 +1,40 @@
 # $XDG_CONFIG_HOME/alacritty/alacritty.toml
 # https://alacritty.org/config-alacritty.html
 
+[terminal]
+shell = { program = "/usr/bin/bash", args = ["--login"] }
+
 
 [font]
-  normal      = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
-  bold        = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
-  italic      = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
-  bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
-  size = 10.25
-  offset = { x = 0, y = 0 }
-  glyph_offset = { x = 0, y = 0 }
-  builtin_box_drawing = true
+normal      = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+bold        = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+italic      = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
+size = 10.25
+offset = { x = 0, y = 0 }
+glyph_offset = { x = 0, y = 0 }
+builtin_box_drawing = true
 
 
 [general]
-  import = [
-    #"~/.config/alacritty/keybindings.toml",
-    #"~/.config/alacritty/themes/acme.toml",
-    #"~/.config/alacritty/themes/base16-3024.toml",
-    #"~/.config/alacritty/myThemes/my_horizon_dark.toml",
-    #"~/.config/alacritty/themes/base16_default_dark.toml",
-    #"~/.config/alacritty/themes/Cobalt2.toml",
-    #"~/.config/alacritty/themes/gruvbox_dark.toml",
+import = [
+#"~/.config/alacritty/keybindings.toml",
+#"~/.config/alacritty/themes/acme.toml",
+#"~/.config/alacritty/themes/base16-3024.toml",
+#"~/.config/alacritty/myThemes/my_horizon_dark.toml",
+#"~/.config/alacritty/themes/base16_default_dark.toml",
+#"~/.config/alacritty/themes/Cobalt2.toml",
+#"~/.config/alacritty/themes/gruvbox_dark.toml",
   ] 
 
-#  working_directory  = "~"
-#  live_config_reload = true
+working_directory  = "~"
+live_config_reload = true
 
 
 [env]
-# Environment variables that are set when running alacritty
-  MY_ENV_VAR = "my_env_variable"
-  ALACRITTY_VERSION="alacritty 0.17.0 (94e7c887)"
+# Environment variables that are set when alacritty is running
+MY_ENV_VAR = "my_env_variable"
+ALACRITTY_VERSION="alacritty 0.17.0 (94e7c887)"
 
 
 #[window]
@@ -68,6 +71,3 @@
 #blink_timeout = 3
 #unfocused_hollow = true
 #thickness = 0.10
-#
-#[terminal]
-#shell = { program = "/usr/bin/bash", args = ["--login"] }

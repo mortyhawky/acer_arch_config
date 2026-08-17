@@ -17,7 +17,7 @@ ctrl + super + F8
     env > ~/sxhkd-env
 
 super + Return
-    /usr/bin/bash -l
+    /usr/bin/bash
     #$TERMINAL
 
 super + w
@@ -29,7 +29,7 @@ super + r
 
 ## Reload sxhkd
 ctrl + super + r
-  pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd
 
 ## Reload bspwm
 super + alt + r

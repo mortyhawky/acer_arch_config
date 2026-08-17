@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#echo " ~/.config/bash/alias"
+printf "~config/bash/alias\n"
 
 ####################################################
 ## GENERAL
@@ -45,7 +45,6 @@ alias elo="sudo nvim /etc/locale.conf"
 ####################################################
 ## ADMIN
 ####################################################
-#alias su="sudo !!"
 alias dm="sudo dmesg"
 alias fdl="sudo fdisk --list"
 alias lb="lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT,LABEL,PARTLABEL,UUID"
@@ -53,7 +52,7 @@ alias mount="sudo mount -v"
 alias pm=f_pacman
 alias poweroff=f_poweroff
 alias reboot=f_reboot
-alias sb="clear && source $HOME/.bashrc"
-alias sp="clear && source $HOME/.bashrc"
+alias sb="clear && source $HOME/.bash_profile"    #source bash
+#alias sp="clear && source $HOME/.bashrc"    #source profile
 alias sc="sudo systemctl"
 alias umount="sudo umount -v"

@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-echo " ~/.config/bash/bashrc"
+printf "~/.bashrc\n"
 
 # see also the settings in ~/.config/readline/
+# readline also works with gdb
 
 # Load modular components
-for file in ~/.config/bash/{exports,functions,aliases,completion,prompt}; do
+for file in ~/.config/bash/{aliases,exports,functions,completion,prompt}; do
     [ -f "$file" ] && source "$file"
 done
 

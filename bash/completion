@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+printf "~/.config/bash/completion\n"
 
-# Extra completions goes here
+# Extra bash completions goes here
+# Can all completions be set with readline?
 export HISTCONTROL=ignoreboth

@@ -1,5 +1,5 @@
-#vim : filetype bash :
-
+#vim : filetype sh :
+printf "~/.config/bash/important\n\n"
 printf "KISS=Keep It Simple Stupid\n"
 echo "***Printertest*** print, scan, print"
 echo "Calm down, there is now Rush"

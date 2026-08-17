@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo "~/.config/bash/debug"
 
 if [[ "$SHLVL" -gt 3 ]];then
     return
@@ -6,11 +7,11 @@ fi
 
 #echo "PATH                      = $PATH"
 #echo "ARCH_VERSION              = $ARCH_VERSION"
-#echo "BROWSER                   = $BROWSER"
+echo "BROWSER                   = $BROWSER"
 #echo "BSPC                      = $BSPC"
 #echo "DBUS_SESSION_BUS_ADDRESS  = $DBUS_SESSION_BUS_ADDRESS"
 #echo "DISPLAY                   = $DISPLAY"
-#echo "EDITOR                    = $EDITOR"
+echo "EDITOR                    = $EDITOR"      #set in exports :ls :b7
 #echo "GDBINIT                   = $GDBINIT"
 #echo "INPUTRC                   = $INPUTRC"
 #echo "LANG                      = $LANG"
@@ -18,8 +19,8 @@ fi
 #echo "SHELL                     = $SHELL"
 echo "SHLVL                     = $SHLVL"
 #echo "SXHKD_SHELL               = $SXHKD_SHELL"
-#echo "TERM                      = $TERM"
-#echo "TERMINAL                  = $TERMINAL"
+echo "TERM                      = $TERM"
+echo "TERMINAL                  = $TERMINAL"
 #echo "W3M_DIR                   = $W3M_DIR"
 #echo "XAUTHORITY                = $XAUTHORITY"
 #echo "XDG_CONFIG_HOME           = $XDG_CONFIG_HOME"
