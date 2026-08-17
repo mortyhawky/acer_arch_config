@@ -55,8 +55,8 @@ f_pacman() {
 f_edit_bash() {
     $EDITOR $XDG_CONFIG_HOME/bash/bash_profile \
             $XDG_CONFIG_HOME/bash/bashrc       \
-            $XDG_CONFIG_HOME/bash/exports      \
             $XDG_CONFIG_HOME/bash/aliases      \
+            $XDG_CONFIG_HOME/bash/exports      \
             $XDG_CONFIG_HOME/bash/bash_logout  \
             $XDG_CONFIG_HOME/bash/completion   \
             $XDG_CONFIG_HOME/bash/debug        \

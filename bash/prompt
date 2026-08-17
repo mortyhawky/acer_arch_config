@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+printf "~/.config/bash/prompt\n"
 
 GREEN="\[$(tput setaf 2)\]"
 RESET="\[$(tput sgr0)\]"

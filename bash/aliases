@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-printf "~config/bash/alias\n"
+printf "~/.config/bash/alias\n"
 
 ####################################################
 ## GENERAL

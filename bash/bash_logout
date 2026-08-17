@@ -1,5 +1,5 @@
 # vim: filetype=sh :
-echo "$XDG_CONFIG_HOME/bash_logout"
+printf "~/.config/bash_logout"
 sleep 0.5
 #
 #if [[ "$TERM" == "alacritty" || "$TERM" == "tmux-256color" ]]; then
