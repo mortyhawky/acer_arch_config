@@ -1,5 +1,6 @@
 #vim : filetype bash :
 
+printf "KISS=Keep It Simple Stupid\n"
 echo "***Printertest*** print, scan, print"
 echo "Calm down, there is now Rush"
 echo "Remember to have fun on the journey"

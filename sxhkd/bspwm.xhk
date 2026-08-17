@@ -17,7 +17,8 @@ ctrl + super + F8
     env > ~/sxhkd-env
 
 super + Return
-  $TERMINAL
+    /usr/bin/bash -l
+    #$TERMINAL
 
 super + w
   /usr/bin/firefox

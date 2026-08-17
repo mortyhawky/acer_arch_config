@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#echo " ~/.config/bash/bashrc"
+echo " ~/.config/bash/bashrc"
 
 # see also the settings in ~/.config/readline/
 
@@ -10,12 +10,11 @@ done
 
 
 # Make ctrl+s useable
-stty -ixon
-
+stty    -ixon
+#xset    r rate 250 40
 
 #################################################
 ##  DEBUG
 #################################################
 source ~/.config/bash/debug
 source ~/.config/bash/important
-
