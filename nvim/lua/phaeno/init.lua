@@ -4,7 +4,7 @@
 
 -- GLOBALS
 vim.opt.termguicolors   = true
-vim.cmd.colorscheme     "murphy"
+vim.cmd.colorscheme     "habamax"
 vim.g.mapleader         = " "
 vim.g.netrw_banner      = 0
 

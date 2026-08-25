@@ -17,11 +17,11 @@ ctrl + super + F8
     env > ~/sxhkd-env
 
 super + Return
-    /usr/bin/bash
+    #/usr/bin/alacritty
     #$TERMINAL
 
 super + w
-  /usr/bin/firefox
+  #/usr/bin/firefox
   #$BROWSER
 
 super + r

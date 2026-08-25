@@ -7,7 +7,7 @@
 "set timeout
 set mintimeoutlen=1000
 set timeoutlen=5000
-set vicmd=vim
+set vicmd=nvim
 "set vicmd=nvim
 set dotfiles
 set relativenumber  

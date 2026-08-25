@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-printf "~/bash_profile\n"
+printf "~/.bash_profile\n"
 #
 # Load bashrc for login shells
 if [ -f ~/.config/bash/bashrc ]; then

@@ -44,14 +44,13 @@ echo "    ip addr show wlan0: "$(ip -c addr show wlan0 |g "inet ")
 #echo "    sc start bluetooth.service"
 #echo "    sc start --user pipewire"
 
-if [[ "$DISPLAY" = ":0" ]]; then
-    echo "GUI-mode"
-    xset q |g -E "auto repeat"
-else
-    echo "TTY-mode"
-    localectl ; timedatectl
-fi
-
+#if [[ "$DISPLAY" = ":0" ]]; then
+#    echo "GUI-mode"
+#    xset q |g -E "auto repeat"
+#else
+#    echo "TTY-mode"
+#    localectl ; timedatectl
+#fi
 
 #fastfetch
 #neofetch
