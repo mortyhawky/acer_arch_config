@@ -25,6 +25,7 @@ nnoremap sd :set sort=-name<CR>
 nnoremap sa :set sort=name<CR>
 
 nnoremap sh :shell<cr>
+nnoremap ss :shell<cr>
 
 " X set file executable, x set file non-executable
 nnoremap X :!sudo chmod +x "%f"<cr>
