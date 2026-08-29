@@ -3,7 +3,11 @@
 -- =====================================
 
 -- Toggle spellcheck:
-vim.keymap.set("n", "<leader>s", "<cmd>set spell!<CR>")
+vim.keymap.set(
+    {"n"}, 
+    "<leader>s",                        -- leader s
+    "<cmd>set spell!<CR>"
+)
 -- :set spellfile?
 -- ]s   next misspelling
 -- [s   previous misspelling
@@ -13,7 +17,7 @@ vim.keymap.set("n", "<leader>s", "<cmd>set spell!<CR>")
 -- zug  undo zg
 -- zuw  undo zw
 
--- Define the function first, with a clear name
+-- define the function to toggle line numbers:
 local function ToggleLineNumbers()
   if vim.wo.number then
     vim.wo.number = false
@@ -23,43 +27,67 @@ local function ToggleLineNumbers()
     vim.wo.relativenumber = true
   end
 end
+-- map Ctrl-n to call ToggleLineNumbers()
+vim.keymap.set(
+    {"n"}, 
+    "<C-n>", 
+    ToggleLineNumbers
+)
 
--- Now map Ctrl - n to call that function
-vim.keymap.set("n", "<C-n>", ToggleLineNumbers)
+-- Make ZZ write all modified buffers and quit.
+vim.keymap.set( 
+    {"n"},         
+    "ZZ",         
+    "<Cmd>wqall<CR>" 
+)
 
--- Using lua inline function
--- Toggle line numbers with Ctrl n
---vim.keymap.set("n", "<C-n>", function()
---  if vim.wo.number then
---    vim.wo.number         = false
---    vim.wo.relativenumber = false
---  else
---    vim.wo.number         = true
---    vim.wo.relativenumber = true
---  end
---end)
+-- C-s Escape + Write + nohls
+vim.keymap.set( 
+    {"n","i","v","c"},
+    "<C-s>",
+    "<Esc><Cmd>write<CR><Cmd>nohls<CR>"
+)
 
--- Save & Exit
--- Write all changed buffers and exit
-vim.keymap.set( {"n"},         "ZZ",         ":wqall<CR>" )
-
-vim.keymap.set( {"n","i","v"}, "<C-s>",      "<Esc><Cmd>:write<CR><Cmd>:nohls<CR>" )
---vim.keymap.set( {"n"},         "<leader>so", "<Cmd>:source<CR><Cmd>:nohls<CR>:echo 'Sourced'<CR>" )
-vim.keymap.set( {"n","i"},     "<Esc>",      "<Esc><Cmd>:nohls<CR>")
+-- Make Escape also turn off highlighting
+vim.keymap.set( 
+    {"n","i"},     
+    "<Esc>",      
+    "<Esc><Cmd>nohls<CR>"
+)
 
 -- Yank from cursor position to end of line
-vim.keymap.set( {"n"},         "Y",          "y$")
+vim.keymap.set( 
+    {"n"},         
+    "Y",          
+    "y$"
+)
 
 -- Replaces selected text WITHOUT
 -- losing what you yanked
-vim.keymap.set( "x", "p", [["_dP]] )
+vim.keymap.set( 
+    {"x"}, 
+    "p", 
+    [["_dP]] 
+)
 
--- Delete text WITHOUT saving it to any register
-vim.keymap.set( {"n","v"}, "<leader>d", [["_d]] )
+--  text WITHOUT saving it to any register
+vim.keymap.set( 
+    {"n","v"}, 
+    "<leader>d", 
+    [["_d]] 
+)
 
 -- Moves line(s) up or down in visual selection mode
-    vim.keymap.set( "v", "J", ":m '>+1<CR>gv=gv" )
-    vim.keymap.set( "v", "K", ":m '<-2<CR>gv=gv" )
+vim.keymap.set( 
+    {"v"}, 
+    "J", 
+    "<Cmd>m '>+1<CR>gv=gv" 
+)
+vim.keymap.set( 
+    {"v"}, 
+    "K", 
+    "<Cmd>m '<-2<CR>gv=gv" 
+)
 
 -- Indent and keep selection
 vim.keymap.set( "v", "<", ">gv" )
