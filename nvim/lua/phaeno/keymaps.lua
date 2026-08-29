@@ -1,6 +1,17 @@
 -- =====================================
--- KEYMAPS
+-- KEY MAPS
 -- =====================================
+
+-- Toggle spellcheck:
+vim.keymap.set("n", "<leader>s", "<cmd>set spell!<CR>")
+-- :set spellfile?
+-- ]s   next misspelling
+-- [s   previous misspelling
+-- z=   show suggestions
+-- zg   add word to dictionary
+-- zw   mark word as misspelled
+-- zug  undo zg
+-- zuw  undo zw
 
 -- Define the function first, with a clear name
 local function ToggleLineNumbers()
@@ -13,7 +24,7 @@ local function ToggleLineNumbers()
   end
 end
 
--- Now map Ctrl-n to call that function
+-- Now map Ctrl - n to call that function
 vim.keymap.set("n", "<C-n>", ToggleLineNumbers)
 
 -- Using lua inline function

@@ -3,13 +3,15 @@ FullScreen=false
 
 [General]
 LockSidebar=true
-ShowSidebar=true
+ShowSidebar=false
 
 [Recent Files]
 File1[$e]=/a/prog/c/c-primer/c-primer-annotation01.pdf
 File2[$e]=/a/linux/arch/Installation_guide_arch.pdf
+File3[$e]=/a/prog/c/1978kr-cc4e/01/1978krc-ch01.pdf
 Name1[$e]=c-primer-annotation01.pdf
 Name2[$e]=Installation_guide_arch.pdf
+Name3[$e]=1978krc-ch01.pdf
 
 [UiSettings]
 ColorScheme=BreezeDark

@@ -2,6 +2,11 @@
 -- OPTIONS
 -- ====================================
 
+vim.opt.spell           = true
+vim.opt.spelllang       = "en_us"
+vim.opt.spellfile       = vim.fn.stdpath("config") 
+                            .. "/spell/en.utf-8.add"
+
 vim.opt.number          = true
 vim.opt.relativenumber  = true
 
@@ -21,7 +26,8 @@ vim.opt.smartcase       = true
 vim.opt.swapfile        = false
 vim.opt.backup          = false
 -- :echo stdpath("data")
-vim.opt.undodir         = vim.fn.stdpath("data") .. "/undodir"
+vim.opt.undodir         = vim.fn.stdpath("data") 
+                            .. "/undodir"
 vim.opt.undofile        = true
 
 vim.opt.clipboard:append("unnamedplus")
