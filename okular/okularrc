@@ -9,9 +9,11 @@ ShowSidebar=false
 File1[$e]=/a/prog/c/c-primer/c-primer-annotation01.pdf
 File2[$e]=/a/linux/arch/Installation_guide_arch.pdf
 File3[$e]=/a/prog/c/1978kr-cc4e/01/1978krc-ch01.pdf
+File4[$e]=/a/prog/c/1988krc/krc_1988-1.pdf
 Name1[$e]=c-primer-annotation01.pdf
 Name2[$e]=Installation_guide_arch.pdf
 Name3[$e]=1978krc-ch01.pdf
+Name4[$e]=krc_1988-1.pdf
 
 [UiSettings]
 ColorScheme=BreezeDark

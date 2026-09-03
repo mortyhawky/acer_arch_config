@@ -4,6 +4,7 @@ printf "~/.config/bash/alias\n"
 ####################################################
 ## GENERAL
 ####################################################
+alias adm="c ~/.config/admin/"
 alias a="alias"
 alias b="bat"
 alias c=f_cdls

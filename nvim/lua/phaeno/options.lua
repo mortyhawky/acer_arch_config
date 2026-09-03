@@ -6,7 +6,7 @@ vim.opt.spell           = true
 vim.opt.spelllang       = "en_us"
 vim.opt.spellfile       = vim.fn.stdpath("config") 
                             .. "/spell/en.utf-8.add"
-vim.opt.spellcapcheck   = ""
+--vim.opt.spellcapcheck   = ""
 
 vim.opt.number          = true
 vim.opt.relativenumber  = true
@@ -35,8 +35,8 @@ vim.opt.clipboard:append("unnamedplus")
 vim.opt.isfname:append("@-@")
 vim.opt.guicursor       = ""
 
-vim.opt.scrolloff       = 8
-vim.opt.colorcolumn     = "70"
+-- vim.opt.scrolloff       = 8
+-- vim.opt.colorcolumn     = "70"
 
 vim.opt.cursorline      = true
 vim.opt.cursorcolumn    = true

@@ -6,13 +6,12 @@
 vim.opt.termguicolors   = true
 vim.cmd.colorscheme     "habamax"
 vim.g.mapleader         = " "
-vim.g.netrw_banner      = 0
+--vim.g.netrw_banner      = 0
 
 require("vim._core.ui2").enable({})
 require("phaeno.autocmds")
 require("phaeno.keymaps")
 require("phaeno.navigations")
 require("phaeno.options")
-
 
 -- Use ZR to :restart
