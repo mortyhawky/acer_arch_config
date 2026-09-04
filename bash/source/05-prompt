@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
-printf "                        ~/.config/bash/prompt        \$- $- \n"
+printf "~/.config/bash/prompt\n"
 
 GREEN="\[$(tput setaf 2)\]"
 RESET="\[$(tput sgr0)\]"
 
 #PS0="PS0: "
-PS1="\w SL=$SHLVL\n >> "
-#PS1="\u@\h:\w SL=$SHLVL\n >> "
+PS1="\u@\h:\w\\n >> "
 #PS1="\n\w${GREEN}>> ${RESET}"
 #PS1="ret:$? jobs:\j ${GREEN}\A ${PWD} \n>> ${RESET}"
 #PS1="\${PWD}${GREEN}\n>> ${RESET}"

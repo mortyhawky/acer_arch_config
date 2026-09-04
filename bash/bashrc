@@ -1,23 +1,17 @@
 #!/usr/bin/env bash
-printf '~/.bashrc\n'
-printf '*** .bashrc WAS READ ***\n'
+printf "~/.bashrc           ->  ~/.config/bash/bashrc        \$- $-\n"
+
 
 # See also the settings in ~/.config/readline/
 # Readline also works with GDB
 
 
 # Load modular components
-for file in ~/.config/bash/{\
-        aliases,            \
-        completion,         \
-        exports,            \
-        functions,          \
-        prompt              \
-    }
+for file in ~/.config/bash/{exports,aliases,completion,exports,functions,prompt}
 do
-    printf 'file = <%s>\n' "$file"
-    printf 'exists = '
-    [ -f "$file" ] && echo yes || echo no
+    #printf 'file = <%s>\n' "$file"
+    #printf 'exists = '
+    #[ -f "$file" ] && echo yes || echo no
 
     [ -f "$file" ] && source "$file"
 done

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-printf "                        ~/.config/bash/aliases       \$- $-\n"
-#printf "~/.config/bash/aliases \n"
+echo '~/.config/bash/aliases'
+printf '~/.config/bash/aliases\n'
 
 ####################################################
 ## GENERAL

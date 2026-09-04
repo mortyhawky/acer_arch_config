@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+echo "~/.config/bash/debug"
+
+#if [[ "$SHLVL" -gt 3 ]];then
+#    return
+#fi
+
+#echo "PATH                      = $PATH"
+#echo "ARCH_VERSION              = $ARCH_VERSION"
+echo "BROWSER                   = $BROWSER"
+#echo "BSPC                      = $BSPC"
+#echo "DBUS_SESSION_BUS_ADDRESS  = $DBUS_SESSION_BUS_ADDRESS"
+#echo "DISPLAY                   = $DISPLAY"
+echo "EDITOR                    = $EDITOR"      #set in exports :ls :b7
+#echo "GDBINIT                   = $GDBINIT"
+#echo "INPUTRC                   = $INPUTRC"
+#echo "LANG                      = $LANG"
+#echo "MANPAGER                  = $MANPAGER"
+#echo "SHELL                     = $SHELL"
+echo "SHLVL                     = $SHLVL"
+#echo "SXHKD_SHELL               = $SXHKD_SHELL"
+echo "TERM                      = $TERM"
+echo "TERMINAL                  = $TERMINAL"
+#echo "W3M_DIR                   = $W3M_DIR"
+#echo "XAUTHORITY                = $XAUTHORITY"
+#echo "XDG_CONFIG_HOME           = $XDG_CONFIG_HOME"
+#echo "XDG_DATA_HOME             = $XDG_DATA_HOME"
+#echo "XDG_RUNTIME_DIR           = $XDG_RUNTIME_DIR"
+#echo "XDG_STATE_HOME            = $XDG_STATE_HOME"
+#echo 'ip a && sc start iwd systemd-resolved && sleep 3 && \'
+#echo "XINITRC                   = $XINITRC"
+
+echo "a |g -E \"^alias e\""
+echo " localectl ; timedatectl"
+echo '  sc start iwd systemd-resolved systemd-timesyncd   ' #/  rc-service iwd start '
+echo '   sc list-units --state=running |g -E "iwd|resolved|timesyncd" '
+echo '    iwctl station wlan0 connect "103B 5" --passphrase=sdbyorgufjuad && ip a'
+#echo "    ip addr show wlan0: "$(ip -c addr show wlan0 |g "inet ") 
+#echo 'iwctl station wlan0 connect "103B 5" --passphrase "sdbyorgufjuad" && ip a'
+#echo '  ip a '
+#echo '  sc disable iwd                 /  rc-update del iwd '
+#echo '  sc enable  iwd                 /  rc-update add default '
+#echo "    sc start bluetooth.service"
+#echo "    sc start --user pipewire"
+
+#if [[ "$DISPLAY" = ":0" ]]; then
+#    echo "GUI-mode"
+#    xset q |g -E "auto repeat"
+#else
+#    echo "TTY-mode"
+#    localectl ; timedatectl
+#fi
+
+#fastfetch
+#neofetch

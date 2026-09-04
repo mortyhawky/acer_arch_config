@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-printf "                        ~/.config/bash/completion    \$- $- \n"
+printf "~/.config/bash/completion\n"
 
 # Extra bash completions goes here
 # Can all completions be set with readline?
