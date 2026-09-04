@@ -70,37 +70,37 @@ vim.keymap.set(
     [["_dP]] 
 )
 
---  text WITHOUT saving it to any register
-vim.keymap.set( 
-    {"n","v"}, 
-    "<leader>d", 
-    [["_d]] 
-)
+-- --  delete text WITHOUT saving it to any register
+-- vim.keymap.set( 
+--     {"n","v"}, 
+--     "<leader>d", 
+--     [["_d]] 
+-- )
 
--- Moves line(s) up or down in visual selection mode
-vim.keymap.set( 
-    {"v"}, 
-    "J", 
-    "<Cmd>m '>+1<CR>gv=gv" 
-)
-vim.keymap.set( 
-    {"v"}, 
-    "K", 
-    "<Cmd>m '<-2<CR>gv=gv" 
-)
+-- -- Moves line(s) up or down in visual selection mode
+-- vim.keymap.set( 
+--     {"v"}, 
+--     "J", 
+--     "<Cmd>m '>+1<CR>gv=gv" 
+-- )
+-- vim.keymap.set( 
+--     {"v"}, 
+--     "K", 
+--     "<Cmd>m '<-2<CR>gv=gv" 
+-- )
 
--- Indent and keep selection
-vim.keymap.set( "v", "<", ">gv" )
--- Unindent and keep selection
-vim.keymap.set( "v", ">", "<gv" )
+-- -- Indent and keep selection
+-- vim.keymap.set( "v", "<", ">gv" )
+-- -- Unindent and keep selection
+-- vim.keymap.set( "v", ">", "<gv" )
 
 -- Join lines without moving cursor
 vim.keymap.set( "n", "J", "mzJ`z" )
 
--- Move down in buffer with cursor centered
-vim.keymap.set( "n", "<C-d>", "<C-d>zz" )
--- Move up   in buffer with cursor centered
-vim.keymap.set( "n", "<C-u>", "<C-u>zz" )
+-- -- Move down in buffer with cursor centered
+-- vim.keymap.set( "n", "<C-d>", "<C-d>zz" )
+-- -- Move up   in buffer with cursor centered
+-- vim.keymap.set( "n", "<C-u>", "<C-u>zz" )
 
 -- Next search result cursor centered
 vim.keymap.set( "n", "n", "nzzzv" )

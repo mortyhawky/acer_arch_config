@@ -1,21 +1,37 @@
 #!/usr/bin/env bash
-printf "~/.bashrc\n"
+printf '~/.bashrc\n'
+printf '*** .bashrc WAS READ ***\n'
 
-# see also the settings in ~/.config/readline/
-# readline also works with gdb
+# See also the settings in ~/.config/readline/
+# Readline also works with GDB
+
 
 # Load modular components
-for file in ~/.config/bash/{aliases,exports,functions,completion,prompt}; do
+for file in ~/.config/bash/{\
+        aliases,            \
+        completion,         \
+        exports,            \
+        functions,          \
+        prompt              \
+    }
+do
+    printf 'file = <%s>\n' "$file"
+    printf 'exists = '
+    [ -f "$file" ] && echo yes || echo no
+
     [ -f "$file" ] && source "$file"
 done
 
 
 # Make ctrl+s useable
 stty    -ixon
+
+
+
 #xset    r rate 250 40
 
 #################################################
 ##  DEBUG
 #################################################
-source ~/.config/bash/debug
-source ~/.config/bash/important
+#source ~/.config/bash/debug
+#source ~/.config/bash/important

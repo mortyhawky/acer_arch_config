@@ -52,3 +52,13 @@ md
 clang
 Kernighan
 Ritchie
+fi
+usr
+env
+GDB
+Readline
+config
+readline
+bashrc
+useable
+xset

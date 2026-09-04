@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 echo "~/.config/bash/debug"
 
-if [[ "$SHLVL" -gt 3 ]];then
-    return
-fi
+#if [[ "$SHLVL" -gt 3 ]];then
+#    return
+#fi
 
 #echo "PATH                      = $PATH"
 #echo "ARCH_VERSION              = $ARCH_VERSION"
@@ -33,7 +33,7 @@ echo "TERMINAL                  = $TERMINAL"
 echo "a |g -E \"^alias e\""
 echo " localectl ; timedatectl"
 echo '  sc start iwd systemd-resolved systemd-timesyncd   ' #/  rc-service iwd start '
-echo '   sc list-units --state=running |g -E "iwd|resolved|timesyncd"'
+echo '   sc list-units --state=running |g -E "iwd|resolved|timesyncd" '
 echo '    iwctl station wlan0 connect "103B 5" --passphrase=sdbyorgufjuad && ip a'
 #echo "    ip addr show wlan0: "$(ip -c addr show wlan0 |g "inet ") 
 #echo 'iwctl station wlan0 connect "103B 5" --passphrase "sdbyorgufjuad" && ip a'
