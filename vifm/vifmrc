@@ -65,6 +65,7 @@ nnoremap <C-l> :wincmd l<CR>
 " ------------------------------------------------------------------------------
 " :mark mark /full/directory/path/ [filename]
 mark a /a/
+mark b ~/.config/bash/
 mark c ~/.config/
 mark d ~/Downloads/
 mark e /etc/

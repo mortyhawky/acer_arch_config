@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 printf "~/.config/bash_logout"
-sleep 0.5
+#sleep 0.5
 
 
 #if [[ "$TERM" == "alacritty" || "$TERM" == "tmux-256color" ]]; then

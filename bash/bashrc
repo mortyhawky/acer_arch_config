@@ -7,7 +7,7 @@ printf "~/.bashrc           ->  ~/.config/bash/bashrc        \$- $-\n"
 
 
 # Load modular components
-for file in ~/.config/bash/{exports,aliases,completion,exports,functions,prompt}
+for file in ~/.config/bash/{exports,aliases,completion,exports,functions,prompt,debug,important}
 do
     #printf 'file = <%s>\n' "$file"
     #printf 'exists = '

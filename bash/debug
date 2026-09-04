@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-echo "~/.config/bash/debug"
+printf "                        ~/.config/bash/debug         $- \n"
 
 #if [[ "$SHLVL" -gt 3 ]];then
 #    return
@@ -53,3 +53,5 @@ echo '    iwctl station wlan0 connect "103B 5" --passphrase=sdbyorgufjuad && ip 
 
 #fastfetch
 #neofetch
+
+printf "flags \$- = $-\n"

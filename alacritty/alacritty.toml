@@ -2,7 +2,8 @@
 # https://alacritty.org/config-alacritty.html
 
 [terminal]
-shell = { program = "/usr/bin/bash", args = ["--login"] }
+#shell = { program = "/usr/bin/bash", args = ["--login"] }
+shell = { program = "/usr/bin/bash"}
 
 
 [font]
