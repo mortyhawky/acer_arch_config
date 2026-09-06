@@ -8,8 +8,13 @@ bluez
 bluez-deprecated-tools
 bluez-utils
 bspwm
-dash
+clang
+cmake
+codeblocks
+codespell
+cscope
 efibootmgr
+exfatprogs
 eza
 fastfetch
 feh
@@ -19,20 +24,30 @@ gdb
 git
 github-cli
 grub
+htop
+hunspell-en_us
 intel-ucode
 iwd
 linux
 linux-firmware
+make
 man-db
 man-pages
 neovim
 noto-fonts-emoji
+okular
 os-prober
 pavucontrol
 picom
 pipewire-pulse
+python-pysequoia
+reflector
 ripgrep
 rofi
+sequoia-chameleon-gnupg
+sequoia-sop
+sequoia-sq
+sequoia-sqv
 sof-firmware
 sudo
 sxhkd
@@ -40,9 +55,11 @@ texinfo
 tmux
 tree
 ttf-jetbrains-mono-nerd
+typos
 vifm
 vim
 w3m
+wget
 which
 wireless-regdb
 xclip
@@ -52,6 +69,7 @@ xorg-server
 xorg-setxkbmap
 xorg-xinit
 xorg-xset
+xterm
 zathura
 zathura-pdf-mupdf
-Number of pkg: 57
+Number of pkg: 75

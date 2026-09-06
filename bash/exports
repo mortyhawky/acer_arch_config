@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 printf "                        ~/.config/bash/exports       \$- $-\n"
-#printf "~/.config/bash/exports\n"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local"
 
-#export BROWSER="/usr/bin/chromium"
+#export BROWSER="/usr/bin/firefox
 #export SXHKD_SHELL="/usr/bin/dash"
-export ARCH_VERSION="2026.07.01"
+#printf "~/.config/bash/exports\n"
+yyyymm=$(date +%Y.%m)
+
+export ARCH_VERSION="$yyyymm.01"
 export BROWSER="/usr/bin/firefox"
 export BSPC="/usr/bin/bspc"
 export EDITOR="/usr/bin/nvim"
