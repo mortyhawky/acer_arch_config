@@ -8,13 +8,15 @@ Ctrl + n to toggle line numbers in vim
 c ~/.config/admin
 c $XDG_CONFIG_HOME/admin
 ll
-rm -rf pkglist-arch* && ll
+rm -rf pkglist-arch* services-arch* install.list && ll
 
 CURRENT="$(date -Iseconds)" && echo $CURRENT
 
 pacman -Qqe > \
     "$XDG_CONFIG_HOME/admin/pkglist-arch-$CURRENT.txt" \
     && ll
+
+b pkglist- [Tab-completion]
 
 echo "Number of pkg: $(pm -Qqe | wc -l)" >>\
     "$XDG_CONFIG_HOME/admin/pkglist-arch-$CURRENT.txt"
@@ -25,9 +27,8 @@ gitall
 
 Restore with:
 ```bash
-pm -S --needed - <$XDG_CONFIG_HOME/admin/pkglist- [Tab-completion]
-// error: target not found: Number of pkg: 57.
-// ignore this line.
+cat pkglist-arch-2026-09-06T11\:12\:36+02\:00.txt | g "Number" -v > install.list
+sudo pacman -S --needed < $(cat install.list)
 ```
 
 Services Arch Systemd:
@@ -36,6 +37,12 @@ ll && \
     systemctl list-units --state=running > \
     "$XDG_CONFIG_HOME/admin/services-arch.txt" \
     && ll
+
+bat $XDG_CONFIG_HOME/admin/services-arch.txt
+
+echo "Number of services:"\
+     "$(cat $XDG_CONFIG_HOME/admin/services-arch.txt | wc -l)" >>\
+           "$XDG_CONFIG_HOME/admin/services-arch.txt"
 
 bat $XDG_CONFIG_HOME/admin/services-arch.txt
 gitall
