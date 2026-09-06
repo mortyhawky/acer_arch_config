@@ -27,8 +27,9 @@ gitall
 
 Restore with:
 ```bash
-cat pkglist-arch-2026-09-06T11\:12\:36+02\:00.txt | g "Number" -v > install.list
-sudo pacman -S --needed < $(cat install.list)
+cat pkglist-arch-$CURRENT.txt | g "Number" -v > install.list
+cat install.list
+sudo pacman -S --needed $(cat install.list)
 ```
 
 Services Arch Systemd:
@@ -45,7 +46,6 @@ echo "Number of services:"\
            "$XDG_CONFIG_HOME/admin/services-arch.txt"
 
 bat $XDG_CONFIG_HOME/admin/services-arch.txt
-gitall
 ```
 
 Services Artix openrc:
