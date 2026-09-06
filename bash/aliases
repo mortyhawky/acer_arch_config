@@ -5,8 +5,6 @@ printf "                        ~/.config/bash/aliases       \$- $-\n"
 ####################################################
 ## GENERAL
 ####################################################
-alias adm="c ~/.config/admin/"
-alias a="alias"
 alias b="bat"
 alias c=f_cdls
 alias ff="clear && fastfetch"
@@ -47,6 +45,7 @@ alias elo="sudo nvim /etc/locale.conf"
 ####################################################
 ## ADMIN
 ####################################################
+alias adm="c ~/.config/admin/"
 alias dm="sudo dmesg"
 alias fdl="sudo fdisk --list"
 alias lb="lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT,LABEL,PARTLABEL,UUID"
@@ -55,6 +54,5 @@ alias pm=f_pacman
 alias poweroff=f_poweroff
 alias reboot=f_reboot
 alias sb="clear && source $HOME/.bash_profile"    #source bash
-#alias sp="clear && source $HOME/.bashrc"    #source profile
 alias sc="sudo systemctl"
 alias umount="sudo umount -v"

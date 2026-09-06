@@ -1,11 +1,23 @@
--- ====================================
--- OPTIONS
--- ====================================
+-- ========================================================
+-- OPTIONS ~/.config/nvim/lua/phaeno/options.lua
+-- ========================================================
+
+-- Colorscheme based on GUI/CLI mode
+local display = os.getenv("DISPLAY") or os.getenv("WAYLAND_DISPLAY")
+--echo "display"
+
+if display and display ~= "" then
+--if display ~= "" then
+  vim.cmd("colorscheme habamax")
+else
+  vim.cmd("colorscheme elflord")
+end
 
 vim.opt.spell           = true
 vim.opt.spelllang       = "en_us"
 vim.opt.spellfile       = vim.fn.stdpath("config") 
                             .. "/spell/en.utf-8.add"
+-- Ignore spellerror on line starting with lowercase
 --vim.opt.spellcapcheck   = ""
 
 vim.opt.number          = true
@@ -27,6 +39,7 @@ vim.opt.smartcase       = true
 vim.opt.swapfile        = false
 vim.opt.backup          = false
 -- :echo stdpath("data")
+-- returns: /home/m/.local/share/nvim
 vim.opt.undodir         = vim.fn.stdpath("data") 
                             .. "/undodir"
 vim.opt.undofile        = true
@@ -36,7 +49,7 @@ vim.opt.isfname:append("@-@")
 vim.opt.guicursor       = ""
 
 -- vim.opt.scrolloff       = 8
--- vim.opt.colorcolumn     = "70"
+vim.opt.colorcolumn     = "70"
 
 vim.opt.cursorline      = true
 vim.opt.cursorcolumn    = true

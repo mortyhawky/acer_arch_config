@@ -1,36 +1,38 @@
 #!/usr/bin/env bash
-printf "                        ~/.config/bash/debug         $- \n"
+printf "                        ~/.config/bash/debug         \$- $- \n"
 
 #if [[ "$SHLVL" -gt 3 ]];then
 #    return
 #fi
 
-#echo "PATH                      = $PATH"
 #echo "ARCH_VERSION              = $ARCH_VERSION"
-echo "BROWSER                   = $BROWSER"
+#echo "BROWSER                   = $BROWSER"
 #echo "BSPC                      = $BSPC"
 #echo "DBUS_SESSION_BUS_ADDRESS  = $DBUS_SESSION_BUS_ADDRESS"
 #echo "DISPLAY                   = $DISPLAY"
-echo "EDITOR                    = $EDITOR"      #set in exports :ls :b7
 #echo "GDBINIT                   = $GDBINIT"
 #echo "INPUTRC                   = $INPUTRC"
 #echo "LANG                      = $LANG"
 #echo "MANPAGER                  = $MANPAGER"
+#echo "PATH                      = $PATH"
 #echo "SHELL                     = $SHELL"
-echo "SHLVL                     = $SHLVL"
+#echo "SHLVL                     = $SHLVL"
 #echo "SXHKD_SHELL               = $SXHKD_SHELL"
-echo "TERM                      = $TERM"
-echo "TERMINAL                  = $TERMINAL"
 #echo "W3M_DIR                   = $W3M_DIR"
 #echo "XAUTHORITY                = $XAUTHORITY"
 #echo "XDG_CONFIG_HOME           = $XDG_CONFIG_HOME"
 #echo "XDG_DATA_HOME             = $XDG_DATA_HOME"
 #echo "XDG_RUNTIME_DIR           = $XDG_RUNTIME_DIR"
 #echo "XDG_STATE_HOME            = $XDG_STATE_HOME"
-#echo 'ip a && sc start iwd systemd-resolved && sleep 3 && \'
 #echo "XINITRC                   = $XINITRC"
+#echo 'ip a && sc start iwd systemd-resolved && sleep 3 && \'
+printf "ARCH_VERSION              = $ARCH_VERSION  \n"
+printf "BASHRCSOURCED             = $BASHRCSOURCED \n"    # set in /etc/bash.bashrc
+printf "EDITOR                    = $EDITOR        \n"    # set in ~/.config/bash/exports
+printf "TERM                      = $TERM          \n"
+printf "TERMINAL                  = $TERMINAL      \n"
 
-echo "a |g -E \"^alias e\""
+echo "alias |g -E \"^alias e\""
 echo " localectl ; timedatectl"
 echo '  sc start iwd systemd-resolved systemd-timesyncd   ' #/  rc-service iwd start '
 echo '   sc list-units --state=running |g -E "iwd|resolved|timesyncd" '

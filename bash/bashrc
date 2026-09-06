@@ -19,13 +19,3 @@ done
 
 # Make ctrl+s useable
 stty    -ixon
-
-
-
-#xset    r rate 250 40
-
-#################################################
-##  DEBUG
-#################################################
-#source ~/.config/bash/debug
-#source ~/.config/bash/important

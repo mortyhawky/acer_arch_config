@@ -1,13 +1,19 @@
--- --------------------------------------------------------
--- 01SETTINGS   ~/.config/nvim/lua/morty/01settings.lua
--- --------------------------------------------------------
+-- ========================================================
+-- OPTIONS   ~/.config/nvim/lua/morty/options.lua
+-- ========================================================
+
+vim.opt.spell           = true
+vim.opt.spelllang       = "en_us"
+vim.opt.spellfile       = vim.fn.stdpath("config") 
+                            .. "/spell/en.utf-8.add"
+vim.opt.spellcapcheck   = ""
 
 vim.opt.modeline = true           -- Enable 5 modelines
 
 -- --------------------------------------------------------
 -- MY ADDONS:
 -- --------------------------------------------------------
---print("Start: ~/.config/nvim/lua/morty/01settings.lua")
+--print("Start: ~/.config/nvim/lua/morty/options.lua")
 
 -- Colorscheme based on GUI/CLI mode
 local display = os.getenv("DISPLAY") or os.getenv("WAYLAND_DISPLAY")
