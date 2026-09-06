@@ -59,3 +59,11 @@ Check dmesg:
 sudo dmesg |grep -i --color error
 sudo dmesg |grep --color -i microcode
 ```
+
+#### Git Locations:
+
+```bash
+cd ~/.config
+gs
+gitall
+```
