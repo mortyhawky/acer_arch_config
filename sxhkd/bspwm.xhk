@@ -13,6 +13,11 @@
 #    lowercase, (X keysym conventions)
 ## ####################################
 
+super + r
+  rofi -modi drun,run -show drun -show-icons
+  #rofi -modi drun,run -show drun -show-icons
+  #rofi -show drun
+
 ctrl + super + F8
     env > ~/sxhkd-env
 
@@ -24,8 +29,6 @@ super + w
   #/usr/bin/firefox
   #$BROWSER
 
-super + r
-  rofi -show drun
 
 ## Reload sxhkd
 ctrl + super + r

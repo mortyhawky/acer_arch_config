@@ -1,7 +1,12 @@
 ### Create-Repo-Cli.md
-pm -S xdg-utils
-Add this to your .zshrc so the system knows which browser to trigger:
-  export BROWSER="/usr/bin/firefox" # Replace with your browser path 
+
+Add this to your .bashrc so the system knows which browser to trigger:
+```bash
+pm -S xdg-utils --needed
+echo $BROWSER
+export BROWSER="/usr/bin/firefox"
+echo $BROWSER
+```
 
 gh auth login
   >GitHub.com

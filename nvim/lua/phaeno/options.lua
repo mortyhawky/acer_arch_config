@@ -6,12 +6,27 @@
 local display = os.getenv("DISPLAY") or os.getenv("WAYLAND_DISPLAY")
 --echo "display"
 
+local display = vim.env.DISPLAY
+
 if display and display ~= "" then
---if display ~= "" then
   vim.cmd("colorscheme habamax")
 else
-  vim.cmd("colorscheme elflord")
+  vim.cmd("colorscheme industry")
 end
+
+-- Override for Markdown
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.cmd("colorscheme industry")
+  end,
+})
+
+--if display and display ~= "" then
+--  vim.cmd("colorscheme habamax")
+--else
+--  vim.cmd("colorscheme industry")
+--end
 
 vim.opt.spell           = true
 vim.opt.spelllang       = "en_us"
