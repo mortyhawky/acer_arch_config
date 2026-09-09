@@ -16,7 +16,7 @@ gh auth status
 ```
 
 ```bash
-gh repo creat config_vifm --public --source=. --remote=origin
+gh repo create config_vifm --public --source=. --remote=origin
 git push -u origin main
 ```
 

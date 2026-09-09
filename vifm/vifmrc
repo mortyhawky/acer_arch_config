@@ -50,6 +50,7 @@ set followlinks
 "Ctrl-W o - leave only one pane.                vifm-CTRL-W_o
 "Ctrl-W s - split window horizontally.          vifm-CTRL-W_s
 "Ctrl-W v - split window vertically.            vifm-CTRL-W_v
+nnoremap <C--> <C-W>s :echo "Horizontal Split"<cr>
 nnoremap <SPACE>- <C-W>s :echo "Horizontal Split"<cr>
 nnoremap <SPACE>| <C-W>v :echo "Vertical Split"<cr>
 nnoremap <SPACE>m <C-W>o :echo "Monocle"<cr>
