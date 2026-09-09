@@ -63,13 +63,13 @@ sudo dmesg |grep --color -i microcode
 #### Git Locations:
 
 ```bash
-cd ~/.config/
+cd ~/.config
 gitall
 
-cd /a/prog/
+cd /a/prog
 gitall
 
-cd /a/linux/arch/
+cd /a/linux/arch
 gitall
 ```
 
