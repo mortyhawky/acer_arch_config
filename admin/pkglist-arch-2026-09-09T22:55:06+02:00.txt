@@ -1,5 +1,6 @@
 alacritty
 alsa-utils
+arandr
 base
 bat
 bat-extras
@@ -68,7 +69,9 @@ xf86-video-intel
 xorg-server
 xorg-setxkbmap
 xorg-xinit
+xorg-xrandr
 xorg-xset
 xterm
 zathura
 zathura-pdf-mupdf
+Number of pkg: 77
