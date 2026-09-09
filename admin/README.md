@@ -23,12 +23,12 @@ echo "Number of pkg: $(pm -Qqe | wc -l)" >>\
 
 b pkglist- [Tab-completion]
 cat pkglist-arch-$CURRENT.txt | g "Number" -v > install.list
+b install.list
 gitall
 ```
 
 Restore with:
 ```bash
-cat install.list
 sudo pacman -S --needed $(cat install.list)
 ```
 
