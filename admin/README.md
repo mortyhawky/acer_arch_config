@@ -72,3 +72,4 @@ gitall
 cd /a/linux/arch/
 gitall
 ```
+
