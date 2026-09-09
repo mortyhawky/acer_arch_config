@@ -22,12 +22,12 @@ echo "Number of pkg: $(pm -Qqe | wc -l)" >>\
     "$XDG_CONFIG_HOME/admin/pkglist-arch-$CURRENT.txt"
 
 b pkglist- [Tab-completion]
+cat pkglist-arch-$CURRENT.txt | g "Number" -v > install.list
 gitall
 ```
 
 Restore with:
 ```bash
-cat pkglist-arch-$CURRENT.txt | g "Number" -v > install.list
 cat install.list
 sudo pacman -S --needed $(cat install.list)
 ```
