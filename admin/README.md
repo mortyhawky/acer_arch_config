@@ -64,12 +64,11 @@ sudo dmesg |grep --color -i microcode
 
 ```bash
 cd ~/.config/
-gs
 gitall
 
 cd /a/prog/
-gs
 gitall
 
 cd /a/linux/arch/
+gitall
 ```
