@@ -13,6 +13,15 @@
 #    lowercase, (X keysym conventions)
 ## ####################################
 
+## Reload sxhkd
+ctrl + super + r
+    pkill -USR1 -x sxhkd
+
+## Reload bspwm
+super + alt + r
+  $BSPC wm -r
+
+## Run rofi
 super + r
   rofi -modi drun,run -show drun -show-icons
   #rofi -modi drun,run -show drun -show-icons
@@ -30,13 +39,7 @@ super + w
   #$BROWSER
 
 
-## Reload sxhkd
-ctrl + super + r
-    pkill -USR1 -x sxhkd
 
-## Reload bspwm
-super + alt + r
-  $BSPC wm -r
 
 ## ###############################################
 ##   BSPWM   HOTKEYS

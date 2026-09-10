@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-#pgrep -x sxhkd > /dev/null || sxhkd &
-#sxhkd is started in my ~/.config/x11/.xinitrc
+#sxhkd is started with ~/.config/x11/.xinitrc
+#Use super + ctrl + r   to reload sxhkd
+#Use super + alt  + r   to reload bspwm
 
-#bspc monitor -d I II III IV V VI VII VIII IX X
-#bspc monitor -d 1 2 3 4 5 6 7 8
 bspc monitor eDP1 -d 1 2
 bspc monitor HDMI1 -d 3 4
 
@@ -15,17 +14,21 @@ bspc config normal_border_color          '#3a3432'
 bspc config active_border_color          '#01a252'
 bspc config focused_border_color         '#01a252'
 bspc config preselect_feedback_color     '#00ff88'
-#bspc config focused_monocle_border_color "#db2d20"
 
 bspc config split_ratio                     0.50
-bspc config borderless_monocle              false
-bspc config gapless_monocle                 false
+bspc config borderless_monocle              true
+bspc config gapless_monocle                 true
 
-bspc rule -a firefox desktop='^3'
+bspc rule -a firefox desktop='^4'
 
-
-#bspc rule -a Gimp desktop='^8' state=floating follow=on
-#bspc rule -a Chromium desktop='^2'
-#bspc rule -a mplayer2 state=floating
-#bspc rule -a Kupfer.py focus=on
-#bspc rule -a Screenkey manage=off
+bspc subscribe layout | while read -r monitor desktop layout; do
+    if [ "$layout" = "monocle" ]; then
+        # Monocle mode → deep blue border
+        bspc config focused_border_color "#005577"
+        bspc config normal_border_color "#003344"
+    else
+        # Tiled mode → your normal colors
+        bspc config focused_border_color "#88c0d0"
+        bspc config normal_border_color "#4c566a"
+    fi
+done &
