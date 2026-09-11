@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
-printf "~/.config/bash_logout"
-#sleep 0.5
+if [[ "$DEBUG" == "true" ]]; then
+    #         1         2         3         4         5         6  
+    #1234567890123456789012345678901234567890123456789012345678901234567890
+    printf "                -> ~/.config/bash/bash_logout    \$- $-\n"
+    #sleep 2
+fi
 
 
 #if [[ "$TERM" == "alacritty" || "$TERM" == "tmux-256color" ]]; then

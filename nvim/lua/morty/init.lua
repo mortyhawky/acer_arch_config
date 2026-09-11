@@ -1,3 +1,4 @@
+--print the name of the lua file for debugging purposes.
 --print("Start: ~/.config/nvim/lua/morty/init.lua")
 require("morty.options")
 require("morty.autocmds")
@@ -6,88 +7,15 @@ require("morty.navigations")
 require("morty.netrw")
  
 -- ----------------------------
--- TIPS & TRICKS
+-- Some useful commands.
 -- ----------------------------
--- default map        my map      Description
--- /cmd               /alias
---
--- <C-g>                          Show filename and position (percentage)
--- g <C-g>                        Show detailed position (line, col, word, byte count)
---
--- :vs [file]         Space |     Vertical split
--- :sp [file]         Space -     Horizontal split
--- nvim .             v .                   Go directly to netrw, starting in current working dir
--- Ctrl+ Ctrl- Ctrl0  
--- :Ex               Space nr     :Explore / netrw
-
-
--- ------------------------------------
--- :r !tree --gitignore ~/.config
--- ------------------------------------
---
--- /home/m/.config
--- ├── alacritty
--- │   └── alacritty.toml
--- ├── dmenu
--- │   ├── arg.h
--- │   ├── config.def.h
--- │   ├── config.h
--- │   ├── config.mk
--- │   ├── dmenu
--- │   ├── dmenu.1
--- │   ├── dmenu.c
--- │   ├── dmenu.o
--- │   ├── dmenu_path
--- │   ├── dmenu_run
--- │   ├── drw.c
--- │   ├── drw.h
--- │   ├── drw.o
--- │   ├── LICENSE
--- │   ├── Makefile
--- │   ├── README
--- │   ├── stest
--- │   ├── stest.1
--- │   ├── stest.c
--- │   ├── stest.o
--- │   ├── util.c
--- │   ├── util.h
--- │   └── util.o
--- ├── dwm
--- │   ├── config.def.h
--- │   ├── config.h
--- │   ├── config.mk
--- │   ├── drw.c
--- │   ├── drw.h
--- │   ├── drw.o
--- │   ├── dwm
--- │   ├── dwm.1
--- │   ├── dwm.c
--- │   ├── dwm.o
--- │   ├── dwm.png
--- │   ├── LICENSE
--- │   ├── Makefile
--- │   ├── my-changes.patch
--- │   ├── README
--- │   ├── transient.c
--- │   ├── util.c
--- │   ├── util.h
--- │   └── util.o
--- ├── htop
--- │   └── htoprc
--- ├── my-readme.txt
--- ├── nvim
--- │   ├── init.lua
--- │   ├── lua
--- │   │   └── morty
--- │   │       ├── init.lua
--- │   │       ├── mappings.lua
--- │   │       ├── navigation.lua
--- │   │       └── settings.lua
--- │   └── README.md
--- ├── README.md
--- └── tmux
---     └── tmux.conf
--- 
--- 9 directories, 53 files
-
--- Updated ArchReal 2026-04-20 21:06 Mon
+-- 1234567890123456789012345678901234567890123456789012345678901234567
+-- Command       Mapping        Actual keys    Description
+-- :Ex           leader e       space e        :Explorer
+-- :sp [file]    leader -       space -        split vert
+-- :vs [file]    leader |       space |        split hori
+-- :wq           leader q       space q
+-- Ctrl+g                                      Show full path
+-- g Ctrl+g                                    Show more info
+-- Ctrl+/-/0                    Ctrl+/-/0      Zoom in/out/default
+-- nvim .        v .                           Open in Explore mode

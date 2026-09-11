@@ -1,11 +1,20 @@
 #!/usr/bin/env bash
-printf "                        ~/.config/bash/prompt        \$- $- \n"
+if [[ "$DEBUG" == "true" ]]; then
+    #         1         2         3         4         5         6  
+    #1234567890123456789012345678901234567890123456789012345678901234567890
+    printf "                -> ~/.config/bash/prompt         \$- $-\n"
+fi
+
+#printf "                        ~/.config/bash/prompt     \$- $- \n"
+#printf "~/.config/bash/prompt\n"
 
 GREEN="\[$(tput setaf 2)\]"
 RESET="\[$(tput sgr0)\]"
 
-#PS0="PS0: "
 PS1="\w SL=$SHLVL\n >> "
+
+######################################################################
+#PS0="PS0: "
 #PS1="\u@\h:\w SL=$SHLVL\n >> "
 #PS1="\n\w${GREEN}>> ${RESET}"
 #PS1="ret:$? jobs:\j ${GREEN}\A ${PWD} \n>> ${RESET}"

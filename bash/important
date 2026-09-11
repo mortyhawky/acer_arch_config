@@ -1,13 +1,18 @@
-#vim : filetype sh :
-printf "                        ~/.config/bash/important     \$- $-\n"
-printf "KISS=Keep It Simple Stupid. "
-printf "Printertest: print, scan. "
-printf "Calm down, there is now rush. "
-printf "Remember to have fun on the journey. "
-printf "This is my hobby, have fun. "
-printf "I have nothing to prove to anyone. "
-printf "Data, car, data, rc, dog, electronics. "
-printf "Ultimatly all I have is my journey. "
-printf "Find joy in a nice C book. "
-printf "Be mindfull, slow walking. "
-printf "Nostalgia data learning! C64.\n "
+#!/usr/bin/env bash
+# vim: filetype=sh :
+if [[ "$DEBUG" == "true" ]]; then
+    #         1         2         3         4         5         6  
+    #1234567890123456789012345678901234567890123456789012345678901234567890
+    printf "                    ~/.config/bash/important     \$- $-\n"
+    printf "KISS=Keep It Simple Stupid. "
+    printf "Printertest: print, scan. "
+    printf "Calm down, there is now rush. "
+    printf "Remember to have fun on the journey. "
+    printf "This is my hobby, have fun. "
+    printf "I have nothing to prove to anyone. "
+    printf "Data, car, data, rc, dog, electronics. "
+    printf "Ultimatly all I have is my journey. "
+    printf "Find joy in a nice C book. "
+    printf "Be mindfull, slow walking. "
+    printf "Nostalgia data learning! C64.\n "
+fi

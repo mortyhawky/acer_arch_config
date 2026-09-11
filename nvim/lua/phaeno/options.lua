@@ -3,15 +3,19 @@
 -- ========================================================
 
 -- Colorscheme based on GUI/CLI mode
-local display = os.getenv("DISPLAY") or os.getenv("WAYLAND_DISPLAY")
---echo "display"
+--local display = os.getenv("DISPLAY") or os.getenv("WAYLAND_DISPLAY")
+display = os.getenv("DISPLAY") or os.getenv("WAYLAND_DISPLAY")
+--echo display
 
-local display = vim.env.DISPLAY
+--local display = vim.env.DISPLAY
+display = vim.env.DISPLAY
+--echo display
 
 if display and display ~= "" then
   vim.cmd("colorscheme habamax")
 else
-  vim.cmd("colorscheme industry")
+  --vim.cmd("colorscheme industry")
+  vim.cmd("colorscheme default")
 end
 
 -- Override for Markdown

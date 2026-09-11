@@ -4,6 +4,7 @@
 
 -- Enable relative line numbers in netrw, and remove banner.
 vim.api.nvim_create_autocmd("FileType", {
+  desc = "Open netrw, without banner & number, with relativenumber",
   pattern = "netrw",
   callback = function()
     vim.g.netrw_banner           = 0

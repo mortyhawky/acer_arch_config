@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
-printf "~/.bash_profile     ->  ~/.config/bash/bash_profile  \$- $- \n"
+if [[ "$DEBUG" == "true" ]]; then
+    #         1         2         3         4         5         6  
+    #1234567890123456789012345678901234567890123456789012345678901234567890
+    printf "~/.bash.profile -> ~/.config/bash/bash_profile   \$- $-\n"
+fi
+
+#printf "~/.bash_profile     ->  -> ~/.config/bash/bash_profile"
+#printf "flags : $- \n"
 
 
 # Load bashrc for login shells

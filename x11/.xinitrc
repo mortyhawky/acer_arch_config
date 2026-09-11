@@ -30,7 +30,9 @@ sxhkd   -c "$XDG_CONFIG_HOME/sxhkd/bspwm.xhk" \
             >> ~/.local/share/sxhkd.log 2>&1 &
 
 ### Dual Screen setup:
-#xrandr --output eDP1 --primary --mode 1600x900 --pos 0x0 --rotate normal --output HDMI1 --mode 1920x1200 --pos 1950x0 --rotate normal --output VIRTUAL1 --off &
+xrandr --output eDP1 --primary --mode 1600x900  --pos 0x0    --rotate normal\
+       --output HDMI1          --mode 1920x1200 --pos 1950x0 --rotate normal\
+       --output VIRTUAL1 --off &
 
 ### WINDOW MANAGER ###
 #xmodmap "$XDG_CONFIG_HOME/x11/.Xmodmap"

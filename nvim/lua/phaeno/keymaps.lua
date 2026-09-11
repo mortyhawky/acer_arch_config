@@ -2,20 +2,22 @@
 -- KEY MAPS
 -- =====================================
 
--- Toggle spellcheck:
+-- Space s  -> Toggle spelling
 vim.keymap.set(
     {"n"}, 
-    "<leader>s",                        -- leader s
-    "<cmd>set spell!<CR>"
+    "<leader>s",                -- leader s
+    --"<cmd>set spell!<CR>"     -- set spell NOT
+    "<cmd>set nospell<CR>"      -- set nospell 
 )
 -- :set spellfile?
--- ]s   next misspelling
--- [s   previous misspelling
+--  spellfile=~/.config/nvim/spell/en.utf-8.add
 -- z=   show suggestions
 -- zg   add word to dictionary
--- zw   mark word as misspelled
 -- zug  undo zg
 -- zuw  undo zw
+-- zw   mark word as misspelled
+-- [s   previous misspelling
+-- ]s   next misspelling
 
 -- define the function to toggle line numbers:
 local function ToggleLineNumbers()
@@ -27,7 +29,8 @@ local function ToggleLineNumbers()
     vim.wo.relativenumber = true
   end
 end
--- map Ctrl-n to call ToggleLineNumbers()
+
+-- Ctrl-n to toggle linenumbers 
 vim.keymap.set(
     {"n"}, 
     "<C-n>", 

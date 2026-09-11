@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-printf "                        ~/.config/bash/aliases       \$- $-\n"
-#printf "~/.config/bash/aliases \n"
+if [[ "$DEBUG" == "true" ]]; then
+    #         1         2         3         4         5         6  
+    #1234567890123456789012345678901234567890123456789012345678901234567890
+    printf "                -> ~/.config/bash/aliases        \$- $-\n"
+fi
 
 ####################################################
 ## GENERAL
@@ -28,6 +31,25 @@ alias gp="git push --set-upstream origin main"
 alias gr="git remote -v"
 alias gs="git status --verbose"
 
+
+####################################################
+## ADMIN
+####################################################
+alias adm="c ~/.config/admin/"
+alias dm="sudo dmesg"
+alias fdl="sudo fdisk --list"
+alias lb="lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT,LABEL,PARTLABEL,UUID"
+alias mount="sudo mount -v"
+alias pm=f_pacman
+alias poweroff=f_poweroff
+alias reboot=f_reboot
+#alias sb="clear && source $HOME/.bash_profile"    #source bash
+#alias sb="clear && source /etc/profile && source ~/.bash_profile"
+alias sb="bash -l"
+alias sc="sudo systemctl"
+alias umount="sudo umount -v"
+
+
 ####################################################
 ## EDIT CONFIGS
 ####################################################
@@ -41,18 +63,3 @@ alias ev="nvim $XDG_CONFIG_HOME/vim/vimrc"
 alias ew="nvim $XDG_CONFIG_HOME/wezterm/wezterm.lua"
 alias evc="sudo nvim /etc/vconsole.conf"
 alias elo="sudo nvim /etc/locale.conf"
-
-####################################################
-## ADMIN
-####################################################
-alias adm="c ~/.config/admin/"
-alias dm="sudo dmesg"
-alias fdl="sudo fdisk --list"
-alias lb="lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT,LABEL,PARTLABEL,UUID"
-alias mount="sudo mount -v"
-alias pm=f_pacman
-alias poweroff=f_poweroff
-alias reboot=f_reboot
-alias sb="clear && source $HOME/.bash_profile"    #source bash
-alias sc="sudo systemctl"
-alias umount="sudo umount -v"
