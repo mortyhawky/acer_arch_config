@@ -4,7 +4,7 @@
 ```bash
 git init  
 echo "# My Project" > README.md  
-git add .  
+git add README.md
 git commit -m "Initial commit"  
 ```
 

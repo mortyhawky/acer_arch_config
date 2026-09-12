@@ -1,0 +1,19 @@
+[H[J[3J~/.config ~/.config/admin
+    in folder: /home/m/.config
+ [31mM[m admin/README.md
+ [31mM[m alacritty/README.md
+ [31mM[m git/config
+[31m??[m admin/cat
+____----------------____
+
+~/.config/admin
+/a/prog ~/.config/admin
+    in folder: /a/prog
+____----------------____
+
+~/.config/admin
+/a/linux/arch ~/.config/admin
+    in folder: /a/linux/arch
+____----------------____
+
+~/.config/admin

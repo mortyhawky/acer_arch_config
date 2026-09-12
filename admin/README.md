@@ -61,7 +61,6 @@ sudo dmesg |grep --color -i microcode
 ```
 
 #### Git Locations:
-
 ```bash
 cd ~/.config
 gitall
@@ -73,3 +72,27 @@ cd /a/linux/arch
 gitall
 ```
 
+# Surveillance:
+```bash
+watch -c -d ./gitlocations.sh
+```
+
+Install hwatch
+```
+sudo pacman -S --needed base-devel git
+mkdir -p ~/build/aur
+c ~/build/aur
+git clone https://aur.archlinux.org/hwatch.git
+c hwatch
+v PKGBUILD
+makepkg --printscrinfo
+makepkg -s
+ls -lh *.pkg.tar.zst
+bash -n PKGBUILD
+sudo pacman -U ./hwatch-*.pkg.tar.zst
+sudo pacman -Rns hwatch
+```
+
+```bash
+hwatch -c -d ./gitlocations.sh
+```
