@@ -1,13 +1,14 @@
-#### My htop settings
+#### htop settings
 
 ```bash
 c ~/.config/htop
-echo "#### My htop settings >> README.md
+echo "#### htop settings >> README.md
 ```
 
 ```bash
 git init
-git add .
+git add --all --verbose && git status --short
+    git add -Av
 git commit -m "Inital commit"
 ```
 
