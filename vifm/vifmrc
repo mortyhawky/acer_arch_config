@@ -12,7 +12,8 @@ set vicmd=nvim
 set dotfiles
 set relativenumber  
 " List of color schemes to try (picks the first one supported by the terminal)
-colorscheme istib-solarized-dark Default-256 Default
+colorscheme istib-solarized-dark Default-256  Default
+"colorscheme Default-256 istib-solarized-dark Default
 "
 "
 " ------------------------------------------------------------------------------
