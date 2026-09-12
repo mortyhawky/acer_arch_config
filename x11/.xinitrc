@@ -5,6 +5,8 @@ xmodmap "$XDG_CONFIG_HOME/x11/.Xmodmap"
 xset r rate 250 40 -dpms s 7200
 
 ###  MONITOR CONFIGURATION  ###
+# Old BenQ HDMI monitor is slow to initialize.
+sleep 2 
 xrandr --output eDP1 --primary --mode 1600x900 --pos 0x0 --rotate normal \
        --output HDMI1 --mode 1920x1200 --pos 1600x0 --rotate normal \
        --output VIRTUAL1 --off

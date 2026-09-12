@@ -22,7 +22,7 @@ end
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "markdown",
   callback = function()
-    vim.cmd("colorscheme industry")
+    vim.cmd("colorscheme default")
     vim.opt.cursorcolumn    = false
   end,
 })
