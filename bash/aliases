@@ -45,7 +45,7 @@ alias poweroff=f_poweroff
 alias reboot=f_reboot
 #alias sb="clear && source $HOME/.bash_profile"    #source bash
 #alias sb="clear && source /etc/profile && source ~/.bash_profile"
-alias sb="bash -l"
+alias sb="clear && bash --login"
 alias sc="sudo systemctl"
 alias umount="sudo umount -v"
 

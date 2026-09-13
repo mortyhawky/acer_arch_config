@@ -32,12 +32,14 @@ if [[ "$DEBUG" == "true" ]]; then
     #echo "XINITRC                   = $XINITRC"
     #echo 'ip a && sc start iwd systemd-resolved && sleep 3 && \'
     
-    echo "alias |g -E \"^alias e\""
+    echo "alias |g -E \"^alias e\"" " #List"
     echo " localectl ; timedatectl"
     echo '  sc start iwd systemd-resolved systemd-timesyncd   ' #/  rc-service iwd start '
     echo '   sc list-units --state=running |g -E "iwd|resolved|timesyncd" '
     echo '    iwctl station wlan0 connect "103B 5" --passphrase=sdbyorgufjuad && ip a'
+    echo '     iwctl station wlan0 connect "Telia-9D67E0" --passphrase= && ip a'
 
+        
     #echo "    ip addr show wlan0: "$(ip -c addr show wlan0 |g "inet ") 
     #echo 'iwctl station wlan0 connect "103B 5" --passphrase "sdbyorgufjuad" && ip a'
     #echo '  ip a '
@@ -58,4 +60,5 @@ if [[ "$DEBUG" == "true" ]]; then
     #neofetch
     
     printf "flags \$- = $-\n"
+    ip -c addr show wlan0 |g "inet " 
 fi

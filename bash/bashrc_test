@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-printf '~/.config/bash/bashrc_test \n'
-

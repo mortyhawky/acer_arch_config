@@ -1,6 +1,8 @@
 #/usr/bin env bash
 
 clear
+color_green="\[$(tput setaf 2)\]"
+color_reset="\[$(tput sgr0)\]"
 
 checkgit() {
     pushd $folder

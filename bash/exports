@@ -11,9 +11,10 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local"
 
 #export BROWSER="/usr/bin/firefox
+#export SXHKD_SHELL="/usr/bin/bash"
 #export SXHKD_SHELL="/usr/bin/dash"
-#printf "~/.config/bash/exports\n"
-yyyymm=$(date +%Y.%m)
+#export SXHKD_SHELL="/usr/bin/sh"
+
 
 export ARCH_VERSION="$yyyymm.01"
 export BROWSER="/usr/bin/firefox"
@@ -23,8 +24,9 @@ export GDBINIT="$XDG_CONFIG_HOME/gdb/gdbinit"
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 export MANPAGER="batman"
 export PATH="$XDG_STATE_HOME/bin:$PATH"
-export SXHKD_SHELL="/usr/bin/bash"
+export SXHKD_SHELL="/usr/bin/sh"
 export TERMINAL="/usr/bin/alacritty"
 export W3M_DIR="$XDG_CONFIG_HOME/w3m"
 export XAUTHORITY="$XDG_CONFIG_HOME/x11/.Xauthority"
 export XINITRC="$XDG_CONFIG_HOME/x11/.xinitrc"
+export yyyymm=$(date +%Y.%m)    # 4 digit year and 2 digit month
