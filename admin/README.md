@@ -6,7 +6,6 @@ Export a list of explicitly installed packages:
 ```bash
 c ~/.config/admin
 c $XDG_CONFIG_HOME/admin
-ll
 rm -rf pkglist-arch* services-arch* install.list && ll
 
 CURRENT="$(date -Iseconds)" && echo $CURRENT
@@ -14,14 +13,14 @@ CURRENT="$(date -Iseconds)" && echo $CURRENT
 pacman -Qqe > \
     "$XDG_CONFIG_HOME/admin/pkglist-arch-$CURRENT.txt" \
     && ll
-
 b pkglist- [Tab-completion]
 
 echo "Number of pkg: $(pm -Qqe | wc -l)" >>\
     "$XDG_CONFIG_HOME/admin/pkglist-arch-$CURRENT.txt"
-
 b pkglist- [Tab-completion]
+
 cat pkglist-arch-$CURRENT.txt | g "Number" -v > install.list
+
 b install.list
 gitall
 ```
@@ -57,6 +56,7 @@ Check dmesg:
 ```bash
 sudo dmesg |grep -i --color error
 sudo dmesg |grep --color -i microcode
+sudo dmesg |grep --color -i microcode |g early
 ```
 
 #### Git Locations:
