@@ -3,8 +3,8 @@
 -- =====================================
 
 -- GLOBALS
-vim.opt.termguicolors   = true
-vim.cmd.colorscheme     "habamax"
+--vim.opt.termguicolors   = true
+--vim.cmd.colorscheme     "default"
 vim.g.mapleader         = " "
 vim.g.netrw_banner      = 0
 

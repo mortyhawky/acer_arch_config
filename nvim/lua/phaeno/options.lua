@@ -3,20 +3,21 @@
 -- ========================================================
 
 -- Colorscheme based on GUI/CLI mode
---local display = os.getenv("DISPLAY") or os.getenv("WAYLAND_DISPLAY")
-display = os.getenv("DISPLAY") or os.getenv("WAYLAND_DISPLAY")
---echo display
-
+--display = os.getenv("DISPLAY") or os.getenv("WAYLAND_DISPLAY")
+--
 --local display = vim.env.DISPLAY
-display = vim.env.DISPLAY
---echo display
+--display = vim.env.DISPLAY
 
-if display and display ~= "" then
-  vim.cmd("colorscheme habamax")
-else
-  --vim.cmd("colorscheme industry")
-  vim.cmd("colorscheme default")
-end
+
+-- --if display and display ~= "" then
+-- --  vim.cmd("colorscheme vim_default")
+-- --else
+-- --  --vim.cmd("colorscheme industry")
+-- --  vim.cmd("colorscheme vim_default")
+-- --end
+
+vim.opt.termguicolors   = false
+vim.cmd("colorscheme vim_default")
 
 -- Override for Markdown
 vim.api.nvim_create_autocmd("FileType", {
@@ -24,14 +25,11 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     vim.cmd("colorscheme default")
     vim.opt.cursorcolumn    = false
+    vim.opt.number = false
+    vim.opt.relativenumber = false
   end,
 })
 
---if display and display ~= "" then
---  vim.cmd("colorscheme habamax")
---else
---  vim.cmd("colorscheme industry")
---end
 
 vim.opt.spell           = true
 vim.opt.spelllang       = "en_us"

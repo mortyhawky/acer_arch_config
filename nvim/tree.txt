@@ -1,0 +1,29 @@
+
+/home/m/.config/nvim
+├── colors
+│   └── vim_default.vim
+├── init.lua
+├── lua
+│   ├── morty
+│   │   ├── autocmds.lua
+│   │   ├── init.lua
+│   │   ├── mappings.lua
+│   │   ├── navigations.lua
+│   │   ├── neovim-keycodes.txt
+│   │   ├── netrw.lua
+│   │   ├── options.lua
+│   │   └── README.md
+│   ├── phaeno
+│   │   ├── autocmds.lua
+│   │   ├── init.lua
+│   │   ├── keymaps.lua
+│   │   ├── navigations.lua
+│   │   └── options.lua
+│   └── radlectures
+├── README.md
+├── spell
+│   ├── en.utf-8.add
+│   └── en.utf-8.add.spl
+└── yt-link-txt
+
+7 directories, 19 files

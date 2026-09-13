@@ -3,7 +3,6 @@
 #### Info and scripts for administration of config files.  
 
 Export a list of explicitly installed packages:
-Ctrl + n to toggle line numbers in vim
 ```bash
 c ~/.config/admin
 c $XDG_CONFIG_HOME/admin
