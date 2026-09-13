@@ -6,7 +6,9 @@ color_reset="\[$(tput sgr0)\]"
 
 checkgit() {
     pushd $folder
-        printf "    in folder: "; pwd
+        printf "$color_green     -->  in folder: "
+            pwd
+        printf "$color_reset\n"
         git status --short
         printf "____----------------____\n\n"
     popd

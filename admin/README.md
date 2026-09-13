@@ -73,6 +73,7 @@ gitall
 
 # Surveillance:
 ```bash
+c $XDG_CONFIG_HOME/admin
 watch -c -d ./gitlocations.sh
 ```
 
