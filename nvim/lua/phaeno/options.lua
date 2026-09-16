@@ -25,8 +25,19 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     vim.cmd("colorscheme default")
     vim.opt.cursorcolumn    = false
-    vim.opt.number = false
-    vim.opt.relativenumber = false
+    vim.opt.number          = false
+    vim.opt.relativenumber  = false
+  end,
+})
+
+-- Override for .c
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "c",
+  callback = function()
+    vim.cmd("colorscheme habamax")
+    vim.opt.cursorcolumn    = true
+    vim.opt.number          = true
+    vim.opt.relativenumber  = true
   end,
 })
 

@@ -2,6 +2,20 @@
 -- KEY MAPS
 -- =====================================
 
+-- Make Shift+Return insert a newline in normal mode:
+vim.keymap.set(
+  "n",
+  "<Enter>",
+  "li<CR><Esc>"
+)
+
+-- Make Backspace behave as in insert mode directly from normal mode
+vim.keymap.set(
+    "n",
+    "<BS>",
+    "i<BS> <Esc>"
+)
+
 -- Space s  -> Toggle spelling
 vim.keymap.set(
     {"n"}, 

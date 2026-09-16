@@ -63,6 +63,7 @@ f_edit_bash() {
         $XDG_CONFIG_HOME/bash/bashrc        \
         $XDG_CONFIG_HOME/bash/exports       \
         $XDG_CONFIG_HOME/bash/aliases       \
+        $XDG_CONFIG_HOME/bash/bash_login    \
         $XDG_CONFIG_HOME/bash/bash_logout   \
         $XDG_CONFIG_HOME/bash/colors        \
         $XDG_CONFIG_HOME/bash/completion    \

@@ -12,12 +12,16 @@ File3[$e]=/a/prog/c/1978kr-cc4e/01/1978krc-ch01.pdf
 File4[$e]=/a/prog/c/morty/reverse_string/reverse_string.pdf
 File5[$e]=/a/prog/c/1988krc/krc_1988-1.pdf
 File6[$e]=/a/prog/c/1978kr-cc4e/1978krc-ch01.pdf
+File7[$e]=/a/prog/c/2004cprimer5/c-primer-annotation01.pdf
+File8[$e]=/a/prog/c/2004cprimer5/c-primer-5th.pdf
 Name1[$e]=c-primer-annotation01.pdf
 Name2[$e]=Installation_guide_arch.pdf
 Name3[$e]=1978krc-ch01.pdf
 Name4[$e]=reverse_string.pdf
 Name5[$e]=krc_1988-1.pdf
 Name6[$e]=1978krc-ch01.pdf
+Name7[$e]=c-primer-annotation01.pdf
+Name8[$e]=c-primer-5th.pdf
 
 [UiSettings]
 ColorScheme=BreezeDark

@@ -13,12 +13,16 @@
 #    lowercase, (X keysym conventions)
 ## ####################################
 
+# Win + n toggle layout.
+super + n
+    bspc node -R 90
+
 ## Reload sxhkd
-ctrl + super + r
+super + ctrl + r
     pkill -USR1 -x sxhkd
 
 ## Reload bspwm
-super + alt + r
+super + shift + r
   $BSPC wm -r
 
 ## Run rofi
@@ -76,6 +80,8 @@ super + shift + q
 ## alternate between the tiled and monocle layout
 super + m
 	$BSPC desktop -l next
+super + t
+	$BSPC desktop -l next
 
 ## Promote window
 super + shift + Return
@@ -83,7 +89,7 @@ super + shift + Return
 
 # focus or send to the given desktop
 # Super + 1-9,0 go to desktop 
-# Super + 1-9,0 send node to given desktop
+# Super + Shift + 1-9,0 send node to given desktop
 super + {_, shift + }{1-9,0}
 	$BSPC {desktop --focus, node --to-desktop} '^{1-9,10}'
 

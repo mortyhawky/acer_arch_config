@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Auto-start tmux on login shell
+printf " ********************* ~/.bash_login **********  \n\n"
+if command -v tmux >/dev/null; then
+    # Only start tmux if not already inside a tmux session
+    [ -z "$TMUX" ] && tmux
+fi

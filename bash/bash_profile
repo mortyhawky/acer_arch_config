@@ -9,7 +9,28 @@ fi
 #printf "flags : $- \n"
 
 
+# XDG login shell config
+#if [ -f "$XDG_CONFIG_HOME/bash/bash_profile" ]; then
+#    . "$XDG_CONFIG_HOME/bash/bash_profile"
+#fi
+
 # Load bashrc for login shells
 if [ -f ~/.config/bash/bashrc ]; then
+  #source ~/.config/bash/bash_login
   source ~/.config/bash/bashrc
 fi
+
+
+source ~/.config/bash/bash_login
+
+
+#######################################
+### This file should source my files ##
+#######################################
+
+#### Load modular components
+###for file in "$XDG_CONFIG_HOME/bash/"{exports,aliases,colors,completion,functions,prompt,debug,important}
+###do
+###    [ -f "$file" ] && source "$file"
+###done
+
