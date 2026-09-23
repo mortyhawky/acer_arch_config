@@ -4,12 +4,14 @@ if [[ "$DEBUG" == "true" ]]; then
     #1234567890123456789012345678901234567890123456789012345678901234567890
     printf "                -> ~/.config/bash/debug          \$- $-\n"
 
-    printf "ARCH_VERSION              = $ARCH_VERSION  \n"
+
+    printf "ARCH_VERSION              = $ARCH_VERSION  \n"    # set in 
     printf "BASHRCSOURCED             = $BASHRCSOURCED \n"    # set in /etc/bash.bashrc
     printf "DEBUG                     = $DEBUG         \n"    # set in /etc/profile
-    printf "EDITOR                    = $EDITOR        \n"    # set in ~/.config/bash/exports
-    printf "TERM                      = $TERM          \n"    # set in ~/.config/bash/exports
-    printf "TERMINAL                  = $TERMINAL      \n"    # set in ~/.config/bash/exports
+    printf "EDITOR                    = $EDITOR        \n"    # set in exports
+    printf "GREP_COLORS               = $GREP_COLORS   \n"    # set in exports
+    printf "TERM                      = $TERM          \n"    # set in exports
+    printf "TERMINAL                  = $TERMINAL      \n"    # set in exports
 
     #echo "BROWSER                   = $BROWSER"
     #echo "BSPC                      = $BSPC"
@@ -32,8 +34,9 @@ if [[ "$DEBUG" == "true" ]]; then
     #echo "XINITRC                   = $XINITRC"
     #echo 'ip a && sc start iwd systemd-resolved && sleep 3 && \'
     
-    echo "alias |g -E \"^alias e\"" " #List"
-    echo " localectl ; timedatectl"
+    echo "alias |grep -iE \"^alias e\"" " #List all aliases beginning with e"
+    printf "a |g \"^alias e\"  \n"
+    echo " localectl ; locale ; timedatectl"
     echo '  sc start iwd systemd-resolved systemd-timesyncd   ' #/  rc-service iwd start '
     echo '   sc list-units --state=running |g -E "iwd|resolved|timesyncd" '
     echo '    iwctl station wlan0 connect "103B 5" --passphrase=sdbyorgufjuad && ip a'

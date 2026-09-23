@@ -21,6 +21,7 @@ ShowLeftPanel=false
 [PageView]
 BackgroundColor=0,0,127
 MouseMode=TextSelect
+SmoothScrolling=false
 TrimMargins=true
 UseCustomBackgroundColor=true
 

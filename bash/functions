@@ -55,6 +55,15 @@ f_pacman() {
     fi
 }
 
+#alias ea="nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml $XDG_CONFIG_HOME/alacritty/keybindings.toml"
+f_edit_alacritty() {
+    $EDITOR         \
+        $XDG_CONFIG_HOME/alacritty/alacritty.toml \
+        $XDG_CONFIG_HOME/alacritty/keybindings.toml
+}
+alias ea = "f_edit_alacritty"
+
+
 f_edit_bash() {
     $EDITOR            \
         /etc/profile    \
