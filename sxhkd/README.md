@@ -1,6 +1,6 @@
 #### Sxhkd settings
 Simple X Hot Key Daemon  
-`pm -S sxhkd`
+`pm -S sxhkd --needed`
 
 sxhkd -h
 sxhkd -c $XDG_CONFIG_HOME/sxhkd/bspwm_xhk &

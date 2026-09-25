@@ -13,10 +13,6 @@
 #    lowercase, (X keysym conventions)
 ## ####################################
 
-# Win + n toggle layout.
-super + n
-    bspc node -R 90
-
 ## Reload sxhkd
 super + ctrl + r
     pkill -USR1 -x sxhkd
@@ -32,7 +28,7 @@ super + r
   #rofi -show drun
 
 ctrl + super + F8
-    env > ~/sxhkd-env
+    env > ~/.config/sxhkd/sxhkd-env
 
 super + Return
     #/usr/bin/alacritty
@@ -164,3 +160,7 @@ super + {_, shift + }{1-9,0}
 ## move a floating window
 ##super + {Left,Down,Up,Right}
 ##	$BSPC node -v {-20 0,0 20,0 -20,20 0}
+
+# Win + n toggle layout.
+#super + n
+#    bspc node -R 90
