@@ -19,26 +19,19 @@ super + ctrl + r
 
 ## Reload bspwm
 super + shift + r
-  $BSPC wm -r
+    bspc wm -r
 
-## Run rofi
 super + r
-  rofi -modi drun,run -show drun -show-icons
-  #rofi -modi drun,run -show drun -show-icons
-  #rofi -show drun
+    rofi -modi drun,run -show drun -show-icons
 
 ctrl + super + F8
     env > ~/.config/sxhkd/sxhkd-env
 
 super + Return
     #/usr/bin/alacritty
-    #$TERMINAL
 
 super + w
-  #/usr/bin/firefox
-  #$BROWSER
-
-
+    #/usr/bin/firefox
 
 
 ## ###############################################

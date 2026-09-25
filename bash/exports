@@ -16,11 +16,10 @@ export XDG_STATE_HOME="$HOME/.local"
 #export SXHKD_SHELL="/usr/bin/bash"
 #export SXHKD_SHELL="/usr/bin/dash"
 #export SXHKD_SHELL="/usr/bin/sh"
-
+#export BSPC="/usr/bin/bspc"
 
 export ARCH_VERSION="$yyyymm.01"
 export BROWSER="/usr/bin/firefox"
-export BSPC="/usr/bin/bspc"
 export EDITOR="/usr/bin/nvim"
 export GDBINIT="$XDG_CONFIG_HOME/gdb/gdbinit"
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
