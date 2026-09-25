@@ -16,9 +16,9 @@ colorscheme istib-solarized-dark Default-256  Default
 "colorscheme Default-256 istib-solarized-dark Default
 "
 "
-" ------------------------------------------------------------------------------
+"  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "  MAPPINGS
-" ------------------------------------------------------------------------------
+"  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Display sorting dialog
 nnoremap S :sort<cr>
 " ,sd = Sort Descending     ,sa = Sort Acending
