@@ -7,6 +7,20 @@ fi
 
 null="/dev/null"
 
+f_startx() {
+    printf "in f_startx()\n"
+    if [ "$TERM" == "linux" ]; then
+        printf "    \$TERM == linux \n"
+        startx
+    fi
+
+    if [ "$TERM" == "tmux-256color" ]; then
+        printf "    \$TERM == tmux-256color \n"
+        exit
+        #startx        
+    fi
+}
+
 f_eza() {
   command eza              \
     --almost-all            \

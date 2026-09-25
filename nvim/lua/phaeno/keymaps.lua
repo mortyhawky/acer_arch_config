@@ -2,6 +2,13 @@
 -- KEY MAPS
 -- =====================================
 
+-- Search and Replace with  sr
+vim.keymap.set(
+    "n",
+    "<leader>sr",
+    ":%s/"
+)
+
 -- Make Shift+Return insert a newline in normal mode:
 vim.keymap.set(
   "n",
@@ -16,15 +23,15 @@ vim.keymap.set(
     "i<BS> <Esc>"
 )
 
--- Space s  -> Toggle spelling
+-- Space ts  -> Toggle Spelling
 vim.keymap.set(
-    {"n"}, 
-    "<leader>s",                -- leader s
+    "n", 
+    "<leader>ts",                --  s
     --"<cmd>set spell!<CR>"     -- set spell NOT
     "<cmd>set nospell<CR>"      -- set nospell 
 )
 -- :set spellfile?
---  spellfile=~/.config/nvim/spell/en.utf-8.add
+--  spellfile=~/.config//spell/en.utf-8.add
 -- z=   show suggestions
 -- zg   add word to dictionary
 -- zug  undo zg
@@ -90,7 +97,7 @@ vim.keymap.set(
 -- --  delete text WITHOUT saving it to any register
 -- vim.keymap.set( 
 --     {"n","v"}, 
---     "<leader>d", 
+--     "<>d", 
 --     [["_d]] 
 -- )
 
@@ -112,7 +119,7 @@ vim.keymap.set(
 -- vim.keymap.set( "v", ">", "<gv" )
 
 -- Join lines without moving cursor
-vim.keymap.set( "n", "J", "mzJ`z" )
+--vim.keymap.set( "n", "J", "mzJ`z" )
 
 -- -- Move down in buffer with cursor centered
 -- vim.keymap.set( "n", "<C-d>", "<C-d>zz" )
@@ -120,6 +127,6 @@ vim.keymap.set( "n", "J", "mzJ`z" )
 -- vim.keymap.set( "n", "<C-u>", "<C-u>zz" )
 
 -- Next search result cursor centered
-vim.keymap.set( "n", "n", "nzzzv" )
+--vim.keymap.set( "n", "n", "nzzzv" )
 -- Prev search result cursor centered
-vim.keymap.set( "n", "N", "Nzzzv" )
+--vim.keymap.set( "n", "N", "Nzzzv" )

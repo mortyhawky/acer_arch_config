@@ -5,12 +5,14 @@ if [[ "$DEBUG" == "true" ]]; then
     printf "                -> ~/.config/bash/aliases        \$- $-\n"
 fi
 
+
 ####################################################
 ## GENERAL
 ####################################################
 alias a="alias "
 alias b="bat"
 alias c=f_cdls
+alias d="date -Iseconds"
 alias ff="clear && fastfetch"
 alias g="grep -i --color=auto"
 alias l=f_eza
@@ -21,7 +23,8 @@ alias mkcd=f_mkcd
 alias t="tmux"
 alias v="nvim"
 alias vf="vifm"
-alias x="startx"
+alias x=f_startx
+
 
 ####################################################
 ## GIT
@@ -32,10 +35,11 @@ alias gitall="gr && gs && ga && gc && gp && l"
 alias gp="git push --set-upstream origin main"
 alias gr="git remote -v"
 alias gs="git status --verbose"
+alias gl="clear && $XDG_CONFIG_HOME/admin/gitlocations.sh"
 
 
 ####################################################
-## ADMIN
+## ADMINISTRATIVE
 ####################################################
 alias adm="c ~/.config/admin/"
 alias dm="sudo dmesg"
