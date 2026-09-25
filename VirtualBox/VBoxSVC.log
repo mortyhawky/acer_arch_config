@@ -1,0 +1,80 @@
+00:00:00.000124 main     VirtualBox XPCOM Server 7.2.20 r175154 linux.amd64 (Sep 22 2026 15:26:35) release log
+00:00:00.000126 main     Log opened 2026-09-25T18:57:13.485465000Z
+00:00:00.000126 main     Build Type: release
+00:00:00.000127 main     OS Product: Linux
+00:00:00.000128 main     OS Release: 7.2.6-arch2-1
+00:00:00.000128 main     OS Version: #1 SMP PREEMPT_DYNAMIC Mon, 14 Sep 2026 22:41:30 +0000
+00:00:00.000139 main     DMI Product Name: Aspire A317-53
+00:00:00.000142 main     DMI Product Version: V1.35
+00:00:00.000144 main     Firmware type: UEFI
+00:00:00.000406 main     Secure Boot: Disabled
+00:00:00.000424 main     Host RAM: 7711MB (7.5GB) total, 6210MB (6.0GB) available
+00:00:00.000425 main     Executable: /usr/lib/virtualbox/VBoxSVC
+00:00:00.000425 main     Process ID: 2157
+00:00:00.000426 main     Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.003036 main     IPC socket path: /tmp/.vbox-m-ipc/ipcd
+00:00:00.004582 DCon01   VirtualBox: object creation starts
+00:00:00.004623 DCon01   Home directory: '/home/m/.config/VirtualBox'
+00:00:00.004684 DCon01   Loading settings file "/home/m/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:00.013755 DCon01   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlan0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.014182 DCon01   HostDnsMonitor: initializing
+00:00:00.014262 DCon01   HostDnsMonitor: updating information
+00:00:00.014264 DCon01   HostDnsMonitor: unchanged
+00:00:00.015016 DCon01   VD: VDInit finished with VINF_SUCCESS
+00:00:00.015064 DCon01   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={925084b0-625f-422f-a67d-0ede1880a56c} aComponent={SystemPropertiesWrap} aText={Cannot determine default Guest Additions ISO location. Most likely they are not available}, preserve=false aResultDetail=0
+00:00:00.015403 DCon01   Platform architecture set to 'x86'
+00:00:00.015559 DCon01   Loading settings file "/a/linux/vboxVMs/arch/arch.vbox" with version "1.19-linux"
+00:00:00.015666 DCon01   Platform architecture set to 'x86'
+00:00:00.015906 DCon01   VirtualBox: object created
+00:00:00.024376 DCon01   Launched VM: 1745395696 pid: 2182 (0x886) frontend: gui name: arch
+00:00:00.262297 DCon04   Platform architecture set to 'x86'
+00:00:00.657533 DCon05   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:00:00.657945 DCon05   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:00:00.658213 DCon05   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:00:00.695084 DCon05   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:00:00.695511 DCon05   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:00:00.697919 DCon05   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={83cfdc66-4f20-4569-ad39-8722f7d472b3} aComponent={RecordingSettingsWrap} aText={Recording not started}, preserve=false aResultDetail=0
+00:00:00.719370 DCon05   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlan0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.721452 DCon05   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=false aResultDetail=0
+00:00:00.721847 DCon05   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:00:00.721932 DCon05   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:00:00.803554 DCon06   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:00:00.818273 DCon05   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlan0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.825836 DCon05   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:00:00.826304 DCon05   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:00:00.826889 DCon05   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={83cfdc66-4f20-4569-ad39-8722f7d472b3} aComponent={RecordingSettingsWrap} aText={Recording not started}, preserve=false aResultDetail=0
+00:00:00.902612 DCon05   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={7d510820-a678-4730-a862-818dcd3fbed0} aComponent={MediumWrap} aText={Property 'CRYPT/KeyId' does not exist}, preserve=false aResultDetail=0
+00:00:00.903264 DCon05   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={7d510820-a678-4730-a862-818dcd3fbed0} aComponent={MediumWrap} aText={Property 'CRYPT/KeyId' does not exist}, preserve=false aResultDetail=0
+00:00:00.903844 DCon05   HostDnsMonitorProxy::GetDomainName: no domain set
+00:00:00.903893 DCon05   HostDnsMonitorProxy::GetNameServers:
+00:00:00.903894 DCon05     no name server entries
+00:00:00.903938 DCon05   HostDnsMonitorProxy::GetSearchStrings:
+00:00:00.903940 DCon05     no search string entries
+00:00:00.914928 DCon03   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:00:00.915418 DCon03   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:00:00.916105 DCon03   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={83cfdc66-4f20-4569-ad39-8722f7d472b3} aComponent={RecordingSettingsWrap} aText={Recording not started}, preserve=false aResultDetail=0
+00:00:01.165021 DCon01   Saving settings file "/a/linux/vboxVMs/arch/arch.vbox" with version "1.19-linux"
+00:00:01.171154 DCon01   Finished saving settings file "/a/linux/vboxVMs/arch/arch.vbox"
+00:00:01.502864 DCon04   Saving settings file "/a/linux/vboxVMs/arch/arch.vbox" with version "1.19-linux"
+00:00:01.506470 DCon04   Finished saving settings file "/a/linux/vboxVMs/arch/arch.vbox"
+00:00:30.286141 DCon09   Saving settings file "/a/linux/vboxVMs/arch/arch.vbox" with version "1.19-linux"
+00:00:30.293714 DCon09   Finished saving settings file "/a/linux/vboxVMs/arch/arch.vbox"
+00:09:00.586222 DCon28   Saving settings file "/a/linux/vboxVMs/arch/arch.vbox" with version "1.19-linux"
+00:09:00.593822 DCon28   Finished saving settings file "/a/linux/vboxVMs/arch/arch.vbox"
+00:09:04.886705 DCon31   Saving settings file "/a/linux/vboxVMs/arch/arch.vbox" with version "1.19-linux"
+00:09:04.894281 DCon31   Finished saving settings file "/a/linux/vboxVMs/arch/arch.vbox"
+00:56:34.846702 DCon136  WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:56:34.847272 DCon136  WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:56:34.848159 DCon136  ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={83cfdc66-4f20-4569-ad39-8722f7d472b3} aComponent={RecordingSettingsWrap} aText={Recording not started}, preserve=false aResultDetail=0
+00:56:34.892014 DCon136  Saving settings file "/a/linux/vboxVMs/arch/arch.vbox" with version "1.19-linux"
+00:56:34.896117 DCon136  Finished saving settings file "/a/linux/vboxVMs/arch/arch.vbox"
+00:56:34.910898 DCon138  WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:56:34.911512 DCon138  WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true aResultDetail=0
+00:56:34.912508 DCon138  ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={83cfdc66-4f20-4569-ad39-8722f7d472b3} aComponent={RecordingSettingsWrap} aText={Recording not started}, preserve=false aResultDetail=0
+00:56:34.913442 DCon138  ERROR [COM]: aRC=NS_ERROR_INVALID_ARG (0x80070057) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={SessionMachine} aText={Properties with TRANSIENT or TRANSRESET flag cannot be set or modified if VM is not running}, preserve=false aResultDetail=0
+00:56:41.411683 main     VirtualBox: object deletion starts
+00:56:41.411731 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={7d510820-a678-4730-a862-818dcd3fbed0} aComponent={MediumWrap} aText={Medium '/a/linux/vboxVMs/arch/arch.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:56:41.412527 main     HostDnsMonitor: shutting down ...
+00:56:41.416741 main     HostDnsMonitor: shut down
+00:56:41.427431 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={2ce10519-3c09-45d8-a12d-e887786146b7} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+00:56:41.427525 main     VirtualBox: object deleted

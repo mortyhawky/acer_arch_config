@@ -14,7 +14,7 @@ alias b="bat"
 alias c=f_cdls
 alias d="date -Iseconds"
 alias ff="clear && fastfetch"
-alias g="grep -i --color=auto"
+alias g="grep -iE --color=auto"
 alias l=f_eza
 alias ll='f_eza --long'
 alias m="make"
