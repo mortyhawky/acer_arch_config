@@ -4,6 +4,10 @@ if [[ "$DEBUG" == "true" ]]; then
     #1234567890123456789012345678901234567890123456789012345678901234567890
     printf "                -> ~/.config/bash/debug          \$- $-\n"
 
+    echo "XDG_CONFIG_HOME           = $XDG_CONFIG_HOME" # set in /exports
+    echo "XDG_DATA_HOME             = $XDG_DATA_HOME"
+    echo "XDG_RUNTIME_DIR           = $XDG_RUNTIME_DIR"
+    echo "XDG_STATE_HOME            = $XDG_STATE_HOME"
 
     printf "ARCH_VERSION              = $ARCH_VERSION  \n"    # set in 
     printf "BASHRCSOURCED             = $BASHRCSOURCED \n"    # set in /etc/bash.bashrc
@@ -27,12 +31,8 @@ if [[ "$DEBUG" == "true" ]]; then
     #echo "SXHKD_SHELL               = $SXHKD_SHELL"
     #echo "W3M_DIR                   = $W3M_DIR"
     #echo "XAUTHORITY                = $XAUTHORITY"
-    #echo "XDG_CONFIG_HOME           = $XDG_CONFIG_HOME"
-    #echo "XDG_DATA_HOME             = $XDG_DATA_HOME"
-    #echo "XDG_RUNTIME_DIR           = $XDG_RUNTIME_DIR"
-    #echo "XDG_STATE_HOME            = $XDG_STATE_HOME"
-    #echo "XINITRC                   = $XINITRC"
-    #echo 'ip a && sc start iwd systemd-resolved && sleep 3 && \'
+    echo "XINITRC                   = $XINITRC"
+    echo 'ip a && sc start iwd systemd-resolved && sleep 3 && \'
     
     echo "a |g \"^alias e\"" " #List all aliases beginning with e"
     printf "a |g \"^alias e\"  \n"
