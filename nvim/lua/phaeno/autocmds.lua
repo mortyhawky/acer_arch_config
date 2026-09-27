@@ -3,6 +3,17 @@
 -- =====================================
 
 
+-- Override for .xhk
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "xhk",
+  callback = function()
+    vim.cmd("colorscheme desert")
+    vim.opt.cursorcolumn    = true
+    vim.opt.number          = true
+    vim.opt.relativenumber  = true
+  end,
+})
+
 -- Override for .c
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "c",

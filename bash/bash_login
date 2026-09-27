@@ -3,5 +3,6 @@
 printf " **************** $XDG_CONFIG_HOME/bash/bash_login **********  \n\n"
 if command -v tmux >/dev/null; then
     # Only start tmux if not already inside a tmux session
-    [ -z "$TMUX" ] && tmux
+    #[ -z "$TMUX" ] && tmux
+    printf "not in tmux \n"
 fi

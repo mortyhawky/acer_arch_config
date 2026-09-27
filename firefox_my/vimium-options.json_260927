@@ -1,6 +1,6 @@
 {
   "exclusionRules": [],
-  "keyMappings": "map <C-d> scrollPageDown\nmap <C-u> scrollPageUp\nmap J nextTab\nmap K previousTab\nmap <C-r> reload\nmap r reload hard\n#map R reload hard",
+  "keyMappings": "map <C-d> scrollPageDown\nmap <C-u> scrollPageUp\nmap J nextTab\nmap k previousTab\nmap <C-r> reload\nmap r reload hard\n#map R reload hard",
   "newTabCustomUrl": "https://start.duckduckgo.com",
   "newTabDestination": "customUrl",
   "openVomnibarOnNewTabPage": false,

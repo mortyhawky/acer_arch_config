@@ -1,3 +1,5 @@
+# vim: set filetype=xhk :
+
 ## ####################################
 ##  BackSpace
 ##  Escape
@@ -13,16 +15,24 @@
 #    lowercase, (X keysym conventions)
 ## ####################################
 
-## Reload sxhkd
-super + ctrl + r
-    pkill -USR1 -x sxhkd
-
-## Reload bspwm
-super + shift + r
+super + Escape
     bspc wm -r
 
+ctrl + Escape
+    pkill -SIGUSR1 --exact sxhkd
+
+
+#    pkill -SIGUSR1 --exact sxhkd
+##super + ctrl + r    ## Reload sxhkd
+##    pkill -USR1 -x sxhkd
+#
+#super + shift + r   ## Reload bspwm
+#    bspc wm -r
+#
+
 super + r
-    rofi -modi drun,run -show drun -show-icons
+    rofi -modi drun,run -show drun
+    #rofi -modi drun,run -show drun -show-icons
 
 ctrl + super + F8
     env > ~/.config/sxhkd/sxhkd-env
@@ -32,6 +42,10 @@ super + Return
 
 super + w
     /usr/bin/firefox
+
+#                              "instance","class"
+super + b
+    /usr/bin/alacritty --class alac_btop,alac_btop -e /usr/bin/btop
 
 
 ## ###############################################
