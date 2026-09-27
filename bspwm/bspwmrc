@@ -4,8 +4,8 @@
 #Use super + ctrl + r   to reload sxhkd
 #Use super + alt  + r   to reload bspwm
 
-bspc monitor eDP1 -d 1 2
-bspc monitor HDMI1 -d 3 4
+bspc monitor eDP1 -d 1 2 3 4
+bspc monitor HDMI1 -d 5 6 7 8
 
 bspc config border_width                        3
 bspc config window_gap                         13
