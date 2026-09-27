@@ -4,18 +4,20 @@ if [[ "$DEBUG" == "true" ]]; then
     #1234567890123456789012345678901234567890123456789012345678901234567890
     printf "                -> ~/.config/bash/debug          \$- $-\n"
 
-    echo "XDG_CONFIG_HOME           = $XDG_CONFIG_HOME" # set in /exports
-    echo "XDG_DATA_HOME             = $XDG_DATA_HOME"
-    echo "XDG_RUNTIME_DIR           = $XDG_RUNTIME_DIR"
-    echo "XDG_STATE_HOME            = $XDG_STATE_HOME"
+    printf "XDG_CONFIG_HOME         = $XDG_CONFIG_HOME   \n" # set in /exports
+    printf "XDG_DATA_HOME           = $XDG_DATA_HOME     \n"
+    printf "XDG_RUNTIME_DIR         = $XDG_RUNTIME_DIR   \n"
+    printf "XDG_STATE_HOME          = $XDG_STATE_HOME    \n"
 
-    printf "ARCH_VERSION              = $ARCH_VERSION  \n"    # set in 
-    printf "BASHRCSOURCED             = $BASHRCSOURCED \n"    # set in /etc/bash.bashrc
-    printf "DEBUG                     = $DEBUG         \n"    # set in /etc/profile
-    printf "EDITOR                    = $EDITOR        \n"    # set in exports
-    printf "GREP_COLORS               = $GREP_COLORS   \n"    # set in exports
-    printf "TERM                      = $TERM          \n"    # set in exports
-    printf "TERMINAL                  = $TERMINAL      \n"    # set in exports
+    printf "ARCH_VERSION            = $ARCH_VERSION      \n"    # set in 
+    printf "BASHRCSOURCED           = $BASHRCSOURCED     \n"    # set in /etc/bash.bashrc
+    printf "DEBUG                   = $DEBUG             \n"    # set in /etc/profile
+    printf "EDITOR                  = $EDITOR            \n"    # set in exports
+    printf "GREP_COLORS             = $GREP_COLORS       \n"    # set in exports
+    printf "PYTHON_BASIC_REPL       = $PYTHON_BASIC_REPL \n"
+    printf "TERM                    = $TERM              \n"    # set in exports
+    printf "TERMINAL                = $TERMINAL          \n"    # set in exports
+    printf "XINITRC                 = $XINITRC           \n"
 
     #echo "BROWSER                   = $BROWSER"
     #echo "BSPC                      = $BSPC"
@@ -31,7 +33,6 @@ if [[ "$DEBUG" == "true" ]]; then
     #echo "SXHKD_SHELL               = $SXHKD_SHELL"
     #echo "W3M_DIR                   = $W3M_DIR"
     #echo "XAUTHORITY                = $XAUTHORITY"
-    echo "XINITRC                   = $XINITRC"
     echo 'ip a && sc start iwd systemd-resolved && sleep 3 && \'
     
     echo "a |g \"^alias e\"" " #List all aliases beginning with e"

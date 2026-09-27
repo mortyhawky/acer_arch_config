@@ -25,6 +25,7 @@ export GDBINIT="$XDG_CONFIG_HOME/gdb/gdbinit"
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 export MANPAGER="batman"
 export PATH="$XDG_STATE_HOME/bin:$PATH"
+export PYTHON_BASIC_REPL=1
 export SXHKD_SHELL="/usr/bin/sh"
 export TERMINAL="/usr/bin/alacritty"
 export W3M_DIR="$XDG_CONFIG_HOME/w3m"
