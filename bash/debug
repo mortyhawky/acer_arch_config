@@ -18,6 +18,7 @@ if [[ "$DEBUG" == "true" ]]; then
     printf "TERM                    = $TERM              \n"    # set in exports
     printf "TERMINAL                = $TERMINAL          \n"    # set in exports
     printf "XINITRC                 = $XINITRC           \n"
+    printf "yyyymm                  = $yyyymm            \n"
 
     #echo "BROWSER                   = $BROWSER"
     #echo "BSPC                      = $BSPC"

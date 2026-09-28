@@ -43,7 +43,7 @@ super + Return
 super + w
     /usr/bin/firefox
 
-#                              "instance","class"
+
 super + b
     /usr/bin/alacritty --class alac_btop,alac_btop -e /usr/bin/btop
 
