@@ -4,7 +4,7 @@
 set bell-style visible
 set mark-symlinked-directories on
 
-# Prevents pasted multiline commands 
+# Prevents pasted multi line commands 
 # from being executed accidentally.
 set enable-bracketed-paste on
 

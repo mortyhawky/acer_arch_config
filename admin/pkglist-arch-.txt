@@ -9,10 +9,12 @@ bluez
 bluez-deprecated-tools
 bluez-utils
 bspwm
+btop
 clang
 cmake
 codeblocks
 codespell
+cppcheck
 cscope
 efibootmgr
 exfatprogs
@@ -33,12 +35,14 @@ intel-ucode
 iwd
 linux
 linux-firmware
+linux-headers
 make
 man-db
 man-pages
 neovim
 noto-fonts-emoji
 okular
+openssh
 os-prober
 pavucontrol
 picom
@@ -62,11 +66,14 @@ ttf-jetbrains-mono-nerd
 typos
 vifm
 vim
+virtualbox
+virtualbox-host-dkms
 w3m
 wget
 which
 wireless-regdb
 xclip
+xdg-desktop-portal-wlr
 xdg-utils
 xf86-video-intel
 xorg-server
@@ -77,4 +84,4 @@ xorg-xset
 xterm
 zathura
 zathura-pdf-mupdf
-Number of pkg: 80
+Number of pkg: 87

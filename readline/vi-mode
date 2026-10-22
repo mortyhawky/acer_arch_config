@@ -4,5 +4,8 @@
 set editing-mode vi
 set show-mode-in-prompt on
 
+# Make prompt
+# Show [i] in insert mode
+# Show [c] in command mode
 set vi-cmd-mode-string "[c] "
 set vi-ins-mode-string "[i] "

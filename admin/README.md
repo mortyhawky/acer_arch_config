@@ -12,7 +12,7 @@ CURRENT="$(date -Iseconds)" && echo $CURRENT
 
 pacman -Qqe > \
     "$XDG_CONFIG_HOME/admin/pkglist-arch-$CURRENT.txt" \
-    && ll
+    && eza
 b pkglist- [Tab-completion]
 
 echo "Number of pkg: $(pm -Qqe | wc -l)" >>\

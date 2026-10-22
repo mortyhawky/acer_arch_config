@@ -20,7 +20,8 @@ bspc config borderless_monocle              true
 bspc config gapless_monocle                 true
 
 bspc rule -a alac_btop desktop='^1'
-bspc rule -a firefox desktop='^8'
+#bspc rule -a firefox desktop='^8'
+bspc rule -a firefox desktop='^4'
 
 #bspc subscribe layout | while read -r monitor desktop layout; do
 #    if [ "$layout" = "monocle" ]; then

@@ -15,9 +15,11 @@
 #    lowercase, (X keysym conventions)
 ## ####################################
 
+# Reload bspwm  Win + Escape
 super + Escape
     bspc wm -r
 
+# Reload sxhkd  Ctrl + Escape
 ctrl + Escape
     pkill -SIGUSR1 --exact sxhkd
 

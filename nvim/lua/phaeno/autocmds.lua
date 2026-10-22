@@ -2,15 +2,25 @@
 -- AUTO COMMANDS
 -- =====================================
 
-
--- Override for .xhk
+-- Override for gdb
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "xhk",
+  pattern = "gdb",
   callback = function()
-    vim.cmd("colorscheme desert")
-    vim.opt.cursorcolumn    = true
-    vim.opt.number          = true
-    vim.opt.relativenumber  = true
+    vim.cmd("colorscheme vim_default")
+    vim.opt.cursorcolumn    = false
+    vim.opt.number          = false
+    vim.opt.relativenumber  = false
+  end,
+})
+
+-- Override for Markdown
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.cmd("colorscheme default")
+    vim.opt.cursorcolumn    = false
+    vim.opt.number          = false
+    vim.opt.relativenumber  = false
   end,
 })
 
@@ -25,6 +35,19 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+
+
+-- Override for .xhk
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "xhk",
+  callback = function()
+    vim.cmd("colorscheme desert")
+    vim.opt.cursorcolumn    = true
+    vim.opt.number          = true
+    vim.opt.relativenumber  = true
+  end,
+})
+
 -- Disable expandtab for Makefile
 vim.api.nvim_create_autocmd("FileType", {
     desc = "Disable expandtab for Makefile",
@@ -32,7 +55,7 @@ vim.api.nvim_create_autocmd("FileType", {
     callback = function()
         vim.opt_local.expandtab = false
         vim.opt_local.list      = true
-        --vim.cmd("colorscheme default")
+        vim.cmd("colorscheme vim_default")
     end,
 })
 

@@ -1,5 +1,5 @@
-#### Vifm settings
-Vi File Manager  
+# Vifm settings
+`Vi File Manager`
 
 #### Create Repo on the CLI
 ```bash
@@ -21,3 +21,8 @@ git push -u origin main
 ```
 
 Use: `git status` to check.
+
+# bulk rename:
+```
+select with v or V hit cw
+```

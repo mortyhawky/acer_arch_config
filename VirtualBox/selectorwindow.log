@@ -1,2 +1,33 @@
-03:04:06.688959 Log continuation - Log started 2026-09-27T12:56:45.381393000Z
-03:04:07.066427 GUI: UICommon: aboutToQuit request handled!
+00:00:00.219940 VirtualBox GUI VM Selector Window 7.2.20 r175154 linux.amd64 (Sep 22 2026 15:26:35) release log
+00:00:00.219941 Log opened 2026-09-29T14:36:58.340631000Z
+00:00:00.219942 Build Type: release
+00:00:00.219942 OS Product: Linux
+00:00:00.219943 OS Release: 7.2.7-arch1-1
+00:00:00.219943 OS Version: #1 SMP PREEMPT_DYNAMIC Mon, 21 Sep 2026 18:51:14 +0000
+00:00:00.219954 DMI Product Name: Aspire A317-53
+00:00:00.219957 DMI Product Version: V1.35
+00:00:00.219959 Firmware type: UEFI
+00:00:00.220226 Secure Boot: Disabled
+00:00:00.220243 Host RAM: 7711MB (7.5GB) total, 6732MB (6.5GB) available
+00:00:00.220245 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:00.220245 Process ID: 1199
+00:00:00.220245 Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.220257 Qt version: 6.11.2
+00:00:00.221156 GUI: UIMediumEnumerator: Initial medium-enumeration finished!
+00:00:00.230610 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:00.621234 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 9x9 x 782x878
+00:00:00.624723 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:13.671707 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:14.168662 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:28:23.053822 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:29:17.029661 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:29:17.046851 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:29:20.085758 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:29:48.366883 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:29:54.678426 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:30:47.055194 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:30:47.073420 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:30:51.270391 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:34:15.477601 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:34:22.277615 GUI: UICommon: Handling aboutToQuit request..
+00:34:23.024329 GUI: UICommon: aboutToQuit request handled!

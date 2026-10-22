@@ -34,7 +34,8 @@ if [[ "$DEBUG" == "true" ]]; then
     #echo "SXHKD_SHELL               = $SXHKD_SHELL"
     #echo "W3M_DIR                   = $W3M_DIR"
     #echo "XAUTHORITY                = $XAUTHORITY"
-    echo 'ip a && sc start iwd systemd-resolved && sleep 3 && \'
+    #echo 'ip a && sc start iwd systemd-resolved && sleep 3 && \'
+    printf "clear; ip a; sc start iwd systemd-resolved systemd-timesyncd; sleep 4; ip a\n"
     
     echo "a |g \"^alias e\"" " #List all aliases beginning with e"
     printf "a |g \"^alias e\"  \n"

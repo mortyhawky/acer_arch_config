@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
-# Auto-start tmux on login shell
-printf " **************** $XDG_CONFIG_HOME/bash/bash_login **********  \n\n"
+#### Auto-start tmux on login shell
+if [[ "$DEBUG" == "true" ]]; then
+    #         1         2         3         4         5         6  
+    #1234567890123456789012345678901234567890123456789012345678901234567890
+    printf "                -> ~/.config/bash/bash_login     \$- $-\n"
+fi
+
+#printf " $XDG_CONFIG_HOME/bash/bash_login **********  \n\n"
 #if command -v tmux >/dev/null; then
 #    # Only start tmux if not already inside a tmux session
 #    #[ -z "$TMUX" ] && tmux
@@ -8,7 +14,8 @@ printf " **************** $XDG_CONFIG_HOME/bash/bash_login **********  \n\n"
 #fi
 
 if [ "$TERM" == "tmux-256color" ]; then
-    printf "in a tmux session \n"
+    printf "                *** TMUX SESSION ***\n"
+    printf "                \$TMUX = $TMUX \n"
 else
-    printf "NOT in tmux \n"
+    printf "                __ NO TMUX __ \n"
 fi

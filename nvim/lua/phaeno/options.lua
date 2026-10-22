@@ -19,28 +19,6 @@
 vim.opt.termguicolors   = false
 vim.cmd("colorscheme vim_default")
 
--- Override for Markdown
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
-  callback = function()
-    vim.cmd("colorscheme default")
-    vim.opt.cursorcolumn    = false
-    vim.opt.number          = false
-    vim.opt.relativenumber  = false
-  end,
-})
-
--- Override for .c
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "c",
-  callback = function()
-    vim.cmd("colorscheme habamax")
-    vim.opt.cursorcolumn    = true
-    vim.opt.number          = true
-    vim.opt.relativenumber  = true
-  end,
-})
-
 
 vim.opt.spell           = true
 vim.opt.spelllang       = "en_us"

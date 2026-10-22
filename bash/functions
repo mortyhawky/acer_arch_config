@@ -7,6 +7,7 @@ fi
 
 null="/dev/null"
 
+
 f_startx() {
     printf "in f_startx()\n"
     if [ "$TERM" == "linux" ]; then
@@ -20,6 +21,7 @@ f_startx() {
         #startx        
     fi
 }
+
 
 f_eza() {
   command eza              \
@@ -75,7 +77,7 @@ f_edit_alacritty() {
         $XDG_CONFIG_HOME/alacritty/alacritty.toml \
         $XDG_CONFIG_HOME/alacritty/keybindings.toml
 }
-alias ea = "f_edit_alacritty"
+alias ea="f_edit_alacritty"
 
 
 f_edit_bash() {
@@ -83,17 +85,17 @@ f_edit_bash() {
         /etc/profile    \
         /etc/bash.bashrc \
         $XDG_CONFIG_HOME/bash/bash_profile  \
-        $XDG_CONFIG_HOME/bash/bashrc        \
-        $XDG_CONFIG_HOME/bash/exports       \
-        $XDG_CONFIG_HOME/bash/aliases       \
         $XDG_CONFIG_HOME/bash/bash_login    \
+        $XDG_CONFIG_HOME/bash/bashrc        \
+         $XDG_CONFIG_HOME/bash/exports       \
+         $XDG_CONFIG_HOME/bash/aliases       \
+         $XDG_CONFIG_HOME/bash/colors        \
+         $XDG_CONFIG_HOME/bash/completion    \
+         $XDG_CONFIG_HOME/bash/debug         \
+         $XDG_CONFIG_HOME/bash/functions     \
+         $XDG_CONFIG_HOME/bash/important     \
+         $XDG_CONFIG_HOME/bash/prompt        \
         $XDG_CONFIG_HOME/bash/bash_logout   \
-        $XDG_CONFIG_HOME/bash/colors        \
-        $XDG_CONFIG_HOME/bash/completion    \
-        $XDG_CONFIG_HOME/bash/debug         \
-        $XDG_CONFIG_HOME/bash/functions     \
-        $XDG_CONFIG_HOME/bash/important     \
-        $XDG_CONFIG_HOME/bash/prompt        \
         $XDG_CONFIG_HOME/readline/completions   \
         $XDG_CONFIG_HOME/readline/inputrc       \
         $XDG_CONFIG_HOME/readline/keybinds      \
@@ -102,10 +104,24 @@ f_edit_bash() {
     && clear && source $HOME/.bash_profile
 } 
 
+
+f_edit_grub() {
+    sudo grub-install           \
+        --target=x86_64-efi     \
+        --efi-directory=/boot   \
+        --bootloader=GRUB
+
+    sudo nvim /etc/default/grub
+
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+}
+
+
 f_reboot() {
     iwctl known-networks "103B 5" forget
     sudo reboot
 }
+
 
 f_poweroff() {
     iwctl known-networks "103B 5" forget

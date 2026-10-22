@@ -295,7 +295,11 @@ set grepprg="grep -n -H -I -r -s %i %a %s"
 " program.  There is also %FOREGROUND, which is useful for entering passwords.
 
 " Pdf
-filextype {*.pdf},<application/pdf> okular %c %i, zathura %c,  xpdf %c
+"  %c for current file under the cursor
+"filextype {*.pdf},<application/pdf> zathura %c, okular %c %i,  xpdf %c
+"filextype {*.pdf},<application/pdf> zathura %c, okular %c
+"filextype {*.pdf},<application/pdf> okular %c %i
+filextype {*.pdf},<application/pdf> zathura %c %i
 "filextype {*.pdf},<application/pdf> zathura %c, okular %c %i, apvlv %c, xpdf %c
 fileviewer {*.pdf},<application/pdf> pdftotext -nopgbrk %c -
 
