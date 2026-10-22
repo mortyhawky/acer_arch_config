@@ -13,11 +13,11 @@ CURRENT="$(date -Iseconds)" && echo $CURRENT
 pacman -Qqe > \
     "$XDG_CONFIG_HOME/admin/pkglist-arch-$CURRENT.txt" \
     && eza
-b pkglist-2026- [Tab-completion]
+b pkglist-arch-2026- [Tab-completion]
 
 echo "Number of pkg: $(pm -Qqe | wc -l)" >>\
     "$XDG_CONFIG_HOME/admin/pkglist-arch-$CURRENT.txt"
-b pkglist- [Tab-completion]
+b pkglist-arch-2026- [Tab-completion]
 
 cat pkglist-arch-$CURRENT.txt | g "Number" -v > install.list
 
@@ -44,6 +44,8 @@ echo "Number of services:"\
            "$XDG_CONFIG_HOME/admin/services-arch.txt"
 
 bat $XDG_CONFIG_HOME/admin/services-arch.txt
+
+gitall
 ```
 
 Services Artix openrc:
