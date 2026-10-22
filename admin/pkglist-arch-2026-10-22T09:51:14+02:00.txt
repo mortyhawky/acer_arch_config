@@ -29,8 +29,6 @@ github-cli
 grub
 htop
 hunspell-en_us
-hwatch
-hwatch-debug
 intel-ucode
 iwd
 linux
@@ -84,4 +82,4 @@ xorg-xset
 xterm
 zathura
 zathura-pdf-mupdf
-Number of pkg: 87
+Number of pkg: 85
