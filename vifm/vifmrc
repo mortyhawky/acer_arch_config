@@ -7,8 +7,8 @@
 "set timeout
 set mintimeoutlen=1000
 set timeoutlen=5000
-set vicmd=nvim
-"set vicmd=nvim
+"set vicmd=vim
+set vicmd='NVIM_APPNAME="nvim-kickstart" nvim'
 set dotfiles
 set relativenumber  
 " List of color schemes to try (picks the first one supported by the terminal)

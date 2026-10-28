@@ -17,7 +17,7 @@
 -- --end
 
 vim.opt.termguicolors   = false
-vim.cmd("colorscheme vim_default")
+vim.cmd("colorscheme default")
 
 
 vim.opt.spell           = true

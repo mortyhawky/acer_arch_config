@@ -1,0 +1,58 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" SETTINGS
+"" freecodecamp.org vimrc-configuration-guide
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                           "Check Setting
+" vim: set filetype=vim :   ":set ft?
+colorscheme murphy_morty    ":colorscheme
+                            ":echo g:colors_name
+                            ":echo s:t_Co ???
+                            ":echo s:t_tgc
+                            ":echo has('gui_running')
+                            ":echo has('termguicolors')
+                            ":echo g:terminal_ansi_colors
+            "echo g:terminal_ansi_colors
+
+filetype plugin indent on   ":filetype  :set ft?
+
+set colorcolumn=70",+5      ":set cc?
+highlight ColorColumn ctermbg=255
+
+
+set cursorcolumn            ":set cuc?
+set cursorline              ":set cul?
+set expandtab               ":set et?
+set hlsearch                ":set hls?
+set ignorecase              ":set ic?
+set incsearch               ":set is?
+set list                    ":set list?
+set nocompatible            ":set nocp?
+set number                  ":set nu?
+set relativenumber          ":set rnu?
+set shiftwidth      =4      ":set sw?
+set showbreak=++\           ":set sbr?
+set showcmd                 ":set sc
+set showmatch               ":set sm?
+set smartcase               ":set scs?
+set tabstop         =4      ":set ts?
+set wildmenu                ":set wmnu?
+"set wildmode=list:longest   ":wim?
+set wildignore=*.pdf        ":set wig?
+
+syntax on                   ":set syntax?
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" MAPPINGS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = " "         "space as mapleader
+
+nnoremap <leader>ee :Explore        <CR>
+nnoremap <leader>tl :setlocal list! <CR>
+nnoremap <leader>tn :setlocal nu!   <CR>
+                  \ :setlocal rnu!  <CR>
+
+inoremap <C-s>      <Esc>:write     <CR>
+nnoremap <C-s>      :nohls          <CR>
+                   \:write          <CR>
+vnoremap <C-s>      <Esc>:write     <CR>

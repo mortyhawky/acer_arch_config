@@ -95,7 +95,7 @@ f_edit_bash() {
          $XDG_CONFIG_HOME/bash/functions     \
          $XDG_CONFIG_HOME/bash/important     \
          $XDG_CONFIG_HOME/bash/prompt        \
-        $XDG_CONFIG_HOME/bash/bash_logout   \
+         $XDG_CONFIG_HOME/bash/bash_logout   \
         $XDG_CONFIG_HOME/readline/completions   \
         $XDG_CONFIG_HOME/readline/inputrc       \
         $XDG_CONFIG_HOME/readline/keybinds      \
@@ -105,15 +105,20 @@ f_edit_bash() {
 } 
 
 
+f_edit_nvim() {
+    nvim        \
+        ~/.config/nvim/init.lua                  \
+        ~/.config/nvim/lua/*
+}
+
 f_edit_grub() {
     sudo grub-install           \
         --target=x86_64-efi     \
         --efi-directory=/boot   \
         --bootloader=GRUB
 
-    sudo nvim /etc/default/grub
-
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
+    sudo nvim               /etc/default/grub
+    sudo grub-mkconfig -o   /boot/grub/grub.cfg
 }
 
 

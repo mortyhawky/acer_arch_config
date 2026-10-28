@@ -2,7 +2,7 @@
 if [[ "$DEBUG" == "true" ]]; then
     #         1         2         3         4         5         6  
     #1234567890123456789012345678901234567890123456789012345678901234567890
-    printf "                -> ~/.config/bash/debug          \$- $-\n"
+    printf "                -> ~/.config/bash/debug\n"
 
     printf "XDG_CONFIG_HOME         = $XDG_CONFIG_HOME   \n" # set in /exports
     printf "XDG_DATA_HOME           = $XDG_DATA_HOME     \n"
@@ -35,15 +35,15 @@ if [[ "$DEBUG" == "true" ]]; then
     #echo "W3M_DIR                   = $W3M_DIR"
     #echo "XAUTHORITY                = $XAUTHORITY"
     #echo 'ip a && sc start iwd systemd-resolved && sleep 3 && \'
-    printf "clear; ip a; sc start iwd systemd-resolved systemd-timesyncd; sleep 4; ip a\n"
-    
-    echo "a |g \"^alias e\"" " #List all aliases beginning with e"
-    printf "a |g \"^alias e\"  \n"
-    echo "localectl ; locale ; timedatectl"
-    echo 'sc start iwd systemd-resolved systemd-timesyncd   ' #/  rc-service iwd start '
-    echo 'sc list-units --state=running |g -E "iwd|resolved|timesyncd" '
-    echo 'iwctl station wlan0 connect "103B 5"       --passphrase sdbyorgufjuad    ; ip a'
-    echo 'iwctl station wlan0 connect "Telia-9D67E0" --passphrase fh6hAmEhTsTpYyeX ; ip a'
+    #printf "clear; ip a; sc start iwd systemd-resolved systemd-timesyncd; sleep 4; ip a\n"
+    #
+    #echo "a |g \"^alias e\"" " #List all aliases beginning with e"
+    #printf "a |g \"^alias e\"  \n"
+    #echo "localectl ; locale ; timedatectl"
+    #echo 'sc start iwd systemd-resolved systemd-timesyncd   ' #/  rc-service iwd start '
+    #echo 'sc list-units --state=running |g -E "iwd|resolved|timesyncd" '
+    #echo 'iwctl station wlan0 connect "103B 5"       --passphrase sdbyorgufjuad    ; ip a'
+    #echo 'iwctl station wlan0 connect "Telia-9D67E0" --passphrase fh6hAmEhTsTpYyeX ; ip a'
 
         
     #echo "    ip addr show wlan0: "$(ip -c addr show wlan0 |g "inet ") 
