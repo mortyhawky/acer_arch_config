@@ -195,9 +195,9 @@ do
   vim.keymap.set( { 'n', 'i', 'v', 'c'}, '<C-s>', '<Esc><cmd>nohlsearch<CR><cmd>write<CR>')
 
   local function toggle_numbers()
-    vim.opt.number = not vim.opt.number:get()
-    vim.opt.relativenumber = not vim.opt.relativenumber:get()
-    vim.opt.signcolumn = vim.opt.signcolumn:get() == 'no' and 'yes' or 'no'
+    vim.o.number = not vim.o.number
+    vim.o.relativenumber = not vim.o.relativenumber
+    vim.o.signcolumn = vim.o.signcolumn == 'no' and 'yes' or 'no'
   end
   vim.keymap.set('n', '<leader>tn', toggle_numbers, {
     desc = 'Toggle number, relativenumber and signcolumn',
