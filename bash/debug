@@ -14,6 +14,7 @@ if [[ "$DEBUG" == "true" ]]; then
     printf "DEBUG                   = $DEBUG             \n"    # set in /etc/profile
     printf "EDITOR                  = $EDITOR            \n"    # set in exports
     printf "GREP_COLORS             = $GREP_COLORS       \n"    # set in exports
+    printf "NVIM_APPNAME            = $NVIM_APPNAME      \n"    # set in exports
     printf "PYTHON_BASIC_REPL       = $PYTHON_BASIC_REPL \n"
     printf "TERM                    = $TERM              \n"    # set in exports
     printf "TERMINAL                = $TERMINAL          \n"    # set in exports

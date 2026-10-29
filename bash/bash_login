@@ -3,7 +3,7 @@
 if [[ "$DEBUG" == "true" ]]; then
     #         1         2         3         4         5         6  
     #1234567890123456789012345678901234567890123456789012345678901234567890
-    printf "                -> ~/.config/bash/bash_login     \$- $-\n"
+    printf "                -> ~/.config/bash/bash_login\n"
 fi
 
 #printf " $XDG_CONFIG_HOME/bash/bash_login **********  \n\n"

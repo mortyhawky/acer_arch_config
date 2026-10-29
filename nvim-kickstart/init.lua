@@ -164,6 +164,7 @@ do
   -- Show which line your cursor is on
   vim.o.cursorline = true
   vim.o.cursorcolumn = true
+  vim.o.colorcolumn = '70'      -- set cc?
 
   -- Minimal number of screen lines to keep above and below the cursor.
   vim.o.scrolloff = 10
@@ -172,6 +173,11 @@ do
   -- instead raise a dialog asking if you wish to save the current file(s)
   -- See `:help 'confirm'`
   vim.o.confirm = true
+
+  vim.o.tabstop = 4
+  vim.o.shiftwidth= 4
+  vim.o.showbreak = ' ++ '
+  vim.o.wildignore = '*.pdf'
 end
 
 -- ============================================================
@@ -185,6 +191,8 @@ do
   -- Clear highlights on search when pressing <Esc> in normal mode
   --  See `:help hlsearch`
   vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+  vim.keymap.set( { 'n', 'i', 'v' }, '<C-s>', '<Esc><cmd>nohlsearch<CR><cmd>write<CR>')
+  vim.keymap.set('n', '<leader>tn', '<cmd>setlocal nu!<CR><cmd>setlocal rnu!<CR>', { desc = 'toggle numbers' })
 
   -- Diagnostic Config & Keymaps
   --  See `:help vim.diagnostic.Opts`
@@ -221,10 +229,10 @@ do
   vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
   -- TIP: Disable arrow keys in normal mode
-  -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
-  -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
-  -- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
-  -- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+  vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+  vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+  vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+  vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
   -- Keybinds to make split navigation easier.
   --  Use CTRL+<hjkl> to switch between windows
