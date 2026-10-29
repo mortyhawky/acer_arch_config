@@ -193,7 +193,17 @@ do
   vim.keymap.set('n', '<M-7>', '{', {desc = 'paragraph backward'})
   vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
   vim.keymap.set( { 'n', 'i', 'v', 'c'}, '<C-s>', '<Esc><cmd>nohlsearch<CR><cmd>write<CR>')
-  vim.keymap.set('n', '<leader>tn', '<cmd>setlocal nu!<CR><cmd>setlocal rnu!<CR>', { desc = 'toggle numbers' })
+
+  local function toggle_numbers()
+    vim.opt.number = not vim.opt.number:get()
+    vim.opt.relativenumber = not vim.opt.relativenumber:get()
+    vim.opt.signcolumn = vim.opt.signcolumn:get() == 'no' and 'yes' or 'no'
+  end
+  vim.keymap.set('n', '<leader>tn', toggle_numbers, {
+    desc = 'Toggle number, relativenumber and signcolumn',
+  })
+
+  --vim.keymap.set('n', '<leader>tn', '<cmd>setlocal nu!<CR><cmd>setlocal rnu!<CR>', { desc = 'toggle numbers' })
   --vim.o.signcolumn = 'yes'  set signcolumn=no
   vim.keymap.set('n', '<leader>ot', '<cmd>terminal<CR>', {desc = 'open terminal'})
   vim.keymap.set('n', '<leader>oe', '<cmd>Explore<CR>', {desc = 'open netrw'})
