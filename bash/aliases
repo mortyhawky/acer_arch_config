@@ -21,7 +21,7 @@ alias m="make"
 alias man="batman"
 alias mkcd=f_mkcd
 alias t="tmux new-session \; split-window -h"
-alias v='NVIM_APPNAME="nvim-kickstart" nvim'
+alias v="nvim"
 alias vi="vim"
 alias vf="vifm"
 alias x=f_startx

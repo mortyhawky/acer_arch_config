@@ -105,11 +105,8 @@ do
   --  See `:help vim.o`
   -- NOTE: You can change these options as you wish!
   --  For more options, you can see `:help option-list`
-
-  -- Make line numbers default
+  vim.o.wrap = false
   vim.o.number = true
-  -- You can also add relative line numbers, to help with jumping.
-  --  Experiment for yourself to see if you like it!
   vim.o.relativenumber = true
 
   -- Enable mouse mode, can be useful for resizing splits for example!
@@ -190,9 +187,17 @@ do
 
   -- Clear highlights on search when pressing <Esc> in normal mode
   --  See `:help hlsearch`
+
+  vim.keymap.set('n', '<C-a>', '<cmd>echo "C-a"<CR>', {desc = 'ctrl-a'})
+  vim.keymap.set('n', '<M-0>', '}', {desc = 'paragraph forward'})
+  vim.keymap.set('n', '<M-7>', '{', {desc = 'paragraph backward'})
   vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-  vim.keymap.set( { 'n', 'i', 'v' }, '<C-s>', '<Esc><cmd>nohlsearch<CR><cmd>write<CR>')
+  vim.keymap.set( { 'n', 'i', 'v', 'c'}, '<C-s>', '<Esc><cmd>nohlsearch<CR><cmd>write<CR>')
   vim.keymap.set('n', '<leader>tn', '<cmd>setlocal nu!<CR><cmd>setlocal rnu!<CR>', { desc = 'toggle numbers' })
+  --vim.o.signcolumn = 'yes'  set signcolumn=no
+  vim.keymap.set('n', '<leader>ot', '<cmd>terminal<CR>', {desc = 'open terminal'})
+  vim.keymap.set('n', '<leader>oe', '<cmd>Explore<CR>', {desc = 'open netrw'})
+  vim.keymap.set('n', '<leader>on', '<cmd>Explore<CR>', {desc = 'open netrw'})
 
   -- Diagnostic Config & Keymaps
   --  See `:help vim.diagnostic.Opts`
@@ -261,6 +266,17 @@ do
     callback = function() vim.hl.on_yank() end,
   })
 end
+
+-- Enable relative line numbers in netrw, and remove banner.
+vim.api.nvim_create_autocmd("FileType", {
+  desc = "Configure netrw: hide banner, use relnumber",
+  pattern = "netrw",
+  callback = function()
+  vim.g.netrw_banner           = 0
+  vim.opt_local.number         = false
+  vim.opt_local.relativenumber = true
+  end,
+})
 
 -- ============================================================
 -- SECTION 3: PLUGIN MANAGER INTRO
